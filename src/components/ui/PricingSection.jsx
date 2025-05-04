@@ -166,7 +166,7 @@ const PricingSection = () => {
               to="/pricing"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-green-600 hover:from-orange-600 hover:to-green-700 shadow-md hover:shadow-lg transition-all duration-300"
             >
-              Get Custom Quote
+              See full pricing details
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 ml-2"

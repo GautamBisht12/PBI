@@ -21,6 +21,7 @@ import LoadingSpinner from "./components/ui/LoadingSpinner.jsx";
 import BookkeepingAccounting from "./pages/BookkeepingAccounting.jsx";
 import BookkeepingService from "./pages/BookkeepingServices.jsx";
 import Industries from "./pages/Industries.jsx";
+import Pricing from "./pages/Pricing.jsx";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
                 element={<BookkeepingService />}
               />
               <Route path="/industries" element={<Industries />} />
+              <Route path="/pricing" element={<Pricing />} />
             </Route>
 
             {/* Protected dashboard routes */}

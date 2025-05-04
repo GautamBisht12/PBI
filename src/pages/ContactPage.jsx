@@ -4,8 +4,17 @@ import {
   PhoneIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
+import HeroSection from "../components/ui/HeroSection";
+import { Clock10Icon, Clock9Icon } from "lucide-react";
 
 const ContactPage = () => {
+  const [heroDetails, setHeroDetails] = useState({
+    heroTitle: "Contact Us",
+    heroSubtitle:
+      "We'd love to hear from you! Reach out to us using the form below or contact us directly.",
+    heroImage:
+      "https://img.freepik.com/premium-photo/business-team-hero-banner-background_693425-12089.jpg",
+  });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,30 +62,7 @@ const ContactPage = () => {
   return (
     <div className="fade-in  overflow-hidden mt-20">
       {/* Hero section */}
-      <section className="relative text-white py-20 px-4 sm:px-6 lg:px-8 h-[70vh] w-full">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed z-0"
-          style={{
-            backgroundImage: `url("https://img.freepik.com/premium-photo/business-team-hero-banner-background_693425-12089.jpg")`,
-          }}
-        ></div>
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60 z-0"></div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto my-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full">
-          <div className="text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-              Get in Touch
-            </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-xl text-primary-100">
-              Have questions about PowerVision? We're here to help!
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection heroDetails={heroDetails} />
 
       {/* Contact section */}
       <section className="py-20 bg-white ">
@@ -84,47 +70,57 @@ const ContactPage = () => {
           <div className="lg:grid lg:grid-cols-1 lg:gap-16">
             {/* Contact info */}
             <div>
-              <h2 className="text-3xl font-extrabold text-gray-900">
+              <h2 className="text-3xl text-center font-extrabold text-gray-900">
                 Contact Information
               </h2>
-              <p className="mt-4 text-lg text-gray-500">
+              <p className="mt-4 text-lg text-gray-500 text-center">
                 Reach out to us using any of the following methods, and our team
                 will respond as soon as possible.
               </p>
 
-              <div className="mt-8 space-y-6">
-                <div className="flex items-start">
+              <div className="mt-14 space-y-6 flex justify-between ">
+                <div className="flex items-center justify-center flex-col  gap-5">
                   <div className="flex-shrink-0">
-                    <EnvelopeIcon className="h-6 w-6 text-primary-600" />
+                    <EnvelopeIcon className="h-10 w-10 text-[#ceb16b]" />
                   </div>
-                  <div className="ml-3 text-base text-gray-500">
+                  <div className="ml-3 text-base text-gray-500 text-center">
                     <p>info@powervision.com</p>
                     <p className="mt-1">support@powervision.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-center justify-center flex-col  gap-5">
                   <div className="flex-shrink-0">
-                    <PhoneIcon className="h-6 w-6 text-primary-600" />
+                    <Clock9Icon className="h-10 w-10 text-[#ceb16b]" />
                   </div>
-                  <div className="ml-3 text-base text-gray-500">
-                    <p>+1 (555) 123-4567</p>
-                    <p className="mt-1">Mon-Fri, 9AM-6PM EST</p>
+                  <div className="ml-3 text-base text-gray-500 text-center">
+                    <p>Monday - Friday</p>
+                    <p className="mt-1">9:00 PM - 6:00 AM</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-center justify-center flex-col gap-5 ">
                   <div className="flex-shrink-0">
-                    <MapPinIcon className="h-6 w-6 text-primary-600" />
+                    <PhoneIcon className="h-10 w-10 text-[#ceb16b] " />
                   </div>
-                  <div className="ml-3 text-base text-gray-500">
+                  <div className="ml-3 text-base text-gray-500 text-center">
+                    <p>+1 (555) 123-4567</p>
+                    <p className="mt-1">Mon-Fri, 9AM-6PM IST</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center flex-col justify-center gap-5 ">
+                  <div className="flex-shrink-0">
+                    <MapPinIcon className="h-10 w-10 text-[#ceb16b]" />
+                  </div>
+                  <div className="ml-3 text-base text-gray-500 text-center">
                     <p>123 Business Avenue</p>
                     <p>San Francisco, CA 94107</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12">
+              {/* <div className="mt-12">
                 <h3 className="text-xl font-medium text-gray-900">Follow Us</h3>
                 <div className="mt-4 flex space-x-6">
                   <a href="#" className="text-gray-400 hover:text-primary-600">
@@ -169,12 +165,12 @@ const ContactPage = () => {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Contact form */}
-            <section className="bg-[#f9f7f3] py-16 px-4">
-              <div className="max-w-3xl mx-auto bg-[#F5F3F0]">
+            <section className="bg-white py-16 px-4 ">
+              <div className="max-w-2xl mx-auto bg-[#F5F3F0] p-10">
                 <h2 className="text-center text-3xl font-serif text-gray-900 mb-4">
                   Send Message
                 </h2>
@@ -211,10 +207,10 @@ const ContactPage = () => {
                       className="w-full bg-transparent border-b border-gray-400 focus:outline-none focus:border-black resize-none"
                     ></textarea>
                   </div>
-                  <div className="text-center">
+                  <div className="">
                     <button
                       type="submit"
-                      className="mt-6 bg-black text-white px-6 py-2 uppercase tracking-wider text-sm hover:bg-gray-800"
+                      className="mt-6 bg-[#b79e63] text-black px-10 py-3 uppercase tracking-wider text-sm hover:bg-gray-800 hover:text-white"
                     >
                       Send
                     </button>
@@ -222,68 +218,6 @@ const ContactPage = () => {
                 </form>
               </div>
             </section>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
-              Frequently Asked Questions
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Find quick answers to common questions about PowerVision.
-            </p>
-          </div>
-
-          <div className="mt-12 space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-gray-900">
-                How secure is PowerVision?
-              </h3>
-              <p className="mt-2 text-gray-500">
-                PowerVision implements enterprise-grade security measures
-                including end-to-end encryption, role-based access control, and
-                regular security audits. We comply with industry standards like
-                SOC 2 and GDPR.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-gray-900">
-                Do I need a Power BI license to use PowerVision?
-              </h3>
-              <p className="mt-2 text-gray-500">
-                Yes, PowerVision integrates with your existing Power BI service.
-                Your organization needs at least a Power BI Pro or Premium
-                license to use our platform.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-gray-900">
-                Can I control who sees which reports?
-              </h3>
-              <p className="mt-2 text-gray-500">
-                Absolutely! PowerVision offers granular access control, allowing
-                administrators to determine precisely which users or groups can
-                access specific reports and dashboards.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-gray-900">
-                How often are the reports updated?
-              </h3>
-              <p className="mt-2 text-gray-500">
-                PowerVision connects directly to your Power BI service, so your
-                reports update according to the refresh schedule you've set in
-                Power BI. We also support real-time dashboards for data that
-                requires immediate visibility.
-              </p>
-            </div>
           </div>
         </div>
       </section>

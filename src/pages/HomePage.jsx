@@ -59,17 +59,18 @@ function HomePage() {
     <div className="fade-in">
       {/* Hero section */}
       <HeroSlider />
+      {/* Services overview */}
       <ServicesOverview />
       {/* Features section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-black to-[#1E2D2F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl relative inline-block">
-              Why Choose <span className="text-orange-500">Upsell</span>{" "}
-              <span className="text-green-600">FinLogix</span> ?
+            <h2 className="text-3xl font-extrabold text-[#B79E63] sm:text-4xl relative inline-block">
+              Why Choose <span className="text-[#fad88a]">Upsell</span>{" "}
+              <span className="text-[#fad88a]">FinLogix</span> ?
               <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-2"></span>
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-white">
               Everything you need to understand and utilize your business data
               effectively.
             </p>
@@ -218,7 +219,7 @@ function HomePage() {
       </section>
 
       {/* CTA section */}
-      <section className="bg-primary-700 py-16">
+      <section className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -238,8 +239,8 @@ function HomePage() {
                 </Link>
               ) : (
                 <SignUpButton mode="modal">
-                  <button className="btn bg-white text-primary-700 hover:bg-gray-50 text-base px-8 py-3">
-                    Start Free Trial
+                  <button className="btn bg-white text-primary-700 hover:bg-[#B79E63] hover:text-white text-base px-8 py-3">
+                    Book an Appointment
                   </button>
                 </SignUpButton>
               )}

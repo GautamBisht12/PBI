@@ -15,7 +15,7 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Services", href: "/services" },
-  { name: "Blog", href: "/blog" },
+  { name: "Pricing", href: "/pricing" },
 ];
 
 function Navbar() {

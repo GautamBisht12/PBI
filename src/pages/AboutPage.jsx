@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import HeroSection from "../components/ui/HeroSection";
 
 function AboutPage() {
+  const heroData = {
+    heroTitle: "About Us",
+    heroSubtitle:
+      " Empowering Your Business with Professional Bookkeeping, Accounting, and Corporate Finance Solutions",
+    heroImage:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+  };
   return (
     <div className="fade-in">
       {/* Hero section */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <HeroSection heroDetails={heroData} />
+      {/* <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
@@ -25,7 +34,7 @@ function AboutPage() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-      </section>
+      </section> */}
 
       {/* Mission section */}
       <section className="py-16 bg-white">
