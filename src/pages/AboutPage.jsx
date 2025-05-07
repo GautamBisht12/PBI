@@ -591,52 +591,46 @@ function AboutPage() {
       </section>
 
       {/* CTA section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-extrabold mb-6">
-                Partner with Us for a Stronger Financial Future
-              </h2>
-              <p className="text-xl text-blue-100 mb-8">
-                At Upsell Finlogix, we are more than just a service provider; we
-                are your strategic partner in bookkeeping, accounting, and
-                corporate finance. Let us help you navigate the complexities of
-                financial management with precision, insight, and transparency,
-                so you can focus on growing your business.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colors duration-300 shadow-lg"
-              >
-                Schedule a Consultation
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </Link>
-            </div>
-            <div className="mt-10 lg:mt-0 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                  alt="Business meeting"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-30"></div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500 rounded-full -z-10"></div>
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-green-500 rounded-full -z-10"></div>
-            </div>
-          </div>
+      <section
+        className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/90"></div>
+
+        {/* Content container */}
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-3xl font-extrabold mb-6 text-white">
+            Partner with Us for a Stronger Financial Future
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            At Upsell Finlogix, we are more than just a service provider; we are
+            your strategic partner in bookkeeping, accounting, and corporate
+            finance. Let us help you navigate the complexities of financial
+            management with precision, insight, and transparency, so you can
+            focus on growing your business.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-black hover:text-white transition-colors duration-300 shadow-lg"
+          >
+            Book an Appointmemt
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Link>
         </div>
       </section>
 

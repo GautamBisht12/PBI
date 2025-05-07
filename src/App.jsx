@@ -22,6 +22,7 @@ import BookkeepingAccounting from "./pages/BookkeepingAccounting.jsx";
 import BookkeepingService from "./pages/BookkeepingServices.jsx";
 import Industries from "./pages/Industries.jsx";
 import Pricing from "./pages/Pricing.jsx";
+import Services from "./pages/Services.jsx";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
               />
               <Route path="/industries" element={<Industries />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/services" element={<Services />} />
             </Route>
 
             {/* Protected dashboard routes */}

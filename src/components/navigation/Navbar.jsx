@@ -37,6 +37,19 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen]);
+
   // Determine navbar background style based on page and scroll position
   const getNavbarStyle = () => {
     if (!isHomePage) {
@@ -164,13 +177,15 @@ function Navbar() {
         <div className="md:hidden">
           <button
             type="button"
-            className={
-              !isHomePage
+            className={`z-50 relative ${
+              mobileMenuOpen
+                ? "text-white"
+                : !isHomePage
                 ? "text-gray-800"
                 : isScrolled
                 ? "text-gray-700"
                 : "text-white"
-            }
+            }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
@@ -183,56 +198,80 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-black bg-opacity-90">
-          <div className="space-y-1 px-4 pt-2 pb-3">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`block py-2 text-base font-medium ${
-                  location.pathname === item.href
-                    ? "text-primary-700"
-                    : "text-white"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+      {/* Mobile menu - Full screen slide from left */}
+      <div
+        className={`fixed inset-0 bg-black z-30 md:hidden transform transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full gap-0">
+          {/* Centered Logo */}
+          <div className="flex justify-center items-center py-10 border-b border-white/20">
+            <span className="text-3xl font-bold text-[#B69D62]">
+              Company Name
+            </span>
+          </div>
 
-            {isSignedIn ? (
-              <div className="flex items-center space-x-4 py-3">
+          {/* Navigation Links */}
+          <div className="flex -mt-1 flex-col items-center justify-center flex-grow px-8 bg-black">
+            <div className="w-full max-w-md space-y-8">
+              {navigation.map((item) => (
                 <Link
-                  to="/dashboard"
-                  className="btn-primary"
+                  key={item.name}
+                  to={item.href}
+                  className={`flex items-center justify-between py-4 text-xl font-medium border-b border-white/10 ${
+                    location.pathname === item.href
+                      ? "text-[#B69D62]"
+                      : "text-white"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Dashboard
+                  <span>{item.name}</span>
+                  <GoArrowUpRight size={24} />
                 </Link>
-                <UserButton
-                  afterSignOutUrl="/"
-                  appearance={{
-                    elements: {
-                      userButtonAvatarBox: "w-9 h-9",
-                    },
-                  }}
-                />
+              ))}
+
+              {/* Auth Section */}
+              <div className="pt-8 mt-8 border-t border-white/10">
+                {isSignedIn ? (
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to="/dashboard"
+                      className="btn-primary w-full py-3 text-center text-lg"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Dashboard
+                    </Link>
+                    <div className="ml-4">
+                      <UserButton
+                        afterSignOutUrl="/"
+                        appearance={{
+                          elements: {
+                            userButtonAvatarBox: "w-12 h-12",
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex flex-col space-y-4">
+                    <SignInButton mode="modal">
+                      <button className="btn-secondary w-full py-3 text-lg">
+                        Sign in
+                      </button>
+                    </SignInButton>
+                    <SignUpButton mode="modal">
+                      <button className="btn-primary w-full py-3 text-lg">
+                        Sign up
+                      </button>
+                    </SignUpButton>
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="flex flex-col space-y-2 py-3">
-                <SignInButton mode="modal">
-                  <button className="btn-secondary w-full">Sign in</button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <button className="btn-primary w-full">Sign up</button>
-                </SignUpButton>
-              </div>
-            )}
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
