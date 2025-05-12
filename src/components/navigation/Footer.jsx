@@ -13,7 +13,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <footer className="bg-gradient-to-r from-[#192D2F] to-[#203c3e] text-white">
       <div className="container-custom py-16">
         {/* Top section with logo, description, links and contact */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-9">
@@ -26,8 +26,7 @@ function Footer() {
               <span className="text-primary-300">Upsell</span> FinLogix
             </Link>
             <p className="mt-4 text-gray-400 max-w-md leading-relaxed">
-              Empowering businesses with interactive Power BI reports and
-              advanced analytics to make data-driven decisions with confidence.
+              Empowering businesses with advanced financial analytics.
             </p>
 
             {/* Social media icons */}
@@ -192,15 +191,12 @@ const quickLinks = [
   { name: "About", to: "/about" },
   { name: "Services", to: "/services" },
   { name: "Contact", to: "/contact" },
-  { name: "Blog", to: "/blog" },
 ];
 
 // Services data
 const services = [
-  { name: "Power BI Reports", to: "/services/power-bi-reports" },
-  { name: "Data Analytics", to: "/services/data-analytics" },
-  { name: "Business Intelligence", to: "/services/business-intelligence" },
-  { name: "Consulting", to: "/services/consulting" },
+  { name: "Bookkeeping & Accounting", to: "/bookkeeping-accounting" },
+  { name: "Bookkeeping Services", to: "/bookkeeping-services" },
 ];
 
 // Social media links

@@ -16,9 +16,16 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import HeroSection from "../components/ui/HeroSection";
 
 export default function BookkeepingAccounting() {
   const [expandedId, setExpandedId] = useState(null);
+  const [heroDetails, setHeroDetails] = useState({
+    heroTitle: "Expert Bookkeeping Services",
+    heroSubtitle:
+      " Accurate, timely, and professional financial record-keeping that gives you confidence in your business decisions.",
+    heroImage: "https://wallpaperaccess.com/full/153208.jpg",
+  });
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
@@ -184,53 +191,30 @@ export default function BookkeepingAccounting() {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-700 to-indigo-800 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Expert Bookkeeping Services
-            </h1>
-            <p className="text-xl opacity-90 mb-8 text-yellow-300">
-              Accurate, timely, and professional financial record-keeping that
-              gives you confidence in your business decisions.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-300">
-                Schedule a Consultation
-              </button>
-              <a
-                href="#process"
-                className="border-2 cursor-pointer border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300"
-              >
-                View Our Process
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection heroDetails={heroDetails} />
 
       {/* Trust Indicators */}
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-12">
           <div className="flex items-center gap-3">
-            <Shield className="text-blue-600" size={24} />
+            <Shield className="text-[#B69F63]" size={30} />
             <span className="font-medium">AICPA Member</span>
           </div>
           <div className="flex items-center gap-3">
-            <Award className="text-blue-600" size={24} />
-            <span className="font-medium">20+ Years Experience</span>
+            <Award className="text-[#B69F63]" size={30} />
+            <span className="font-medium">10+ Years Experience</span>
           </div>
           <div className="flex items-center gap-3">
-            <UserCheck className="text-blue-600" size={24} />
+            <UserCheck className="text-[#B69F63]" size={30} />
             <span className="font-medium">Certified Bookkeepers</span>
           </div>
           <div className="flex items-center gap-3">
-            <AlertCircle className="text-blue-600" size={24} />
+            <AlertCircle className="text-[#B69F63]" size={24} />
             <span className="font-medium">100% Accuracy Guarantee</span>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-16 text-[#192A2D]">
           Our Comprehensive Bookkeeping Services
         </h2>
 
@@ -246,7 +230,7 @@ export default function BookkeepingAccounting() {
                 onClick={() => toggleExpand(service.id)}
               >
                 <div className="flex items-center gap-4">
-                  <div className="bg-blue-50 p-3 rounded-full text-blue-600">
+                  <div className="bg-[#B69F63] p-3 rounded-full text-[#192D2F]">
                     {service.icon}
                   </div>
                   <div>
@@ -285,7 +269,7 @@ export default function BookkeepingAccounting() {
                   <div className="grid md:grid-cols-2 gap-6">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="bg-gray-50 p-4 rounded-lg">
-                        <h4 className="font-medium text-gray-800 mb-2">
+                        <h4 className="font-medium text-[#a58f57] mb-2">
                           {feature.title}
                         </h4>
                         <p className="text-gray-600 text-sm">
@@ -310,7 +294,7 @@ export default function BookkeepingAccounting() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#192A2D] mb-4">
                 <Shield size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-3">
@@ -324,7 +308,7 @@ export default function BookkeepingAccounting() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#192A2D] mb-4">
                 <Clock size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Time Savings</h3>
@@ -336,7 +320,7 @@ export default function BookkeepingAccounting() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-[#192A2D] mb-4">
                 <TrendingUp size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Strategic Insights</h3>
@@ -389,7 +373,7 @@ export default function BookkeepingAccounting() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-800 relative inline-block mx-auto">
               Our Bookkeeping Process
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform -translate-y-2"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#2e4d52] to-[#B69F63] transform -translate-y-2"></span>
             </h2>
           </div>
 
@@ -402,7 +386,7 @@ export default function BookkeepingAccounting() {
               {/* Step 1 */}
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-5/12 mb-8 md:mb-0 md:pr-12 text-left md:text-right order-2 md:order-1">
-                  <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-1 block">
+                  <span className="text-[#B69F63] font-semibold text-sm tracking-wider uppercase mb-1 block">
                     Step 1
                   </span>
                   <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -415,7 +399,7 @@ export default function BookkeepingAccounting() {
                   </p>
                 </div>
                 <div className="relative order-1 md:order-2 flex items-center justify-center md:w-2/12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
+                  <div className="w-16 h-16 bg-[#192A2D] rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
                     <span className="text-xl font-bold">1</span>
                   </div>
                 </div>
@@ -426,12 +410,12 @@ export default function BookkeepingAccounting() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-5/12 hidden md:block order-1"></div>
                 <div className="relative order-1 md:order-2 flex items-center justify-center md:w-2/12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
+                  <div className="w-16 h-16 bg-[#192A2D] rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
                     <span className="text-xl font-bold">2</span>
                   </div>
                 </div>
                 <div className="w-full md:w-5/12 mb-8 md:mb-0 md:pl-12 text-left order-2 md:order-3">
-                  <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-1 block">
+                  <span className="text-[#B69F63] font-semibold text-sm tracking-wider uppercase mb-1 block">
                     Step 2
                   </span>
                   <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -448,7 +432,7 @@ export default function BookkeepingAccounting() {
               {/* Step 3 */}
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-5/12 mb-8 md:mb-0 md:pr-12 text-left md:text-right order-2 md:order-1">
-                  <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-1 block">
+                  <span className="text-[#B69F63] font-semibold text-sm tracking-wider uppercase mb-1 block">
                     Step 3
                   </span>
                   <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -461,7 +445,7 @@ export default function BookkeepingAccounting() {
                   </p>
                 </div>
                 <div className="relative order-1 md:order-2 flex items-center justify-center md:w-2/12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
+                  <div className="w-16 h-16 bg-[#192A2D] rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
                     <span className="text-xl font-bold">3</span>
                   </div>
                 </div>
@@ -472,12 +456,12 @@ export default function BookkeepingAccounting() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-5/12 hidden md:block order-1"></div>
                 <div className="relative order-1 md:order-2 flex items-center justify-center md:w-2/12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#192A2D] to-[#28474d] rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
                     <span className="text-xl font-bold">4</span>
                   </div>
                 </div>
                 <div className="w-full md:w-5/12 mb-8 md:mb-0 md:pl-12 text-left order-2 md:order-3">
-                  <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-1 block">
+                  <span className="text-[#B69F63] font-semibold text-sm tracking-wider uppercase mb-1 block">
                     Step 4
                   </span>
                   <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -494,7 +478,7 @@ export default function BookkeepingAccounting() {
               {/* Step 5 */}
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-5/12 mb-8 md:mb-0 md:pr-12 text-left md:text-right order-2 md:order-1">
-                  <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase mb-1 block">
+                  <span className="text-[#B69F63] font-semibold text-sm tracking-wider uppercase mb-1 block">
                     Step 5
                   </span>
                   <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -507,7 +491,7 @@ export default function BookkeepingAccounting() {
                   </p>
                 </div>
                 <div className="relative order-1 md:order-2 flex items-center justify-center md:w-2/12">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#192A2D] to-[#28474d]  rounded-full flex items-center justify-center text-white z-10 shadow-lg transform transition-transform duration-300 hover:scale-110">
                     <span className="text-xl font-bold">5</span>
                   </div>
                 </div>
@@ -519,7 +503,7 @@ export default function BookkeepingAccounting() {
           <div className="mt-16 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md  btn-style shadow-md hover:shadow-lg transition-all duration-300"
             >
               Start Your Bookkeeping Journey
               <svg
@@ -540,7 +524,7 @@ export default function BookkeepingAccounting() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 py-16">
+      <div className="bg-gradient-to-r from-[#192A2D] to-[#29454a] py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-6">
@@ -551,7 +535,7 @@ export default function BookkeepingAccounting() {
               off your shoulders so you can focus on growing your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+              <button className="btn-style-2 font-bold py-3 px-8 rounded-lg transition-colors duration-300">
                 Schedule a Free Consultation
               </button>
               <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300">

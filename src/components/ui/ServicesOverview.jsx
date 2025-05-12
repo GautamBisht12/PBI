@@ -17,12 +17,6 @@ const services = [
     link: "/bookkeeping-services",
     icon: "📈",
   },
-  {
-    title: "Industries Needing Accounting",
-    description: "See which industries demand high bookkeeping services.",
-    link: "/industries",
-    icon: "🏭",
-  },
 ];
 
 const ServicesOverview = () => {
@@ -36,12 +30,12 @@ const ServicesOverview = () => {
           <div className="w-full lg:w-5/12 flex justify-center lg:justify-start">
             <img
               className="w-full max-w-md lg:max-w-none object-cover rounded-lg"
-              src="http://afensor.like-themes.com/wp-content/uploads/2023/04/lawyer-744x1024.jpg"
+              src="https://thumbs.dreamstime.com/b/young-businessman-business-meeting-conference-room-office-66968197.jpg"
               alt="Professional consultant"
             />
           </div>
           {/* Text div - responsive */}
-          <div className="w-full lg:w-7/12">
+          <div className="w-full lg:w-7/12 px-10">
             <div className="mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
                 Our Focus Areas
@@ -53,7 +47,7 @@ const ServicesOverview = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 md:gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}

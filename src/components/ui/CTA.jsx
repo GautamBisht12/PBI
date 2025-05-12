@@ -1,5 +1,3 @@
-import React from "react";
-
 const CTA = () => {
   return (
     <div className="mt-24 bg-black text-white rounded-2xl p-12 text-center">

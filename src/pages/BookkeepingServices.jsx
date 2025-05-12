@@ -15,9 +15,18 @@ import {
   LineChart,
   PieChart,
 } from "lucide-react";
+import HeroSection from "../components/ui/HeroSection";
+import FAQ from "../components/ui/FAQ";
+import Testimonials from "../components/ui/Testimonials";
 
 export default function BookkeepingService() {
   const [activeTab, setActiveTab] = useState("core");
+  const heroDetails = {
+    heroTitle: "Bookkeeping Services We Can Offer",
+    heroSubtitle:
+      "We provide comprehensive bookkeeping solutions tailored to your business needs, ensuring your financial records are accurate, up-to-date, and compliant.",
+    heroImage: "https://wallpaperaccess.com/full/153208.jpg",
+  };
 
   const CoreServices = [
     {
@@ -122,24 +131,7 @@ export default function BookkeepingService() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Bookkeeping Services We Can Offer
-            </h1>
-            <p className="text-xl opacity-90 mb-8 text-yellow-300">
-              We provide comprehensive bookkeeping solutions tailored to your
-              business needs, ensuring your financial records are accurate,
-              up-to-date, and compliant.
-            </p>
-            <button className="bg-white text-blue-600 font-medium py-3 px-8 rounded-full hover:bg-blue-50 transition-colors duration-300">
-              Schedule a Consultation
-            </button>
-          </div>
-        </div>
-      </div>
-
+      <HeroSection heroDetails={heroDetails} />
       {/* Main Content */}
       <div className="container mx-auto px-4 lg:px-8 py-16">
         {/* Services Tabs */}
@@ -149,7 +141,7 @@ export default function BookkeepingService() {
               onClick={() => setActiveTab("core")}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-colors duration-200 ${
                 activeTab === "core"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#B69F63] text-[#192A2D]"
                   : "text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -159,7 +151,7 @@ export default function BookkeepingService() {
               onClick={() => setActiveTab("additional")}
               className={`px-6 py-3 rounded-md text-sm font-medium transition-colors duration-200 ${
                 activeTab === "additional"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#B69F63] text-[#192A2D]"
                   : "text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -203,7 +195,7 @@ export default function BookkeepingService() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-blue-600 text-white font-medium py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+              <button className="btn-style font-medium py-3 px-8 rounded-lg  transition-colors duration-300">
                 Get Started
               </button>
               <button className="border border-blue-600 text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-300">
@@ -215,132 +207,10 @@ export default function BookkeepingService() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            What Our Clients Say
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="flex items-center text-yellow-400 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-5 h-5 fill-current"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-gray-600 mb-4">
-                "Their bookkeeping services have transformed how we manage our
-                finances. Accurate, timely, and incredibly helpful in making
-                business decisions."
-              </p>
-              <div>
-                <p className="font-medium text-gray-800">Sarah Johnson</p>
-                <p className="text-gray-500 text-sm">CEO, Retail Solutions</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="flex items-center text-yellow-400 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-5 h-5 fill-current"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-gray-600 mb-4">
-                "I was months behind on my books when I found this team. Their
-                catch-up services were efficient and their ongoing support is
-                invaluable."
-              </p>
-              <div>
-                <p className="font-medium text-gray-800">Michael Chen</p>
-                <p className="text-gray-500 text-sm">Owner, Tech Solutions</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="flex items-center text-yellow-400 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-5 h-5 fill-current"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-gray-600 mb-4">
-                "The financial reports they provide have given me clear insights
-                into my business performance. Their expertise has been crucial
-                for our growth."
-              </p>
-              <div>
-                <p className="font-medium text-gray-800">Lisa Martinez</p>
-                <p className="text-gray-500 text-sm">
-                  Director, Healthcare Services
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Testimonials />
 
       {/* FAQ Section */}
-      <div className="container mx-auto px-4 lg:px-8 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-          Frequently Asked Questions
-        </h2>
-        <div className="max-w-3xl mx-auto grid gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">
-              How often will my books be updated?
-            </h3>
-            <p className="text-gray-600">
-              We offer flexible schedules based on your business needs — weekly,
-              bi-weekly, or monthly updates. For businesses with high
-              transaction volumes, we recommend more frequent updates.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">
-              What accounting software do you use?
-            </h3>
-            <p className="text-gray-600">
-              We're proficient in all major accounting platforms including
-              QuickBooks, Xero, Sage, and FreshBooks. We can work with your
-              existing system or recommend one that suits your business needs.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">
-              Can you help with tax preparation?
-            </h3>
-            <p className="text-gray-600">
-              While we prepare tax-ready financial statements, we partner with
-              certified tax professionals for actual tax filing. We ensure
-              seamless coordination between bookkeeping and tax services.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">
-              How do you handle confidential financial information?
-            </h3>
-            <p className="text-gray-600">
-              We implement bank-level security protocols and encrypt all data.
-              Our team members sign confidentiality agreements, and we maintain
-              strict access controls to protect your sensitive information.
-            </p>
-          </div>
-        </div>
-      </div>
+      <FAQ />
     </div>
   );
 }
