@@ -615,7 +615,7 @@ function AboutPage() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-black hover:text-white transition-colors duration-300 shadow-lg"
+            className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md  btn-style-2 transition-colors duration-300 shadow-lg"
           >
             Book an Appointmemt
             <svg
@@ -794,13 +794,13 @@ function AboutPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-md transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md btn-style shadow-md transition-all duration-300"
             >
               Schedule a Free Consultation
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center justify-center px-8 py-4 border border-blue-600 text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 shadow-sm transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border border-[#192A2D] text-base font-medium rounded-md text-[#192A2D] bg-white hover:bg-blue-50 shadow-sm transition-all duration-300"
             >
               Explore Our Services
             </Link>

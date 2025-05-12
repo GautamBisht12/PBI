@@ -15,8 +15,9 @@ const slides = [
   {
     image:
       "https://www.bizmanualz.com/wp-content/uploads/2024/02/what-does-a-chief-financial-officer-cfo-dosmkg.jpg",
-    headline: "Your Trusted Law Firm",
-    subtext: "Reliable bookkeeping, accounting, and corporate finance services",
+    headline: "Reliable Bookkeeping and Accounting Firm",
+    subtext:
+      "Streamlined Solutions for Accurate, Compliant, and Scalable Growth",
   },
 ];
 
@@ -65,12 +66,12 @@ export default function HeroSlider() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16" // Add top margin to account for navbar
+          className="mt-16" // Add margin-top for spacing
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">
             {slides[current].headline}
           </h1>
-          <p className="text-lg md:text-2xl max-w-2xl text-white">
+          <p className="text-lg md:text-2xl  text-white ">
             {slides[current].subtext}
           </p>
         </motion.div>

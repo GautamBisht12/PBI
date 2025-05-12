@@ -18,6 +18,15 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.btn-style {
+  color: #192d2f;
+  background-color: #b69f63;
+}
+.btn-style:hover {
+  color: white;
+  background-color: #192d2f;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

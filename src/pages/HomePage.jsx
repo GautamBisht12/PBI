@@ -79,23 +79,23 @@ function HomePage() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {/* Feature 1 - Transaction Recording */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-400 h-2"></div>
+              <div className="bg-gradient-to-r from-[#B69F63] to-[#d4c08a] h-2"></div>
               <div className="p-6">
-                <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-5 group-hover:bg-orange-200 transition-colors duration-300">
-                  <ChartBarIcon className="h-8 w-8 text-orange-500" />
+                <div className="w-14 h-14 bg-[#f5f1e6] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#e9e1cc] transition-colors duration-300">
+                  <ChartBarIcon className="h-8 w-8 text-[#B69F63]" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#B69F63] transition-colors duration-300">
                   Transaction Recording
                 </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
+                    <span className="text-[#B69F63] mr-2">•</span>
                     <span>
                       Daily recording of sales, expenses, receipts, and payments
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
+                    <span className="text-[#B69F63] mr-2">•</span>
                     <span>
                       Categorizing expenses properly in accounting software
                     </span>
@@ -106,25 +106,25 @@ function HomePage() {
 
             {/* Feature 2 - Bank & Credit Card Reconciliation */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-green-600 to-green-500 h-2"></div>
+              <div className="bg-gradient-to-r from-[#192A2D] to-[#2d4145] h-2"></div>
               <div className="p-6">
-                <div className="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-5 group-hover:bg-green-200 transition-colors duration-300">
-                  <LockClosedIcon className="h-8 w-8 text-green-600" />
+                <div className="w-14 h-14 bg-[#e6eaeb] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#d8dfe0] transition-colors duration-300">
+                  <LockClosedIcon className="h-8 w-8 text-[#192A2D]" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#192A2D] transition-colors duration-300">
                   Bank & Credit Card Reconciliation
                 </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
+                    <span className="text-[#192A2D] mr-2">•</span>
                     <span>
-                      Matching bank/credit card statements to internal records
+                      Identifying errors, duplicates, or missing transactions
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
+                    <span className="text-[#192A2D] mr-2">•</span>
                     <span>
-                      Identifying errors, duplicates, or missing transactions
+                      Matching bank/credit card statements to internal records
                     </span>
                   </li>
                 </ul>
@@ -133,24 +133,24 @@ function HomePage() {
 
             {/* Feature 3 - Accounts Payable (AP) Management */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-500 h-2"></div>
+              <div className="bg-gradient-to-r from-black to-[#333333] h-2"></div>
               <div className="p-6">
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-200 transition-colors duration-300">
-                  <PresentationChartLineIcon className="h-8 w-8 text-blue-600" />
+                <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center mb-5 group-hover:bg-gray-200 transition-colors duration-300">
+                  <PresentationChartLineIcon className="h-8 w-8 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-black transition-colors duration-300">
                   Accounts Payable (AP) Management
                 </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="text-black mr-2">•</span>
+                    <span>Managing due dates and scheduling payments</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-black mr-2">•</span>
                     <span>
                       Tracking what the business owes vendors/suppliers
                     </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>Managing due dates and scheduling payments</span>
                   </li>
                 </ul>
               </div>
@@ -158,16 +158,16 @@ function HomePage() {
 
             {/* Feature 4 - Accounts Receivable (AR) Management */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-purple-600 to-purple-500 h-2"></div>
+              <div className="bg-gradient-to-r from-[#192A2D] to-[#B69F63] h-2"></div>
               <div className="p-6">
-                <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-5 group-hover:bg-purple-200 transition-colors duration-300">
+                <div className="w-14 h-14 bg-[#f5f1e6] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#e9e1cc] transition-colors duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="h-8 w-8 text-purple-600"
+                    className="h-8 w-8 text-[#B69F63]"
                   >
                     <path
                       strokeLinecap="round"
@@ -176,19 +176,19 @@ function HomePage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#B69F63] transition-colors duration-300">
                   Accounts Receivable (AR) Management
                 </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-purple-600 mr-2">•</span>
-                    <span>Tracking money owed to the business by clients</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-600 mr-2">•</span>
+                    <span className="text-[#B69F63] mr-2">•</span>
                     <span>
                       Invoicing customers and following up on overdue payments
                     </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#B69F63] mr-2">•</span>
+                    <span>Tracking money owed to the business by clients</span>
                   </li>
                 </ul>
               </div>
@@ -198,7 +198,7 @@ function HomePage() {
           <div className="mt-12 text-center">
             <Link
               to="/services"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-orange-500 to-green-600 hover:from-orange-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all duration-300"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm btn-style-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all duration-300"
             >
               Explore All Services
               <svg
@@ -239,7 +239,7 @@ function HomePage() {
                 </Link>
               ) : (
                 <SignUpButton mode="modal">
-                  <button className="btn bg-white text-primary-700 hover:bg-[#B79E63] hover:text-white text-base px-8 py-3">
+                  <button className="btn bg-[#B69F63] text-white hover:bg-white hover:text-black text-base px-8 py-3">
                     Book an Appointment
                   </button>
                 </SignUpButton>

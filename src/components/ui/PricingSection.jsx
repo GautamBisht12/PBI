@@ -18,7 +18,7 @@ const PricingSection = () => {
 
           {/* Main Pricing Card */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto mb-16">
-            <div className="bg-gradient-to-r from-orange-500 to-green-600 px-6 py-8 text-white">
+            <div className="bg-gradient-to-r from-[#e6c882] to-[#ab8d47] px-6 py-8 text-white">
               <h3 className="text-2xl font-bold">Per-Transaction Pricing</h3>
               <p className="mt-2 opacity-90">
                 Pay only for what you use with our flexible pricing model
@@ -164,7 +164,7 @@ const PricingSection = () => {
           <div className="text-center">
             <Link
               to="/pricing"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-green-600 hover:from-orange-600 hover:to-green-700 shadow-md hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  shadow-md hover:shadow-lg transition-all duration-300"
             >
               See full pricing details
               <svg

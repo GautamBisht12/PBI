@@ -45,7 +45,7 @@ const ServicesOverview = () => {
             <div className="mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
                 Our Focus Areas
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-accent-500 transform -translate-y-2"></span>
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#B69F63] to-[#192A2D] transform -translate-y-2"></span>
               </h2>
               <p className="text-[#B79E63] max-w-2xl">
                 Comprehensive financial solutions tailored to your business
@@ -65,7 +65,7 @@ const ServicesOverview = () => {
                     <div className="p-4 rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1 h-full flex flex-col relative overflow-hidden">
                       {/* Gradient accent on hover */}
                       <div
-                        className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary-500 to-accent-500 transition-all duration-300 ${
+                        className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white to-[#B69F63] transition-all duration-300 ${
                           hoveredIndex === index ? "opacity-100" : "opacity-0"
                         }`}
                       ></div>
