@@ -219,7 +219,7 @@ function Navbar() {
           ) : (
             <>
               <Link
-                className="p-3 bg-[#B79E63] rounded-md hover:bg-[#1E2D2F] hover:text-white transition duration-300  font-semibold"
+                className="p-2 text-base bg-[#B79E63] rounded-md hover:bg-[#1E2D2F] hover:text-white transition duration-300  font-semibold"
                 to="/contact"
               >
                 Get Free Consultation
@@ -273,9 +273,21 @@ function Navbar() {
         <div className="flex flex-col h-full gap-0">
           {/* Centered Logo */}
           <div className="flex justify-center items-center py-10 border-b border-white/20">
-            <span className="text-3xl font-bold text-[#B69D62]">
-              Company Name
-            </span>
+          <span
+            className={`flex gap-2 text-2xl font-bold ${
+              !isHomePage
+                ? "text-[#B69D62]"
+                : isScrolled
+                ? "text-[#B69D62]"
+                : "text-white"
+            }`}
+          >
+            <img src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png" alt="logo" className="w-20 h-20" />
+            <h3>
+              Upsell <br />
+              Finlogix{" "}
+            </h3>
+          </span>
           </div>
 
           {/* Navigation Links */}
