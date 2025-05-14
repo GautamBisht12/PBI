@@ -137,7 +137,7 @@ function Navbar() {
                 : "text-white"
             }`}
           >
-            <img src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png" alt="logo" style="width:80px;height:80px;" />
+            <img src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png" alt="logo" className="w-20 h-20" />
             <h3>
               Upsell <br />
               Finlogix{" "}
