@@ -42,34 +42,18 @@ const Services = () => {
         "https://images.unsplash.com/photo-1744051518421-1eaf2fbde680?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tlZXBpbmclMjBhY2NvdW50c3xlbnwwfHwwfHx8MA%3D%3D",
     },
     {
-      title: "Brand Strategy",
+      title: "Corporate Finance Management",
       description:
         "Comprehensive branding solutions to establish a strong market presence.",
       services: [
-        "Brand Identity Development",
-        "Logo & Visual Design",
-        "Brand Messaging & Positioning",
-        "Brand Guidelines Creation",
-        "Rebranding Services",
-        "Brand Audit & Analysis",
+        "Financial planning and analysis ",
+        "Financial planning and business valuation",
+        "Budgeting and Forecasting",
+        "Cashflow management",
+        "Strategic planning",
       ],
       image:
-        "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      title: "Mobile Development",
-      description:
-        "Native and cross-platform mobile applications for iOS and Android.",
-      services: [
-        "iOS App Development",
-        "Android App Development",
-        "Cross-Platform Solutions",
-        "Mobile UI/UX Design",
-        "App Maintenance & Updates",
-        "App Store Optimization",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        "https://th.bing.com/th/id/OIP.tPVB-7ooVwyiqBXrzVYyVAHaE8?cb=iwp2&w=1600&h=1067&rs=1&pid=ImgDetMain",
     },
   ];
 

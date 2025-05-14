@@ -3,21 +3,21 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    image: "https://wallpaperaccess.com/full/153056.jpg",
-    headline: "Experience You Can Trust",
-    subtext: "Private advocate agency for all legal matters",
-  },
-  {
-    image: "https://wallpaperaccess.com/full/643457.jpg",
-    headline: "Expert Legal Guidance",
-    subtext: "Committed to protecting your rights",
-  },
-  {
     image:
       "https://www.bizmanualz.com/wp-content/uploads/2024/02/what-does-a-chief-financial-officer-cfo-dosmkg.jpg",
     headline: "Reliable Bookkeeping and Accounting Firm",
     subtext:
       "Streamlined Solutions for Accurate, Compliant, and Scalable Growth",
+  },
+  {
+    image: "https://wallpaperaccess.com/full/643457.jpg",
+    headline: "Experience You Can Trust",
+    subtext: "Empowering Businesses Through Smart Financial Decisions",
+  },
+  {
+    image: "https://wallpaperaccess.com/full/153056.jpg",
+    headline: "Expert Legal Guidance",
+    subtext: "Committed to protecting your rights",
   },
 ];
 
@@ -68,10 +68,10 @@ export default function HeroSlider() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-16" // Add margin-top for spacing
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">
+          <h1 className="heading-tagline text-4xl md:text-8xl font-bold mb-4 text-shadow-lg sm:max-w-6xl">
             {slides[current].headline}
           </h1>
-          <p className="text-lg md:text-2xl  text-white ">
+          <p className=" text-lg md:text-2xl  text-white ">
             {slides[current].subtext}
           </p>
         </motion.div>

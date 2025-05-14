@@ -4,14 +4,14 @@ const PricingSection = () => {
   return (
     <>
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#192D2F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl relative inline-block">
+            <h2 className="heading-tagline text-3xl font-extrabold text-gray-300 sm:text-4xl relative inline-block">
               Transparent Pricing
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-2"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-1"></span>
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-200">
               Simple per-transaction pricing that scales with your business
             </p>
           </div>
@@ -164,7 +164,7 @@ const PricingSection = () => {
           <div className="text-center">
             <Link
               to="/pricing"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  shadow-md hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  hover:border-[#B69F63] shadow-md hover:shadow-lg transition-all duration-300"
             >
               See full pricing details
               <svg
@@ -180,7 +180,7 @@ const PricingSection = () => {
                 />
               </svg>
             </Link>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-[#B69F63]">
               Need a customized solution?{" "}
               <a
                 href="/contact"

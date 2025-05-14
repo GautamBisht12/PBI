@@ -10,6 +10,17 @@
     scroll-behavior: smooth;
   }
 
+  .para-font {
+    font-family: "Playfair Display", serif;
+  }
+
+  .heading-tagline {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
   body {
     @apply bg-gray-50 text-gray-900 min-h-screen;
   }
@@ -19,8 +30,9 @@
   h3,
   h4,
   h5,
-  h6 {
-    @apply font-semibold tracking-tight;
+  h6,
+  a {
+    @apply font-semibold tracking-tight heading-tagline;
   }
 
   h1 {

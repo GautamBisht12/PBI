@@ -42,12 +42,12 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route
-                path="/bookkeeping-accounting"
+                path="/services/accounting"
                 element={<BookkeepingAccounting />}
               />
-              {/* <Route path="/top-firms" element={<TopFirms />} /> */}
+
               <Route
-                path="/Bookkeeping-services"
+                path="/services/bookkeeping"
                 element={<BookkeepingService />}
               />
               <Route path="/industries" element={<Industries />} />

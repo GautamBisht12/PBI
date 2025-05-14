@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { MoveUpRight, User } from "lucide-react";
+import { MoveUpRight, User, ChevronDown } from "lucide-react";
 import { GoArrowUpRight } from "react-icons/go";
 import {
   SignInButton,
@@ -14,18 +14,31 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Services", href: "/services" },
+  {
+    name: "Services",
+    href: "/services",
+    submenu: [
+      { name: "Bookkeeping", href: "/services/bookkeeping" },
+      { name: "Accounting", href: "/services/accounting" },
+    ],
+  },
   { name: "Pricing", href: "/pricing" },
 ];
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
   const { isSignedIn } = useAuth();
   const location = useLocation();
 
   // Check if we're on the home page
   const isHomePage = location.pathname === "/";
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   // Change navbar style on scroll
   useEffect(() => {
@@ -93,6 +106,12 @@ function Navbar() {
     }
   };
 
+  // Toggle submenu for mobile view
+  const toggleSubmenu = (e, index) => {
+    e.stopPropagation();
+    setActiveSubmenu(activeSubmenu === index ? null : index);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${getNavbarStyle()}`}
@@ -120,16 +139,46 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <div className={`hidden md:flex justify-between`}>
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`p-10 flex gap-2 text-base font-medium transition-colors hover:text-[#B69D62] ${getTextColor(
-                location.pathname === item.href
-              )}`}
-            >
-              {item.name} <GoArrowUpRight size={22} />
-            </Link>
+          {navigation.map((item, index) => (
+            <div key={item.name} className="relative group">
+              {item.submenu ? (
+                <>
+                  <Link
+                    to={item.href}
+                    className={`p-10 flex gap-2 items-center text-base font-medium transition-colors hover:text-[#B69D62] ${getTextColor(
+                      location.pathname === item.href ||
+                        location.pathname.startsWith(item.href + "/")
+                    )}`}
+                  >
+                    {item.name}
+                    <ChevronDown
+                      size={16}
+                      className="transition-transform group-hover:rotate-180"
+                    />
+                  </Link>
+                  <div className="absolute top-full left-0 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible transition-all duration-200 ease-in-out bg-white shadow-lg rounded-md py-2 min-w-[200px] z-50">
+                    {item.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.href}
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#B69D62]"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`p-10 flex gap-2 text-base font-medium transition-colors hover:text-[#B69D62] ${getTextColor(
+                    location.pathname === item.href
+                  )}`}
+                >
+                  {item.name} <GoArrowUpRight size={22} />
+                </Link>
+              )}
+            </div>
           ))}
         </div>
 
@@ -215,20 +264,64 @@ function Navbar() {
           {/* Navigation Links */}
           <div className="flex -mt-1 flex-col items-center justify-center flex-grow px-8 bg-black">
             <div className="w-full max-w-md space-y-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`flex items-center justify-between py-4 text-xl font-medium border-b border-white/10 ${
-                    location.pathname === item.href
-                      ? "text-[#B69D62]"
-                      : "text-white"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span>{item.name}</span>
-                  <GoArrowUpRight size={24} />
-                </Link>
+              {navigation.map((item, index) => (
+                <div key={item.name}>
+                  {item.submenu ? (
+                    <>
+                      <div
+                        className={`flex items-center justify-between py-4 text-xl font-medium border-b border-white/10 ${
+                          location.pathname === item.href ||
+                          location.pathname.startsWith(item.href + "/")
+                            ? "text-[#B69D62]"
+                            : "text-white"
+                        } cursor-pointer`}
+                        onClick={(e) => toggleSubmenu(e, index)}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown
+                          size={20}
+                          className={`transition-transform ${
+                            activeSubmenu === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </div>
+                      <div
+                        className={`pl-4 mt-2 mb-4 space-y-2 overflow-hidden transition-all duration-300 ease-in-out ${
+                          activeSubmenu === index
+                            ? "max-h-40 opacity-100"
+                            : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="flex items-center py-2 text-lg text-white hover:text-[#B69D62]"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setActiveSubmenu(null);
+                            }}
+                          >
+                            <span>- {subItem.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`flex items-center justify-between py-4 text-xl font-medium border-b border-white/10 ${
+                        location.pathname === item.href
+                          ? "text-[#B69D62]"
+                          : "text-white"
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <span>{item.name}</span>
+                      <GoArrowUpRight size={24} />
+                    </Link>
+                  )}
+                </div>
               ))}
 
               {/* Auth Section */}

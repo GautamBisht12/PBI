@@ -10,7 +10,7 @@ const CTA = () => {
         needs and budget.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <button className="px-8 py-3 bg-[#B69D62] text-white font-medium rounded-lg hover:bg-[#a08a55] transition-colors">
+        <button className="px-8 py-3 bg-[#B69D62] text-white font-medium rounded-lg hover:bg-transparent hover:border-[#B69D62] border border-black  transition-colors">
           Book an appointment
         </button>
       </div>

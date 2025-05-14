@@ -18,6 +18,7 @@ import {
 import HeroSection from "../components/ui/HeroSection";
 import FAQ from "../components/ui/FAQ";
 import Testimonials from "../components/ui/Testimonials";
+import { Link } from "react-router-dom";
 
 export default function BookkeepingService() {
   const [activeTab, setActiveTab] = useState("core");
@@ -139,9 +140,9 @@ export default function BookkeepingService() {
           <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-white">
             <button
               onClick={() => setActiveTab("core")}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-colors duration-200 ${
+              className={`px-6 py-3 rounded-md text-base font-medium transition-colors duration-200 ${
                 activeTab === "core"
-                  ? "bg-[#B69F63] text-[#192A2D]"
+                  ? "bg-[#192D2F] text-[#cfb675]"
                   : "text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -149,9 +150,9 @@ export default function BookkeepingService() {
             </button>
             <button
               onClick={() => setActiveTab("additional")}
-              className={`px-6 py-3 rounded-md text-sm font-medium transition-colors duration-200 ${
+              className={`px-6 py-3 rounded-md text-base font-medium transition-colors duration-200 ${
                 activeTab === "additional"
-                  ? "bg-[#B69F63] text-[#192A2D]"
+                  ? "bg-[#192D2F] text-[#cfb675]"
                   : "text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -195,12 +196,18 @@ export default function BookkeepingService() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-style font-medium py-3 px-8 rounded-lg  transition-colors duration-300">
+              <Link
+                to="/contact"
+                className="btn-style font-medium py-3 px-8 rounded-lg  transition-colors duration-300"
+              >
                 Get Started
-              </button>
-              <button className="border border-blue-600 text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+              </Link>
+              <Link
+                to="/pricing"
+                className="border border-blue-600 text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-300"
+              >
                 View Pricing
-              </button>
+              </Link>
             </div>
           </div>
         </div>

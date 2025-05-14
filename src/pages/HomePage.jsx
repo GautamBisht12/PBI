@@ -62,136 +62,128 @@ function HomePage() {
       {/* Services overview */}
       <ServicesOverview />
       {/* Features section */}
-      <section className="py-20 bg-gradient-to-b from-black to-[#1E2D2F]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="py-20 bg-fixed bg-top bg-no-repeat bg-cover relative"
+        style={{
+          backgroundImage: "url('https://wallpaperaccess.com/full/643390.jpg')",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-[#B79E63] sm:text-4xl relative inline-block">
-              Why Choose <span className="text-[#fad88a]">Upsell</span>{" "}
-              <span className="text-[#fad88a]">FinLogix</span> ?
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-2"></span>
+            <h2 className="heading-tagline  text-3xl font-extrabold text-[#B79E63] sm:text-5xl relative inline-block">
+              Explore our Services
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-0"></span>
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-white">
-              Everything you need to understand and utilize your business data
-              effectively.
+              Discover how our services can help you achieve your goals.
             </p>
           </div>
 
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {/* Feature 1 - Transaction Recording */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-[#B69F63] to-[#d4c08a] h-2"></div>
-              <div className="p-6">
-                <div className="w-14 h-14 bg-[#f5f1e6] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#e9e1cc] transition-colors duration-300">
-                  <ChartBarIcon className="h-8 w-8 text-[#B69F63]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#B69F63] transition-colors duration-300">
-                  Transaction Recording
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-[#B69F63] mr-2">•</span>
-                    <span>
-                      Daily recording of sales, expenses, receipts, and payments
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#B69F63] mr-2">•</span>
-                    <span>
-                      Categorizing expenses properly in accounting software
-                    </span>
-                  </li>
-                </ul>
+            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <ChartBarIcon className="h-8 w-8 text-[#B69F63]" />
               </div>
+              <h3 className="heading-tagline  text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
+                Transaction Recording
+              </h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>
+                    Daily recording of sales, expenses, receipts, and payments
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>
+                    Categorizing expenses properly in accounting software
+                  </span>
+                </li>
+              </ul>
             </div>
 
             {/* Feature 2 - Bank & Credit Card Reconciliation */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-[#192A2D] to-[#2d4145] h-2"></div>
-              <div className="p-6">
-                <div className="w-14 h-14 bg-[#e6eaeb] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#d8dfe0] transition-colors duration-300">
-                  <LockClosedIcon className="h-8 w-8 text-[#192A2D]" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#192A2D] transition-colors duration-300">
-                  Bank & Credit Card Reconciliation
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-[#192A2D] mr-2">•</span>
-                    <span>
-                      Identifying errors, duplicates, or missing transactions
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#192A2D] mr-2">•</span>
-                    <span>
-                      Matching bank/credit card statements to internal records
-                    </span>
-                  </li>
-                </ul>
+            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <LockClosedIcon className="h-8 w-8 text-[#B69F63]" />
               </div>
+              <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
+                Bank & Credit Card Reconciliation
+              </h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>
+                    Identifying errors, duplicates, or missing transactions
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>
+                    Matching bank/credit card statements to internal records
+                  </span>
+                </li>
+              </ul>
             </div>
 
             {/* Feature 3 - Accounts Payable (AP) Management */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-black to-[#333333] h-2"></div>
-              <div className="p-6">
-                <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center mb-5 group-hover:bg-gray-200 transition-colors duration-300">
-                  <PresentationChartLineIcon className="h-8 w-8 text-black" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-black transition-colors duration-300">
-                  Accounts Payable (AP) Management
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-black mr-2">•</span>
-                    <span>Managing due dates and scheduling payments</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-black mr-2">•</span>
-                    <span>
-                      Tracking what the business owes vendors/suppliers
-                    </span>
-                  </li>
-                </ul>
+            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <PresentationChartLineIcon className="h-8 w-8 text-[#B69F63]" />
               </div>
+              <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
+                Accounts Payable (AP) Management
+              </h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>Managing due dates and scheduling payments</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>Tracking what the business owes vendors/suppliers</span>
+                </li>
+              </ul>
             </div>
 
             {/* Feature 4 - Accounts Receivable (AR) Management */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="bg-gradient-to-r from-[#192A2D] to-[#B69F63] h-2"></div>
-              <div className="p-6">
-                <div className="w-14 h-14 bg-[#f5f1e6] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#e9e1cc] transition-colors duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="h-8 w-8 text-[#B69F63]"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#B69F63] transition-colors duration-300">
-                  Accounts Receivable (AR) Management
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-[#B69F63] mr-2">•</span>
-                    <span>
-                      Invoicing customers and following up on overdue payments
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#B69F63] mr-2">•</span>
-                    <span>Tracking money owed to the business by clients</span>
-                  </li>
-                </ul>
+            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="h-8 w-8 text-[#B69F63]"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+                  />
+                </svg>
               </div>
+              <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
+                Accounts Receivable (AR) Management
+              </h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>
+                    Invoicing customers and following up on overdue payments
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#B69F63] mr-2">•</span>
+                  <span>Tracking money owed to the business by clients</span>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -219,41 +211,43 @@ function HomePage() {
       </section>
 
       {/* CTA section */}
-      <section className="bg-black py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              Ready to transform your data experience?
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-primary-100">
-              Join thousands of businesses that are making smarter decisions
-              with PowerVision.
-            </p>
-            <div className="mt-8">
-              {isSignedIn ? (
-                <Link
-                  to="/dashboard"
-                  className="btn bg-white text-primary-700 hover:bg-gray-50 text-base px-8 py-3"
-                >
-                  Go to Dashboard
-                </Link>
-              ) : (
-                <SignUpButton mode="modal">
-                  <button className="btn bg-[#B69F63] text-white hover:bg-white hover:text-black text-base px-8 py-3">
-                    Book an Appointment
-                  </button>
-                </SignUpButton>
-              )}
-            </div>
-          </div>
+      <section className="py-20 bg-white ">
+        {/* Content container */}
+        <div className="max-w-3xl  mx-auto px-4 sm:px-6 lg:px-8  z-10 text-center flex flex-col items-center gap-5">
+          <h2 className="heading-tagline text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Ready to transform your data experience?
+          </h2>
+          <p className="mt2 max-w-2xl mx-auto text-xl text-gray-800">
+            Join thousands of businesses that are making smarter decisions with
+            PowerVision.
+          </p>
+          <Link
+            to="/contact"
+            className=" inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md hover:border-[#B69D62]  btn-style-2 transition-colors duration-300 shadow-lg"
+          >
+            Book an Appointmemt
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Link>
         </div>
       </section>
+
       <PricingSection />
       {/* Testimonials */}
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="heading-tagline text-3xl font-extrabold text-gray-900 sm:text-4xl">
               Trusted by Industry Leaders
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
