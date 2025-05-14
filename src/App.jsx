@@ -27,13 +27,13 @@ import Services from "./pages/Services.jsx";
 function App() {
   return (
     <>
-      <ClerkLoading>
+{/*       <ClerkLoading>
         <div className="flex justify-center items-center min-h-screen">
           <LoadingSpinner size="large" />
         </div>
-      </ClerkLoading>
+      </ClerkLoading> */}
 
-      <ClerkLoaded>
+{/*       <ClerkLoaded> */}
         <Routes>
           {/* Public routes with home page layout */}
           <Route element={<RootLayout />}>
@@ -77,7 +77,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
-      </ClerkLoaded>
+{/*       </ClerkLoaded> */}
     </>
   );
 }
