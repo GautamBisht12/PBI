@@ -219,7 +219,7 @@ function Navbar() {
           ) : (
             <>
               <Link
-                className="p-2 text-base bg-[#B79E63] rounded-md hover:bg-[#1E2D2F] hover:text-white transition duration-300  font-semibold"
+                className="p-2 text-base bg-[#B79E63] rounded-sm hover:bg-[#1E2D2F] hover:text-white transition duration-300  font-semibold"
                 to="/contact"
               >
                 Get Free Consultation
