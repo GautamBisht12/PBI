@@ -63,19 +63,6 @@ function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  // Determine navbar background style based on page and scroll position
-  const getNavbarStyle = () => {
-    if (!isHomePage) {
-      // For all pages except home, always use white background
-      return "bg-white shadow-md";
-    } else {
-      // For home page, use the original conditional styling
-      return isScrolled
-        ? "bg-black shadow-md"
-        : "bg-transparent border-white border-t-2 border-b-[1px] backdrop-blur-sm border-b-white/30";
-    }
-  };
-
   // Determine text color based on page and scroll position
   const getTextColor = (isActive) => {
     if (!isHomePage) {
@@ -93,6 +80,19 @@ function Navbar() {
     }
   };
 
+  // Determine navbar background style based on page and scroll position
+  const getNavbarStyle = () => {
+    if (!isHomePage) {
+      // For all pages except home, always use white background
+      return "bg-white shadow-md";
+    } else {
+      // For home page, use the original conditional styling
+      return isScrolled
+        ? "bg-black shadow-md"
+        : "bg-transparent border-white border-t-2 border-b-[1px] backdrop-blur-sm border-b-white/30";
+    }
+  };
+
   // Determine border style based on page and scroll position
   const getBorderStyle = () => {
     if (!isHomePage) {
@@ -101,7 +101,7 @@ function Navbar() {
     } else {
       // For home page, use the original conditional styling
       return isScrolled
-        ? ""
+        ? "border-white border-r-[1px]"
         : "border-white/30 border-r-[1px] backdrop-blur-sm";
     }
   };
@@ -116,16 +116,20 @@ function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${getNavbarStyle()}`}
     >
-      <nav className="container-custom flex items-center justify-between">
-        {/* Logo */}
+      <nav className=" flex justify-between">
+        {/* Logo - Set a fixed width */}
         <Link
           to="/"
-          className={`flex items-center space-x-2 p-10 ${
-            isScrolled && isHomePage ? "" : getBorderStyle()
+          className={`flex items-center justify-end space-x-2 p-10 w-[350px]   ${
+            isScrolled && isHomePage
+              ? "border-gray-500 border-r-[1px]"
+              : !isHomePage
+              ? "border-gray-200 border-r-[1px]"
+              : "border-white/30 border-r-[1px] backdrop-blur-sm"
           }`}
         >
           <span
-            className={`text-2xl font-bold ${
+            className={`flex gap-2 text-2xl font-bold ${
               !isHomePage
                 ? "text-[#B69D62]"
                 : isScrolled
@@ -133,12 +137,24 @@ function Navbar() {
                 : "text-white"
             }`}
           >
-            Company Name
+            <img src="./logo2.png" alt="logo" className="w-20 h-20" />
+            <h3>
+              Upsell <br />
+              Finlogix{" "}
+            </h3>
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className={`hidden md:flex justify-between`}>
+        {/* Desktop Navigation - Give it a flex-grow to take available space */}
+        <div
+          className={`hidden  md:flex justify-center items-center flex-grow ${
+            isScrolled && isHomePage
+              ? "border-gray-700 border-r-[1px]"
+              : !isHomePage
+              ? "border-gray-200 border-r-[1px]"
+              : "border-white/30 border-r-[1px] backdrop-blur-sm"
+          }`}
+        >
           {navigation.map((item, index) => (
             <div key={item.name} className="relative group">
               {item.submenu ? (
@@ -182,15 +198,9 @@ function Navbar() {
           ))}
         </div>
 
-        {/* Auth buttons or dashboard link */}
+        {/* Auth buttons or dashboard link - Set a fixed width */}
         <div
-          className={`hidden md:flex r gap-x-3 p-10 ${
-            isScrolled && isHomePage
-              ? ""
-              : !isHomePage
-              ? "border-gray-200 border-l-[1px]"
-              : "border-white/30 border-l-[1px] backdrop-blur-sm"
-          }`}
+          className={`hidden  gap-5 md:gap-10 md:flex items-center  space-x-2 p-10 justify-center w-[400px]`}
         >
           {isSignedIn ? (
             <>
@@ -208,16 +218,23 @@ function Navbar() {
             </>
           ) : (
             <>
+              <Link
+                className="p-3 bg-[#B79E63] rounded-md hover:bg-[#1E2D2F] hover:text-white transition duration-300  font-semibold"
+                to="/contact"
+              >
+                Get Free Consultation
+              </Link>
               <SignInButton mode="modal">
                 <User
-                  className={`cursor-pointer ${
+                  size={30}
+                  className={`cursor-pointer hover:text-[#B79E63] ${
                     !isHomePage ? "text-gray-800" : "text-white"
                   }`}
                 />
               </SignInButton>
               {/* <SignUpButton mode="modal">
-                <button className="btn-primary">Sign up</button>
-              </SignUpButton> */}
+          <button className="btn-primary">Sign up</button>
+        </SignUpButton> */}
             </>
           )}
         </div>
