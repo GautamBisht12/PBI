@@ -218,8 +218,13 @@ function Navbar() {
             </>
           ) : (
             <>
-              <Link
-                className="p-2 text-base bg-[#B79E63] rounded-sm hover:bg-[#1E2D2F] hover:text-white transition duration-300  font-semibold"
+               <Link
+                className={`p-3 bg-[#B79E63] rounded-md 
+                  ${
+                    isHomePage && isScrolled
+                      ? "hover:bg-white hover:text-gray-800"
+                      : ""
+                  } hover:text-white hover:bg-[#1E2D2F] transition duration-300  font-semibold`}
                 to="/contact"
               >
                 Get Free Consultation
