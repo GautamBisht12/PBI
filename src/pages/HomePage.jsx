@@ -9,6 +9,7 @@ import ServicesOverview from "../components/ui/ServicesOverview";
 import PricingSection from "../components/ui/PricingSection";
 import { useEffect, useRef, useState } from "react";
 import HeroSlider from "../components/ui/HeroSlidder";
+import { ArrowRightIcon, Book, BookOpen, DollarSign } from "lucide-react";
 
 function HomePage() {
   const { isSignedIn } = useAuth();
@@ -71,119 +72,109 @@ function HomePage() {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <h2 className="heading-tagline  text-3xl font-extrabold text-[#B79E63] sm:text-5xl relative inline-block">
               Explore our Services
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-0"></span>
+              {/* <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-0"></span> */}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-white">
               Discover how our services can help you achieve your goals.
             </p>
           </div>
 
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {/* Feature 1 - Transaction Recording */}
-            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <ChartBarIcon className="h-8 w-8 text-[#B69F63]" />
+          <div className="flex flex-wrap gap-6 justify-center items-stretch">
+            {/* Feature 1 */}
+            <div className="flex-1 basis-full md:basis-[48%] lg:basis-[31%] max-w-full md:max-w-[48%] lg:max-w-[31%] bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300 flex flex-col justify-between min-h-[420px]">
+              <div>
+                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <DollarSign className="h-8 w-8 text-[#b69f63]" size={24} />
+                </div>
+                <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
+                  Corporate Finance Management
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-[#B69F63] mr-2">•</span>
+                    <span>Financial planning and analysis</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#B69F63] mr-2">•</span>
+                    <span>Budgeting and Forecasting</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="heading-tagline  text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
-                Transaction Recording
-              </h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>
-                    Daily recording of sales, expenses, receipts, and payments
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>
-                    Categorizing expenses properly in accounting software
-                  </span>
-                </li>
-              </ul>
+              <div className="flex items-center text-[#B69D62] font-medium mt-4 group cursor-pointer hover:text-[#d4b870]">
+                <Link to="/services" className="transition-colors duration-300">
+                  Explore more
+                </Link>
+                <ArrowRightIcon className="h-4 w-4 ml-2 transition-transform duration-300 transform translate-x-0 group-hover:translate-x-1" />
+              </div>
             </div>
 
-            {/* Feature 2 - Bank & Credit Card Reconciliation */}
-            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <LockClosedIcon className="h-8 w-8 text-[#B69F63]" />
+            {/* Feature 2 */}
+            <div className="flex-1 basis-full md:basis-[48%] lg:basis-[31%] max-w-full md:max-w-[48%] lg:max-w-[31%] relative group rounded-2xl overflow-hidden p-[2px] min-h-[420px] flex flex-col">
+              {/* Running Border Effect */}
+              <div className="absolute inset-0 rounded-2xl animate-border-flow z-0"></div>
+
+              {/* Inner Card */}
+              <div className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-2xl p-8 z-10 flex flex-col justify-between h-full shadow-lg transition-transform duration-300 group-hover:scale-[1.02]">
+                <div>
+                  <div className="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto shadow-md">
+                    <Book className="h-10 w-10 text-[#b69f63]" />
+                  </div>
+                  <h3 className="text-2xl font-extrabold text-center mb-4 text-white group-hover:text-[#FFD580] drop-shadow-sm tracking-wide">
+                    Bookkeeping
+                  </h3>
+                  <ul className="space-y-2 text-gray-300 text-[15px] leading-relaxed">
+                    <li className="flex items-start">
+                      <span className="text-[#FFD580] mr-2">•</span>
+                      <span>Monthly Financial Statements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#FFD580] mr-2">•</span>
+                      <span>Payroll Processing</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex items-center justify-center text-[#FFD580] font-semibold mt-6 group cursor-pointer hover:text-[#f9e4b7] transition-colors duration-300">
+                  <Link
+                    to="/services"
+                    className="transition-colors duration-300"
+                  >
+                    Explore more
+                  </Link>
+                  <ArrowRightIcon className="h-4 w-4 ml-2 transition-transform duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                </div>
               </div>
-              <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
-                Bank & Credit Card Reconciliation
-              </h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>
-                    Identifying errors, duplicates, or missing transactions
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>
-                    Matching bank/credit card statements to internal records
-                  </span>
-                </li>
-              </ul>
             </div>
 
-            {/* Feature 3 - Accounts Payable (AP) Management */}
-            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <PresentationChartLineIcon className="h-8 w-8 text-[#B69F63]" />
+            {/* Feature 3 */}
+            <div className="flex-1 basis-full md:basis-[48%] lg:basis-[31%] max-w-full md:max-w-[48%] lg:max-w-[31%] bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300 flex flex-col justify-between min-h-[420px]">
+              <div>
+                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <BookOpen className="h-8 w-8 text-[#B69F63]" size={24} />
+                </div>
+                <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
+                  Accounting
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-[#B69F63] mr-2">•</span>
+                    <span>Full-Service Bookkeeping</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#B69F63] mr-2">•</span>
+                    <span>Accounts Receivable (AR) Management</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
-                Accounts Payable (AP) Management
-              </h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>Managing due dates and scheduling payments</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>Tracking what the business owes vendors/suppliers</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Feature 4 - Accounts Receivable (AR) Management */}
-            <div className="group bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="h-8 w-8 text-[#B69F63]"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
-                  />
-                </svg>
+              <div className="flex items-center text-[#B69D62] font-medium mt-4 group cursor-pointer hover:text-[#d4b870]">
+                <Link to="/services" className="transition-colors duration-300">
+                  Explore more
+                </Link>
+                <ArrowRightIcon className="h-4 w-4 ml-2 transition-transform duration-300 transform translate-x-0 group-hover:translate-x-1" />
               </div>
-              <h3 className="heading-tagline text-xl font-bold text-center mb-4 text-white group-hover:text-[#B69F63]">
-                Accounts Receivable (AR) Management
-              </h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>
-                    Invoicing customers and following up on overdue payments
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#B69F63] mr-2">•</span>
-                  <span>Tracking money owed to the business by clients</span>
-                </li>
-              </ul>
             </div>
           </div>
 
@@ -209,7 +200,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA section */}
       <section className="py-20 bg-white ">
         {/* Content container */}
@@ -241,7 +231,6 @@ function HomePage() {
           </Link>
         </div>
       </section>
-
       <PricingSection />
       {/* Testimonials */}
       <section className="py-16 sm:py-24 bg-gray-50">
