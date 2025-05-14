@@ -4,17 +4,17 @@ import { useState } from "react";
 
 const services = [
   {
-    title: "Bookkeeping & Accounting",
+    title: "Bookkeeping",
     description:
       "Learn how bookkeeping and accounting firms maintain financial clarity.",
-    link: "/services/accounting",
+    link: "/services/bookkeeping",
     icon: "📊",
   },
 
   {
-    title: "Bookkeeping Services",
-    description: "Discover core bookkeeping tasks and additional services.",
-    link: "/services/bookkeeping",
+    title: "Accounting",
+    description: "Discover core accounting tasks and additional services.",
+    link: "/services/accounting",
     icon: "📈",
   },
 ];
