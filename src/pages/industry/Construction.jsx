@@ -12,6 +12,7 @@ const Construction = () => {
   return (
     <>
       <HeroSection heroDetails={heroData} />
+      <h1>Hello</h1>
     </>
   );
 };
