@@ -16,8 +16,9 @@ const slides = [
   },
   {
     image: "https://wallpaperaccess.com/full/153056.jpg",
-    headline: "Expert Legal Guidance",
-    subtext: "Committed to protecting your rights",
+    headline: "Your Partner in Strategic Financial Growth.",
+    subtext:
+      "We turn financial complexity into strategic growth you can trust.",
   },
 ];
 
