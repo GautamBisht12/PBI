@@ -110,6 +110,19 @@ function Navbar() {
     }
   };
 
+  // Determine navbar background style based on page and scroll position
+  const getNavbarStyle = () => {
+    if (!isHomePage) {
+      // For all pages except home, always use white background
+      return "bg-white shadow-md";
+    } else {
+      // For home page, use the original conditional styling
+      return isScrolled
+        ? "bg-black shadow-md"
+        : "bg-transparent border-white border-t-2 border-b-[1px] backdrop-blur-sm border-b-white/30";
+    }
+  };
+
   // Determine border style based on page and scroll position
   const getBorderStyle = () => {
     if (!isHomePage) {
@@ -118,6 +131,7 @@ function Navbar() {
     } else {
       // For home page, use the original conditional styling
       return isScrolled
+        ? "border-white border-r-[1px]"
         ? "border-white border-r-[1px]"
         : "border-white/30 border-r-[1px] backdrop-blur-sm";
     }
@@ -135,8 +149,16 @@ function Navbar() {
     >
       <nav className=" flex justify-between">
         {/* Logo - Set a fixed width */}
+      <nav className=" flex justify-between">
+        {/* Logo - Set a fixed width */}
         <Link
           to="/"
+          className={`flex items-center justify-end space-x-2 p-10 w-[350px]   ${
+            isScrolled && isHomePage
+              ? "border-gray-500 border-r-[1px]"
+              : !isHomePage
+              ? "border-gray-200 border-r-[1px]"
+              : "border-white/30 border-r-[1px] backdrop-blur-sm"
           className={`flex items-center justify-end space-x-2 p-10 w-[350px]   ${
             isScrolled && isHomePage
               ? "border-gray-500 border-r-[1px]"
@@ -146,6 +168,7 @@ function Navbar() {
           }`}
         >
           <span
+            className={`flex gap-2 text-2xl font-bold ${
             className={`flex gap-2 text-2xl font-bold ${
               !isHomePage
                 ? "text-[#B69D62]"
@@ -166,6 +189,16 @@ function Navbar() {
           </span>
         </Link>
 
+        {/* Desktop Navigation - Give it a flex-grow to take available space */}
+        <div
+          className={`hidden  md:flex justify-center items-center flex-grow ${
+            isScrolled && isHomePage
+              ? "border-gray-700 border-r-[1px]"
+              : !isHomePage
+              ? "border-gray-200 border-r-[1px]"
+              : "border-white/30 border-r-[1px] backdrop-blur-sm"
+          }`}
+        >
         {/* Desktop Navigation - Give it a flex-grow to take available space */}
         <div
           className={`hidden  md:flex justify-center items-center flex-grow ${
@@ -220,7 +253,9 @@ function Navbar() {
         </div>
 
         {/* Auth buttons or dashboard link - Set a fixed width */}
+        {/* Auth buttons or dashboard link - Set a fixed width */}
         <div
+          className={`hidden  gap-5 md:gap-10 md:flex items-center  space-x-2 p-10 justify-center w-[400px]`}
           className={`hidden  gap-5 md:gap-10 md:flex items-center  space-x-2 p-10 justify-center w-[400px]`}
         >
           {isSignedIn ? (
@@ -254,11 +289,15 @@ function Navbar() {
                 <User
                   size={30}
                   className={`cursor-pointer hover:text-[#B79E63] ${
+                  size={30}
+                  className={`cursor-pointer hover:text-[#B79E63] ${
                     !isHomePage ? "text-gray-800" : "text-white"
                   }`}
                 />
               </SignInButton>
               {/* <SignUpButton mode="modal">
+          <button className="btn-primary">Sign up</button>
+        </SignUpButton> */}
           <button className="btn-primary">Sign up</button>
         </SignUpButton> */}
             </>
