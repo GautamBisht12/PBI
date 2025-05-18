@@ -4,16 +4,17 @@ import { useState } from "react";
 
 const services = [
   {
-    title: "Bookkeeping",
+    title: " E-commerce Bookkeeping",
     description:
-      "Learn how bookkeeping and accounting firms maintain financial clarity.",
+      "Discover how modern bookkeeping tailored for e-commerce ensures financial clarity and compliance ",
     link: "/services/bookkeeping",
     icon: "📊",
   },
 
   {
-    title: "Accounting",
-    description: "Discover core accounting tasks and additional services.",
+    title: "Diverse Industries Bookkeeping ",
+    description:
+      " Bookkeeping solutions for diverse industries—delivering clarity, compliance, and control. ",
     link: "/services/accounting",
     icon: "📈",
   },
@@ -23,7 +24,7 @@ const ServicesOverview = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="bg-[#1E2D2F] from-white to-gray-50 py-8 md:py-16">
+    <div className="bg-[#1E2D2F] from-white to-gray-50 py-8 md:py-16 md:mt-28 ">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10">
           {/* Image div - responsive */}
@@ -38,12 +39,12 @@ const ServicesOverview = () => {
           <div className="w-full lg:w-7/12 px-10">
             <div className="mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
-                Our Focus Areas
+                Industries We Serve
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#B69F63] to-[#192A2D] transform -translate-y-0"></span>
               </h2>
               <p className="text-[#B79E63] max-w-2xl">
-                Comprehensive financial solutions tailored to your business
-                needs
+                We specialize in providing bookkeeping services for a wide range
+                of industries, including:
               </p>
             </div>
 
@@ -73,7 +74,7 @@ const ServicesOverview = () => {
                         {service.title}
                       </h3>
 
-                      <p className="text-white mb-4 flex-grow">
+                      <p className="text-white mb-4 flex-grow text-xl">
                         {service.description}
                       </p>
 

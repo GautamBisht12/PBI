@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    image:
-      "https://www.bizmanualz.com/wp-content/uploads/2024/02/what-does-a-chief-financial-officer-cfo-dosmkg.jpg",
+    image: "https://wallpaperaccess.com/full/3397663.jpg",
     headline: "Reliable Bookkeeping and Accounting Firm",
     subtext:
       "Streamlined Solutions for Accurate, Compliant, and Scalable Growth",
@@ -15,7 +14,8 @@ const slides = [
     subtext: "Empowering Businesses Through Smart Financial Decisions",
   },
   {
-    image: "https://wallpaperaccess.com/full/153056.jpg",
+    image:
+      "https://wallpapers.com/images/hd/businessman-at-the-rooftop-gksmnqf9109qiyw9.jpg",
     headline: "Your Partner in Strategic Financial Growth.",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",

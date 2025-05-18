@@ -20,12 +20,12 @@ import FAQ from "../components/ui/FAQ";
 import Testimonials from "../components/ui/Testimonials";
 import { Link } from "react-router-dom";
 
-export default function BookkeepingService() {
+export default function FinanceManagement() {
   const [activeTab, setActiveTab] = useState("core");
   const heroDetails = {
-    heroTitle: "E-commerce Bookkeeping",
+    heroTitle: "Finance Management Services We Can Offer",
     heroSubtitle:
-      "Discover how modern bookkeeping tailored for e-commerce ensures financial clarity and compliance.",
+      "We provide comprehensive finance management solutions tailored to your business needs, ensuring your financial records are accurate, up-to-date, and compliant.",
     heroImage: "https://wallpaperaccess.com/full/153208.jpg",
   };
 

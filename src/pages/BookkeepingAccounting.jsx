@@ -21,9 +21,9 @@ import HeroSection from "../components/ui/HeroSection";
 export default function BookkeepingAccounting() {
   const [expandedId, setExpandedId] = useState(null);
   const [heroDetails, setHeroDetails] = useState({
-    heroTitle: "Expert Bookkeeping Services",
+    heroTitle: "Diverse Industries Bookkeeping  ",
     heroSubtitle:
-      " Accurate, timely, and professional financial record-keeping that gives you confidence in your business decisions.",
+      "Bookkeeping solutions for diverse industries—delivering clarity, compliance, and control.",
     heroImage: "https://wallpaperaccess.com/full/153208.jpg",
   });
 

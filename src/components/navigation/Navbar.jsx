@@ -9,6 +9,7 @@ import {
   useAuth,
 } from "@clerk/clerk-react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { sub } from "framer-motion/client";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -20,8 +21,24 @@ const navigation = [
     submenu: [
       { name: "Bookkeeping", href: "/services/bookkeeping" },
       { name: "Accounting", href: "/services/accounting" },
+      { name: "Corporate Finance Management ", href: "/services/finance" },
     ],
   },
+  {
+    name: "Industry",
+    href: "/industry",
+    submenu: [
+      { name: "Ecommerce", href: "/industry/ecommerce " },
+      { name: "Healthcare & Medical", href: "/industry/healthcare" },
+      { name: "Hospitality", href: "/industry/hospitality" },
+      {
+        name: "Manufacturing & Wholesale Service",
+        href: "/industry/manufacturing",
+      },
+      { name: "Construction & Contracting", href: "/industry/construction" },
+    ],
+  },
+
   { name: "Pricing", href: "/pricing" },
 ];
 
@@ -144,7 +161,7 @@ function Navbar() {
             />
             <h3>
               Upsell <br />
-              Finlogix{" "}
+              FinLogix{" "}
             </h3>
           </span>
         </Link>
@@ -181,7 +198,7 @@ function Navbar() {
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#B69D62]"
+                        className="block px-4 py-2 text-gray-800 hover:bg-[#B69D62] hover:text-black"
                       >
                         {subItem.name}
                       </Link>
