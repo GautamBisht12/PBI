@@ -244,8 +244,8 @@ function Navbar() {
                   ${
                     isHomePage && isScrolled
                       ? "hover:bg-white hover:text-gray-800"
-                      : ""
-                  } hover:text-white hover:bg-[#1E2D2F] transition duration-300  font-semibold`}
+                      : "hover:text-white"
+                  }  hover:bg-[#1E2D2F] transition duration-300  font-semibold`}
                 to="/contact"
               >
                 Get Free Consultation

@@ -21,9 +21,22 @@ function Footer() {
           <div className="col-span-1 md:col-span-4">
             <Link
               to="/"
-              className="text-2xl font-bold text-white hover:text-primary-300 transition-colors duration-300"
+              className="flex items-center justify-start space-x-2  w-[350px]"
             >
-              <span className="text-primary-300">Upsell</span> FinLogix
+              <span
+                className={`flex gap-2 text-2xl font-bold text-white
+                }`}
+              >
+                <img
+                  src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
+                  alt="logo"
+                  className="w-20 h-20"
+                />
+                <h3>
+                  Upsell <br />
+                  FinLogix{" "}
+                </h3>
+              </span>
             </Link>
             <p className="mt-4 text-gray-400 max-w-md leading-relaxed">
               Empowering businesses with advanced financial analytics.

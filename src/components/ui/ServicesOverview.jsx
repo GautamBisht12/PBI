@@ -52,15 +52,15 @@ const ServicesOverview = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="group relative hover:bg-[#1E2D2F] hover:shadow-lg transition-all duration-300"
+                  className="group  relative hover:bg-[#1E2D2F] hover:shadow-lg transition-all duration-300"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Link to={service.link}>
-                    <div className="p-4 rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1 h-full flex flex-col relative overflow-hidden">
+                    <div className="p-4 bg-white rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1 h-full flex flex-col relative overflow-hidden">
                       {/* Gradient accent on hover */}
                       <div
-                        className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white to-[#B69F63] transition-all duration-300 ${
+                        className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-black to-[#B69F63] transition-all duration-300 ${
                           hoveredIndex === index ? "opacity-100" : "opacity-0"
                         }`}
                       ></div>
@@ -70,15 +70,15 @@ const ServicesOverview = () => {
                         {service.icon}
                       </div>
 
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#B79E63] transition-colors duration-300">
+                      <h3 className="text-2xl font-extrabold text-black mb-3 group-hover:text-[#B79E63] transition-colors duration-300 ">
                         {service.title}
                       </h3>
 
-                      <p className="text-white mb-4 flex-grow text-xl">
+                      <p className="text-black mb-4 flex-grow text-xl">
                         {service.description}
                       </p>
 
-                      <div className="flex items-center text-[#B69D62] font-medium mt-auto">
+                      <div className="flex items-center text-[#B69D62] font-bold text-lg mt-auto">
                         <span>Learn more</span>
                         <ArrowRightIcon
                           className={`h-4 w-4 ml-2 transition-transform duration-300 ${

@@ -1,4 +1,10 @@
-import { ArrowRightIcon, CheckCircle, BarChart4, FileText } from "lucide-react";
+import {
+  ArrowRightIcon,
+  CheckCircle,
+  BarChart4,
+  FileText,
+  Book,
+} from "lucide-react";
 
 import { Link } from "react-router-dom";
 
@@ -71,6 +77,20 @@ const Card = () => {
                 >
                   <div className="relative pricing-cloud rounded-2xl p-8 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
                     <div>
+                      <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-8 h-8 text-blue-300"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                          />
+                        </svg>
+                      </div>
                       <h3 className="plan-title text-xl font-bold text-gray-800">
                         {d.title}
                       </h3>
@@ -79,7 +99,7 @@ const Card = () => {
                         {d.points.map((point, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start mb-3 justify-start"
+                            className="flex items-start mb-3 justify-start font-bold"
                           >
                             <span className="text-[#B69F63] mr-2">•</span>
                             <span className="text-left">{point}</span>
@@ -105,7 +125,7 @@ const Card = () => {
                     >
                       <path
                         fill="currentColor"
-                        d="M16 2H8C6.897 2 6 2.897 6 4v16c0 1.103.897 2 2 2h8c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 18H8V4h8v16zM9 7h6v2H9V7zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"
+                        d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
                       />
                     </svg>
                   </div>
@@ -117,15 +137,49 @@ const Card = () => {
                 >
                   <div className="relative bg-white rounded-2xl p-8 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
                     <div>
-                      <h3 className="plan-title text-xl text-gray-800">
+                      {d.title === "Accounting" ? (
+                        <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-10 h-10 text-blue-300"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M10.5,2C9.8,2,9.3,2.4,9.1,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7c0,0.6,0.4,1,1,1h7c0.6,0,1-0.4,1-1V11 c0-0.6-0.4-1-1-1h-2V5c0-1.1-0.9-2-2-2h-4.1C11.7,2.4,11.2,2,10.5,2z M10.5,3C10.8,3,11,3.2,11,3.5S10.8,4,10.5,4S10,3.8,10,3.5 S10.2,3,10.5,3z M5.5,5H8v1h5V5h2.5C15.8,5,16,5.2,16,5.5V10h-3c-0.6,0-1,0.4-1,1v8H5.5C5.2,19,5,18.8,5,18.5v-13 C5,5.2,5.2,5,5.5,5z M10.6,8.4h-4v2h4V8.4z M10.6,11.4h-4v2h4V11.4z M10.6,14.5h-4v2h4V14.5z M14,12h5v2h-5V12z M14,15h2v2h-2V15z M17,15h2v2h-2V15z M14,18h2v2h-2V18z M17,18h2v2h-2V18z"
+                            ></path>
+                          </svg>
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-10 h-10 text-blue-300"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67c0-.84.79-1.43 2.1-1.43c1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81c0 1.79 1.49 2.69 3.66 3.21c1.95.46 2.34 1.15 2.34 1.87c0 .53-.39 1.39-2.1 1.39c-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77c-.01-2.2-1.9-2.96-3.66-3.42z"
+                            />
+                          </svg>
+                        </div>
+                      )}
+                      <h3 className="plan-title text-2xl text-gray-800 font-extrabold">
                         {d.title}
                       </h3>
                       {/* <div className="mt-4 flex justify-center">{d.icon}</div> */}
                       <ul className="text-gray-800 mt-4 text-balance">
                         {d.points.map((point, idx) => (
-                          <li key={idx} className="flex items-start mb-2">
+                          <li
+                            key={idx}
+                            className="flex items-start mb-3 justify-start font-semibold text-lg"
+                          >
                             <span className="text-[#B69F63] mr-2">•</span>
-                            <span>{point}</span>
+                            <span className="text-left">{point}</span>
                           </li>
                         ))}
                       </ul>
@@ -150,22 +204,22 @@ const Card = () => {
                         >
                           <path
                             fill="currentColor"
-                            d="M17 3H7a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2m-1 14h-2v1a1 1 0 0 1-2 0v-1H9a1 1 0 0 1 0-2h4v-1H9a1 1 0 0 1 0-2h2v-1a1 1 0 0 1 2 0v1h2a1 1 0 0 1 0 2h-4v1h3a1 1 0 0 1 0 2Z"
-                          />
+                            d="M10.5,2C9.8,2,9.3,2.4,9.1,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7c0,0.6,0.4,1,1,1h7c0.6,0,1-0.4,1-1V11 c0-0.6-0.4-1-1-1h-2V5c0-1.1-0.9-2-2-2h-4.1C11.7,2.4,11.2,2,10.5,2z M10.5,3C10.8,3,11,3.2,11,3.5S10.8,4,10.5,4S10,3.8,10,3.5 S10.2,3,10.5,3z M5.5,5H8v1h5V5h2.5C15.8,5,16,5.2,16,5.5V10h-3c-0.6,0-1,0.4-1,1v8H5.5C5.2,19,5,18.8,5,18.5v-13 C5,5.2,5.2,5,5.5,5z M10.6,8.4h-4v2h4V8.4z M10.6,11.4h-4v2h4V11.4z M10.6,14.5h-4v2h4V14.5z M14,12h5v2h-5V12z M14,15h2v2h-2V15z M17,15h2v2h-2V15z M14,18h2v2h-2V18z M17,18h2v2h-2V18z"
+                          ></path>
                         </svg>
                       </>
                     ) : (
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="iconify absolute top-8 left-4 text-[500px] z-[-1] pointer-events-none text-indigo-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                          className="iconify absolute top-8 left-4 text-[500px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
                           width="1em"
                           height="1em"
                           viewBox="0 0 24 24"
                         >
                           <path
                             fill="currentColor"
-                            d="M3 17h2v4H3v-4zm4-4h2v8H7v-8zm4-4h2v12h-2V9zm4-4h2v16h-2V5zm4-3h2v19h-2V2z"
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67c0-.84.79-1.43 2.1-1.43c1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81c0 1.79 1.49 2.69 3.66 3.21c1.95.46 2.34 1.15 2.34 1.87c0 .53-.39 1.39-2.1 1.39c-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77c-.01-2.2-1.9-2.96-3.66-3.42z"
                           />
                         </svg>
                       </>

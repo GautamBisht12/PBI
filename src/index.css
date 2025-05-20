@@ -185,7 +185,7 @@
     @apply text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white;
   }
   .btn-style-3 {
-    @apply text-[#192d2f] font-bold bg-primary-400 hover:bg-[#192d2f] hover:text-white;
+    @apply text-white font-bold bg-blue-900 hover:bg-[#192d2f] hover:text-white;
   }
   .btn-style-2 {
     @apply text-[#192d2f] bg-[#B69F63] hover:bg-white hover:text-[#192d2f];

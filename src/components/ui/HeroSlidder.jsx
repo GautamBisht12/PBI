@@ -15,7 +15,7 @@ const slides = [
   },
   {
     image:
-      "https://wallpapers.com/images/hd/businessman-at-the-rooftop-gksmnqf9109qiyw9.jpg",
+      "https://img.freepik.com/premium-photo/businessman-rooftop_700248-5107.jpg",
     headline: "Your Partner in Strategic Financial Growth.",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",

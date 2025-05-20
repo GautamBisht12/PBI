@@ -14,7 +14,7 @@ const WorkedWith = () => {
     },
   ];
   return (
-    <div className="worked-with-container ">
+    <div className="worked-with-container mt-16">
       <h3 className="worked-with-title bg-clip-text text-transparent bg-gradient-to-r from-black to-[#FFD580]">
         We work with tons of apps… Here are a few!
       </h3>
