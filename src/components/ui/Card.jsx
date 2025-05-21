@@ -77,8 +77,44 @@ const Card = () => {
                 >
                   <div className="relative pricing-cloud rounded-2xl p-8 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
                     <div>
-                      <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                      <div className="w-16 h-16 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-6 mx-auto  shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]">
                         <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-8 h-8 text-blue-300"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                        >
+                          <polyline
+                            points="6,25 6,3 22,3 22,26 7,26"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <polyline
+                            points="22,5 25,5 25,29 8,29 6,26"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <polyline
+                            points="6,24 6,26 8,29 12,29"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <line
+                            x1="9"
+                            y1="7"
+                            x2="19"
+                            y2="7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                          />
+                        </svg>
+
+                        {/* <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="w-8 h-8 text-blue-300"
                           width="1em"
@@ -89,7 +125,7 @@ const Card = () => {
                             fill="currentColor"
                             d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
                           />
-                        </svg>
+                        </svg> */}
                       </div>
                       <h3 className="plan-title text-xl font-bold text-gray-800">
                         {d.title}
@@ -118,14 +154,37 @@ const Card = () => {
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="iconify absolute top-8 left-8 text-[500px] z-[-1] pointer-events-none text-blue-100 transition duration-1000 delay-200 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                      className="iconify absolute top-28 left-24 text-[400px] z-[-1] pointer-events-none text-[#93C5FD] transition duration-1000 delay-200 group-hover:-translate-y-8 group-hover:-translate-x-8"
                       width="1em"
                       height="1em"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 32 32"
+                      fill="none"
                     >
-                      <path
-                        fill="currentColor"
-                        d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                      <polyline
+                        points="6,25 6,3 22,3 22,26 7,26"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        fill="none"
+                      />
+                      <polyline
+                        points="22,5 25,5 25,29 8,29 6,26"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        fill="none"
+                      />
+                      <polyline
+                        points="6,24 6,26 8,29 12,29"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        fill="none"
+                      />
+                      <line
+                        x1="9"
+                        y1="7"
+                        x2="19"
+                        y2="7"
+                        stroke="currentColor"
+                        strokeWidth="2"
                       />
                     </svg>
                   </div>
@@ -138,7 +197,7 @@ const Card = () => {
                   <div className="relative bg-white rounded-2xl p-8 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
                     <div>
                       {d.title === "Accounting" ? (
-                        <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <div className="w-16 h-16 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-6 mx-auto  shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-10 h-10 text-blue-300"
@@ -153,7 +212,7 @@ const Card = () => {
                           </svg>
                         </div>
                       ) : (
-                        <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <div className="w-16 h-16 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-6 mx-auto  shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-10 h-10 text-blue-300"
@@ -184,10 +243,10 @@ const Card = () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="flex items-center text-primary-700 font-medium mt-4 group cursor-pointer hover:text-[#7a693e]">
+                    <div className="flex items-center text-primary-700 font-bold mt-4 group cursor-pointer hover:text-[#7a693e]">
                       <Link
                         to="/services"
-                        className="transition-colors duration-300"
+                        className="transition-colors duration-300 text-lg"
                       >
                         Explore more
                       </Link>
@@ -197,7 +256,7 @@ const Card = () => {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="iconify absolute top-8 left-4 text-[500px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                          className="iconify absolute top-28 left-24 text-[400px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
                           width="1em"
                           height="1em"
                           viewBox="0 0 24 24"
@@ -212,7 +271,7 @@ const Card = () => {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="iconify absolute top-8 left-4 text-[500px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                          className="iconify absolute top-28 left-24 text-[400px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
                           width="1em"
                           height="1em"
                           viewBox="0 0 24 24"

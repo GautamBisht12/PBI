@@ -60,7 +60,7 @@ export default function HeroSlider() {
         )}
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-4">
+      <div className="absolute inset-0 bg-black/35 flex flex-col justify-center items-center text-white text-center px-4">
         <motion.div
           key={`text-${current}`}
           initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function HeroSlider() {
           <h1 className="heading-tagline text-4xl md:text-8xl font-bold mb-4 text-shadow-lg sm:max-w-6xl">
             {slides[current].headline}
           </h1>
-          <p className=" text-lg md:text-2xl  text-white ">
+          <p className=" text-lg md:text-3xl  text-white ">
             {slides[current].subtext}
           </p>
         </motion.div>

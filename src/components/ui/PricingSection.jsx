@@ -9,7 +9,7 @@ const PricingSection = () => {
           <div className="text-center mb-16">
             <h2 className="heading-tagline text-3xl font-extrabold text-gray-300 sm:text-4xl relative inline-block">
               Transparent Pricing
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform -translate-y-1"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform translate-y-1"></span>
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-200">
               Simple per-transaction pricing that scales with your business

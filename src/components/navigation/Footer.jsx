@@ -24,18 +24,10 @@ function Footer() {
               className="flex items-center justify-start space-x-2  w-[350px]"
             >
               <span
-                className={`flex gap-2 text-2xl font-bold text-white
+                className={`flex gap-2 text-2xl font-bold text-white hover:text-[#B79E63]
                 }`}
               >
-                <img
-                  src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
-                  alt="logo"
-                  className="w-20 h-20"
-                />
-                <h3>
-                  Upsell <br />
-                  FinLogix{" "}
-                </h3>
+                <h3>Upsell FinLogix </h3>
               </span>
             </Link>
             <p className="mt-4 text-gray-400 max-w-md leading-relaxed">
@@ -45,16 +37,16 @@ function Footer() {
             {/* Social media icons */}
             <div className="mt-6 flex space-x-5">
               {socialLinks.map((social) => (
-                <a
+                <Link
                   key={social.name}
-                  href={social.href}
+                  to={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary-300 transition-colors duration-300"
+                  className="text-gray-400 hover:text-[#B79E63] transition-colors duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -69,7 +61,7 @@ function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.to}
-                    className="text-gray-400 hover:text-primary-300 transition-colors duration-300 flex items-center group"
+                    className="text-gray-400 hover:text-[#B79E63] transition-colors duration-300 flex items-center group"
                   >
                     <span className="transform group-hover:translate-x-1 transition-transform duration-300">
                       {link.name}
@@ -88,7 +80,7 @@ function Footer() {
                 <li key={service.name}>
                   <Link
                     to={service.to}
-                    className="text-gray-400 hover:text-primary-300 transition-colors duration-300 flex items-center group"
+                    className="text-gray-400 hover:text-[#B79E63] transition-colors duration-300 flex items-center group"
                   >
                     <span className="transform group-hover:translate-x-1 transition-transform duration-300">
                       {service.name}
@@ -162,7 +154,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-md transition-colors duration-300"
+                className="px-4 py-2 btn-style rounded-md transition-colors duration-300"
               >
                 Subscribe
               </button>
@@ -174,8 +166,8 @@ function Footer() {
         <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
             © {currentYear}{" "}
-            <span className="text-primary-300">Upsell FinLogix</span>. All
-            rights reserved.
+            <span className="text-[#B79E63]">Upsell FinLogix</span>. All rights
+            reserved.
           </p>
 
           <div className="mt-4 md:mt-0 flex flex-wrap gap-4 text-sm text-gray-500">
@@ -208,8 +200,9 @@ const quickLinks = [
 
 // Services data
 const services = [
-  { name: "Bookkeeping & Accounting", to: "/bookkeeping-accounting" },
-  { name: "Bookkeeping Services", to: "/bookkeeping-services" },
+  { name: "Bookkeeping & Accounting", to: "/services/bookkeeping-accounting" },
+  { name: "Bookkeeping Services", to: "/services/bookkeeping-services" },
+  { name: "Corporate Finance Management", to: "/services/finance" },
 ];
 
 // Social media links

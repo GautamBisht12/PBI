@@ -40,7 +40,7 @@ const ServicesOverview = () => {
             <div className="mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
                 Industries We Serve
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#B69F63] to-[#192A2D] transform -translate-y-0"></span>
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#B69F63] to-[#192A2D] transform translate-y-1"></span>
               </h2>
               <p className="text-[#B79E63] max-w-2xl">
                 We specialize in providing bookkeeping services for a wide range
