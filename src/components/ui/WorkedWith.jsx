@@ -1,54 +1,71 @@
 const WorkedWith = () => {
-  const companies = [
+const companies = [
     {
       name: "Shopify",
-      logo: "https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.png",
+      logo: (
+        <img
+          src="https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.png"
+          alt="Shopify Logo"
+          className="w-24 h-24"
+        />
+      ),
     },
     {
       name: "Amazon",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png",
+      logo: (
+        <img
+          src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png"
+          alt="Amazon Logo"
+          className="w-24 h-24"
+        />
+      ),
+    },
+    {
+      name: "Gusto",
+      logo: (
+        <svg
+          className="w-24 h-24"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 200 200"
+        >
+          <g>
+            <path
+              fill="#13b5ea"
+              d="M100,200A100,100,0,1,0,0,100,100,100,0,0,0,100,200"
+            ></path>
+            <path
+              fill="#fff"
+              d="M48,99.73L65,82.62a3.05,3.05,0,0,0-4.34-4.28l-17,17L26.56,78.31a3.05,3.05,0,1,0-4.29,4.35l17,17-17,17.06a3.06,3.06,0,0,0,4.15,4.49l.13-.13,17.06-17.07,17,17a3,3,0,0,0,5.26-2.1,3,3,0,0,0-.89-2.15Z"
+            ></path>
+          </g>
+        </svg>
+      ),
     },
     {
       name: "Walmart",
-      logo: "https://atowndailynews.com/wp-content/uploads/2016/06/Walmart-logo-600x338.jpg",
+      logo: (
+        <img
+          src="https://atowndailynews.com/wp-content/uploads/2016/06/Walmart-logo-600x338.jpg"
+          alt="Walmart Logo"
+          className="w-24 h-24"
+        />
+      ),
     },
   ];
   return (
     <div className="worked-with-container mt-16">
       <h3 className="worked-with-title bg-clip-text text-transparent bg-gradient-to-r from-black to-[#FFD580]">
-        We work with tons of apps… Here are a few!
+        We’ve worked extensively with leading software tools. Here are a few!
       </h3>
 
       <div className="companies-grid">
-        {companies.map((company, index) => (
-          <div key={index} className="company-card">
-            <img
-              src={company.logo}
-              alt={`${company.name} logo`}
-              className="company-logo "
-            />
-            {/* <p className="company-name">{company.name}</p> */}
-          </div>
-        ))}
         <div className="company-card">
-          <svg
-            className="w-24 h-24"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 200 200"
-          >
-            <g>
-              <path
-                fill="#13b5ea"
-                d="M100,200A100,100,0,1,0,0,100,100,100,0,0,0,100,200"
-              ></path>
-              <path
-                fill="#fff"
-                d="M48,99.73,65,82.62a3.05,3.05,0,0,0-4.34-4.28l-17,17L26.56,78.31a3.05,3.05,0,1,0-4.29,4.35l17,17-17,17.06a3.06,3.06,0,0,0,4.15,4.49l.13-.13,17.06-17.07,17,17a3,3,0,0,0,5.26-2.1,3,3,0,0,0-.89-2.15L48,99.72m101.24,0a5.56,5.56,0,1,0,5.55-5.56,5.55,5.55,0,0,0-5.55,5.56m-10.53,0a16.06,16.06,0,1,1,16.06,16.09A16.09,16.09,0,0,1,138.7,99.73m-6.32,0a22.38,22.38,0,1,0,22.38-22.41,22.43,22.43,0,0,0-22.38,22.41m-1.58-22h-.94a12.7,12.7,0,0,0-7.81,2.64,3.08,3.08,0,0,0-3-2.39,3,3,0,0,0-3,3h0v37.76a3.06,3.06,0,0,0,6.1,0V95.51c0-7.73.71-10.86,7.32-11.69a11.76,11.76,0,0,1,1.29-.06,3,3,0,0,0,3.1-3,3.07,3.07,0,0,0-3.07-3.05M72.2,96a2.11,2.11,0,0,1,0-.25,16.16,16.16,0,0,1,31.39.24H72.2Zm37.65-.57A22.26,22.26,0,0,0,75,81.49,22.42,22.42,0,0,0,85.24,122a21.06,21.06,0,0,0,8-.53,22.09,22.09,0,0,0,6.7-2.86,24.21,24.21,0,0,0,5.73-5.43.38.38,0,0,1,.1-.12,3.35,3.35,0,0,0-.35-4.7,3.05,3.05,0,0,0-4.5.7c-.32.46-.68.93-1.07,1.4a17.79,17.79,0,0,1-4.42,3.56A16.12,16.12,0,0,1,88,116a16.41,16.41,0,0,1-15.31-10.74,15.46,15.46,0,0,1-.68-2.57l0-.47h31.86c4.37-.1,6.71-3.19,6.07-6.71Z"
-              ></path>
-            </g>
-          </svg>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Intuit_QuickBooks_logo.svg"
+            alt="Intuit_QuickBooks_logo"
+          />
         </div>
-        <div className="company-card">
+                <div className="company-card">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 200 76.06543"
@@ -76,12 +93,18 @@ const WorkedWith = () => {
             ></path>
           </svg>
         </div>
+         <div className="companies-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+        {companies.map((company) => (
+          <div key={company.name} className="company-card flex items-center justify-center">
+            {company.logo}
+          </div>
+        ))}
+      </div>
         <div className="company-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/79/Intuit_QuickBooks_logo.svg"
-            alt="Intuit_QuickBooks_logo"
-          />
+         
         </div>
+
+ 
       </div>
     </div>
   );
