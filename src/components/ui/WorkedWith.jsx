@@ -44,7 +44,7 @@ const companies = [
       name: "Gusto",
       logo: (
          <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRasOICRC_6iN6K6IQiapRLMx-UE4U72jRD5w&s"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5A8Iv2CT-9t4XqDD2KrmeRtbEl4imeNT8Hg&s"
           alt="Amazon Logo"
           className="w-24 h-24"
         />
