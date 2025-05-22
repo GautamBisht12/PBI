@@ -48,56 +48,48 @@ function Navbar() {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const { isSignedIn } = useAuth();
   const location = useLocation();
-
-  // Check if we're on the home page
   const isHomePage = location.pathname === "/";
 
-  // Scroll to top when route changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // Change navbar style on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("no-scroll");
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("no-scroll");
     };
   }, [mobileMenuOpen]);
 
-  // Determine text color based on page and scroll position
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [mobileMenuOpen]);
+
   const getTextColor = (isActive) => {
-    if (!isHomePage) {
-      // For all pages except home, use dark text
-      return isActive ? "text-[#B69D62]" : "text-gray-800";
-    } else {
-      // For home page, use the original conditional styling
-      return isActive
-        ? isScrolled
-          ? "text-[#B69D62]"
-          : "text-white font-bold"
-        : isScrolled
-        ? "text-gray-300"
-        : "text-white";
-    }
+    if (!isHomePage) return isActive ? "text-[#B69D62]" : "text-gray-800";
+    return isActive
+      ? isScrolled
+        ? "text-[#B69D62]"
+        : "text-white font-bold"
+      : isScrolled
+      ? "text-gray-300"
+      : "text-white";
   };
 
-  // Determine navbar background style based on page and scroll position
   const getNavbarStyle = () => {
     if (!isHomePage) {
       // For all pages except home, always use white background
@@ -109,7 +101,6 @@ function Navbar() {
         : "bg-transparent border-white border-t-2 border-b-[1px] backdrop-blur-sm border-b-white/30";
     }
   };
-
   // Determine border style based on page and scroll position
   const getBorderStyle = () => {
     if (!isHomePage) {
@@ -123,7 +114,6 @@ function Navbar() {
     }
   };
 
-  // Toggle submenu for mobile view
   const toggleSubmenu = (e, index) => {
     e.stopPropagation();
     setActiveSubmenu(activeSubmenu === index ? null : index);
@@ -133,11 +123,11 @@ function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${getNavbarStyle()}`}
     >
-      <nav className="w-full  md:py-0 mx-auto flex  justify-between px-4  md:px-6 ">
-        {/* Logo - Set a fixed width */}
+      <nav className="max-w-screen-xl mx-auto flex  justify-between px-4  md:px-6 ">
+        {/* Logo */}
         <Link
           to="/"
-          className={`flex items-center gap-3 md:justify-end w-[230px] py-3 md:pr-7  ${
+          className={`flex items-center max-w-[250px] py-3 md:py-5 pr-4 ${
             isScrolled && isHomePage
               ? "border-gray-500 border-r-[1px]"
               : !isHomePage
@@ -145,12 +135,7 @@ function Navbar() {
               : "border-white/30 border-r-[1px] backdrop-blur-sm"
           }`}
         >
-          <img
-            src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
-            alt="logo"
-            className="w-14 h-14"
-          />
-          <div
+          <span
             className={`flex gap-2 text-lg md:text-2xl font-bold ${
               !isHomePage
                 ? "text-[#B69D62]"
@@ -159,16 +144,21 @@ function Navbar() {
                 : "text-white"
             }`}
           >
+            <img
+              src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
+              alt="logo"
+              className="w-10 h-10 md:w-14 md:h-14"
+            />
             <h3 className="text-lg">
               Upsell <br />
               FinLogix
             </h3>
-          </div>
+          </span>
         </Link>
 
-        {/* Desktop Navigation - Give it a flex-grow to take available space */}
+        {/* Desktop Nav */}
         <div
-          className={`hidden  md:flex justify-center items-center flex-grow ${
+          className={`hidden md:flex items-center justify-center flex-grow space-x-6 py-3 md:py-5  ${
             isScrolled && isHomePage
               ? "border-gray-700 border-r-[1px]"
               : !isHomePage
@@ -182,7 +172,7 @@ function Navbar() {
                 <>
                   <Link
                     to={item.href}
-                    className={`p-8 flex gap-2 items-center text-base font-medium transition-colors hover:text-[#B69D62] ${getTextColor(
+                    className={`flex items-center gap-2 text-base font-medium transition hover:text-[#B69D62] ${getTextColor(
                       location.pathname === item.href ||
                         location.pathname.startsWith(item.href + "/")
                     )}`}
@@ -208,21 +198,20 @@ function Navbar() {
               ) : (
                 <Link
                   to={item.href}
-                  className={`p-10 flex gap-2 text-base font-medium transition-colors hover:text-[#B69D62] ${getTextColor(
+                  className={`flex gap-1 items-center text-base font-medium transition hover:text-[#B69D62] ${getTextColor(
                     location.pathname === item.href
                   )}`}
                 >
-                  {item.name} <GoArrowUpRight size={22} />
+                  {item.name}
+                  <GoArrowUpRight size={18} />
                 </Link>
               )}
             </div>
           ))}
         </div>
 
-        {/* Auth buttons or dashboard link - Set a fixed width */}
-        <div
-          className={`hidden gap-5 md:gap-5 md:flex items-center  space-x-2  justify-center w-[300px]`}
-        >
+        {/* Auth / Call to Action */}
+        <div className="hidden md:flex items-center gap-2 max-w-[300px] justify-center pl-4 ">
           {isSignedIn ? (
             <>
               <Link to="/dashboard" className="btn-primary">
@@ -240,15 +229,10 @@ function Navbar() {
           ) : (
             <>
               <Link
-                className={`p-3 bg-[#B79E63] rounded-md 
-                  ${
-                    isHomePage && isScrolled
-                      ? "hover:bg-white hover:text-gray-800"
-                      : "hover:text-white"
-                  }  hover:bg-[#1E2D2F] transition duration-300  font-semibold`}
                 to="/contact"
+                className="px-4 py-2 rounded-md bg-[#B79E63] hover:bg-[#1E2D2F] text-white font-semibold transition"
               >
-                Get Free Consultation
+                Free Consultation
               </Link>
               <SignInButton mode="modal">
                 <User
@@ -258,18 +242,15 @@ function Navbar() {
                   }`}
                 />
               </SignInButton>
-              {/* <SignUpButton mode="modal">
-          <button className="btn-primary">Sign up</button>
-        </SignUpButton> */}
             </>
           )}
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden">
           <button
             type="button"
-            className={`z-50 relative ml-4 ${
+            className={`z-50 relative ${
               mobileMenuOpen
                 ? "text-white"
                 : !isHomePage
@@ -280,6 +261,7 @@ function Navbar() {
             }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
+            <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             ) : (
@@ -288,18 +270,16 @@ function Navbar() {
           </button>
         </div>
       </nav>
-
-      {/* Mobile menu - Full screen slide from left */}
       <div
-        className={`fixed inset-0 h-screen bg-black z-30 md:hidden transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-green-700 h-full z-30 md:hidden transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-0 h-screen overflow-y-auto">
-          {/* Centered Logo */}
-          <div className="flex justify-center items-center py-10 border-b border-white/20">
-            <div
-              className={`flex items-center gap-4 text-2xl font-bold ${
+        <div className="flex flex-col h-full overflow-y-auto">
+          {/* Logo Section */}
+          <div className="flex justify-center items-center py-4 border-b border-white/20">
+            <span
+              className={`flex items-center gap-2 text-2xl font-bold ${
                 !isHomePage
                   ? "text-[#B69D62]"
                   : isScrolled
@@ -310,18 +290,18 @@ function Navbar() {
               <img
                 src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
                 alt="logo"
-                className="w-16 h-16"
+                className="w-16 h-16 object-contain"
               />
-              <div className="leading-tight">
-                <div>Upsell</div>
-                <div>FinLogix</div>
-              </div>
-            </div>
+              <h3 className="leading-tight m-0 p-0">
+                Upsell <br />
+                Finlogix
+              </h3>
+            </span>
           </div>
 
-          {/* Navigation Links - Make this section scrollable */}
-          <div className="flex -mt-1 flex-col flex-grow px-8 bg-black  ">
-            <div className="w-full max-w-md space-y-8 py-4">
+          {/* Navigation Section */}
+          <div className="flex flex-col items-center justify-start flex-grow px-8 bg-green-400 pt-4 pb-16">
+            <div className="w-full max-w-md space-y-8">
               {navigation.map((item, index) => (
                 <div key={item.name}>
                   {item.submenu ? (
@@ -346,7 +326,7 @@ function Navbar() {
                       <div
                         className={`pl-4 mt-2 mb-4 space-y-2 overflow-hidden transition-all duration-300 ease-in-out ${
                           activeSubmenu === index
-                            ? "max-h-40 opacity-100"
+                            ? "max-h-96 opacity-100" // Increase from max-h-40 to max-h-96
                             : "max-h-0 opacity-0"
                         }`}
                       >
@@ -383,7 +363,7 @@ function Navbar() {
               ))}
 
               {/* Auth Section */}
-              <div className="pt-8 mt-8 border-t border-white/10 pb-8">
+              <div className="pt-8 mt-8 border-t border-white/10">
                 {isSignedIn ? (
                   <div className="flex items-center justify-between">
                     <Link
