@@ -93,7 +93,7 @@ function Footer() {
 
           {/* Legal  */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-lg font-semibold mb-5 text-white">Services</h3>
+      /*    <h3 className="text-lg font-semibold mb-5 text-white">Services</h3>  */
             <ul className="space-y-3">
               {legal.map((l) => (
                 <li key={l.name}>
