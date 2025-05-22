@@ -63,7 +63,7 @@ const WorkedWith = () => {
   ];
   return (
     <div className="worked-with-container mt-16">
-      <h3 className="worked-with-title bg-clip-text bg-gradient-to-r text-[#4955E9]">
+      <h3 className="worked-with-title bg-clip-text text-transparent bg-gradient-to-r text-[#4955E9]">
         We’ve worked extensively with leading software tools. <br /> Here are a
         few!
       </h3>

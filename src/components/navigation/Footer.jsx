@@ -91,74 +91,23 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Contact info */}
-          {/* <div className="col-span-1 md:col-span-3">
-            <h3 className="text-lg font-semibold mb-5 text-white">
-              Contact Us
-            </h3>
-            <address className="not-italic text-gray-400 space-y-3">
-              <p className="flex items-center">
-                <svg
-                  className="h-5 w-5 mr-2 text-primary-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <span>info@upsellfinlogix.com</span>
-              </p>
-              <p className="flex items-center">
-                <svg
-                  className="h-5 w-5 mr-2 text-primary-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                <span>(555) 123-4567</span>
-              </p>
-            </address>
-          </div> */}
-
-          {/* Newsletter subscription */}
-          <div className="col-span-1 md:col-span-4">
-            <h3 className="text-lg font-semibold mb-5 text-white">
-              Newsletter
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest updates.
-            </p>
-            <form
-              onSubmit={handleSubscribe}
-              className="flex flex-col space-y-3"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address"
-                required
-                className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300 text-white"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 btn-style rounded-md transition-colors duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
+          {/* Legal  */}
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-lg font-semibold mb-5 text-white">Services</h3>
+            <ul className="space-y-3">
+              {legal.map((l) => (
+                <li key={l.name}>
+                  <Link
+                    to={l.to}
+                    className="text-gray-400 hover:text-[#B79E63] transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                      {l.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -203,6 +152,11 @@ const services = [
   { name: "Bookkeeping & Accounting", to: "/services/bookkeeping-accounting" },
   { name: "Bookkeeping Services", to: "/services/bookkeeping-services" },
   { name: "Corporate Finance Management", to: "/services/finance" },
+];
+
+const legal = [
+  { name: "Privacy Policy", to: "/privacy-policy" },
+  { name: "Subscription Agreement", to: "/subscription-agreement" },
 ];
 
 // Social media links

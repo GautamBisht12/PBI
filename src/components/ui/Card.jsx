@@ -55,10 +55,10 @@ const Card = () => {
     <>
       <div className="mb-22">
         <div className="text-center m-16 mb-32">
-          <h2 className="heading-tagline text-3xl font-extrabold text-black sm:text-5xl relative inline-block">
+          <h2 className="heading-tagline text-2xl font-extrabold text-black sm:text-4xl relative inline-block">
             Explore our Services
           </h2>
-          <p className="mt-8 max-w-2xl mx-auto text-2xl text-gray-800 font-bold relative">
+          <p className="mt-8 max-w-2xl mx-auto text-xl text-gray-800 font-bold relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
               Discover how our services can help you achieve your goals.
             </span>
@@ -66,21 +66,21 @@ const Card = () => {
           </p>
         </div>
 
-        <div className="space-y-6 lg:px-8 mt-20 text-center group ">
-          <div className="mx-auto grid justify-center gap-16 sm:grid-cols-2 md:max-w-[74rem] md:grid-cols-3 lg:pb-10">
+        <div className="space-y-6 lg:px-8 mt-20 text-center group">
+          <div className="mx-auto grid justify-center gap-8 sm:grid-cols-2 md:max-w-[74rem] md:grid-cols-3 lg:pb-10">
             {cardData.map((d, index) =>
               d.title === "Bookkeeping" ? (
                 <div
                   key={index}
                   className="pricing-wrapper col-span-1 md:col-span-1 lg:col-span-1 w-full relative rounded-2xl bg-gradient-to-t from-blue-300 to-white p-0.5 shadow-[0_0px_25px_0px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]"
-                  style={{ transform: "scale(1.25)" }} // Makes this card slightly larger
+                  style={{ transform: "scale(1.08)" }} // Reduced scale from 1.15 to 1.08
                 >
-                  <div className="relative pricing-cloud rounded-2xl p-8 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
+                  <div className="relative pricing-cloud rounded-2xl p-5 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-evenly will-change-transform">
                     <div>
-                      <div className="w-16 h-16 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-6 mx-auto  shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]">
+                      <div className="w-14 h-14 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-3 mx-auto shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="w-8 h-8 text-blue-300"
+                          className="w-7 h-7 text-blue-300"
                           width="1em"
                           height="1em"
                           viewBox="0 0 32 32"
@@ -113,37 +113,25 @@ const Card = () => {
                             strokeWidth="2"
                           />
                         </svg>
-
-                        {/* <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-8 h-8 text-blue-300"
-                          width="1em"
-                          height="1em"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                          />
-                        </svg> */}
                       </div>
                       <h3 className="plan-title text-xl font-bold text-gray-800">
                         {d.title}
                       </h3>
-                      {/* <div className="mt-4 flex justify-center">{d.icon}</div> */}
-                      <ul className="text-gray-800 mt-6 ">
+                      <ul className="text-gray-800 mt-4">
                         {d.points.map((point, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start mb-3 justify-start font-bold"
+                            className="flex items-start mb-2 justify-start font-bold"
                           >
                             <span className="text-[#B69F63] mr-2">•</span>
-                            <span className="text-left">{point}</span>
+                            <span className="text-left text-sm md:text-base">
+                              {point}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="flex items-center justify-center text-primary-700 font-medium mt-6 group cursor-pointer hover:text-[#867345]">
+                    <div className="flex items-center justify-center text-primary-700 font-medium mt-2 group cursor-pointer hover:text-[#867345]">
                       <Link
                         to="/services"
                         className="transition-colors duration-300"
@@ -154,7 +142,7 @@ const Card = () => {
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="iconify absolute top-28 left-24 text-[400px] z-[-1] pointer-events-none text-[#93C5FD] transition duration-1000 delay-200 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                      className="iconify absolute top-28 left-24 text-[350px] z-[-1] pointer-events-none text-[#669ede] opacity-30 transition duration-1000 delay-200 group-hover:-translate-y-8 group-hover:-translate-x-8"
                       width="1em"
                       height="1em"
                       viewBox="0 0 32 32"
@@ -194,13 +182,13 @@ const Card = () => {
                   key={index}
                   className="pricing-wrapper w-full relative rounded-2xl bg-gradient-to-t from-indigo-600 to-white p-0.5 shadow-[0_0px_25px_0px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]"
                 >
-                  <div className="relative bg-white rounded-2xl p-8 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
+                  <div className="relative bg-white rounded-2xl p-6 text-center max-w-full w-full z-0 overflow-hidden hover:translate-y-[-5px] transition-all duration-300 ease-in-out h-full flex flex-col justify-between will-change-transform">
                     <div>
                       {d.title === "Accounting" ? (
-                        <div className="w-16 h-16 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-6 mx-auto  shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)]">
+                        <div className="w-14 h-14 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-4 mx-auto shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-10 h-10 text-blue-300"
+                            className="w-8 h-8 text-blue-300"
                             width="1em"
                             height="1em"
                             viewBox="0 0 24 24"
@@ -212,10 +200,10 @@ const Card = () => {
                           </svg>
                         </div>
                       ) : (
-                        <div className="w-16 h-16 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-6 mx-auto  shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)]">
+                        <div className="w-14 h-14 bg-[#F3E8FF] rounded-full flex items-center justify-center mb-4 mx-auto shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0px_25px_0px_rgba(0,0,0,0.3)]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-10 h-10 text-blue-300"
+                            className="w-8 h-8 text-blue-300"
                             width="1em"
                             height="1em"
                             viewBox="0 0 24 24"
@@ -227,26 +215,27 @@ const Card = () => {
                           </svg>
                         </div>
                       )}
-                      <h3 className="plan-title text-2xl text-gray-800 font-extrabold">
+                      <h3 className="plan-title text-xl text-gray-800 font-extrabold">
                         {d.title}
                       </h3>
-                      {/* <div className="mt-4 flex justify-center">{d.icon}</div> */}
-                      <ul className="text-gray-800 mt-4 text-balance">
+                      <ul className="text-gray-800 mt-3 text-balance">
                         {d.points.map((point, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start mb-3 justify-start font-semibold text-lg"
+                            className="flex items-start mb-2 justify-start font-semibold"
                           >
                             <span className="text-[#B69F63] mr-2">•</span>
-                            <span className="text-left">{point}</span>
+                            <span className="text-left text-sm md:text-base">
+                              {point}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="flex items-center text-primary-700 font-bold mt-4 group cursor-pointer hover:text-[#7a693e]">
+                    <div className="flex items-center text-primary-700 font-bold mt-3 group cursor-pointer hover:text-[#7a693e]">
                       <Link
                         to="/services"
-                        className="transition-colors duration-300 text-lg"
+                        className="transition-colors duration-300"
                       >
                         Explore more
                       </Link>
@@ -256,7 +245,7 @@ const Card = () => {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="iconify absolute top-28 left-24 text-[400px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                          className="iconify absolute top-28 left-24 text-[350px] z-[-1] pointer-events-none text-[#669ede] opacity-30 transition duration-1000 delay-200 group-hover:-translate-y-8 group-hover:-translate-x-8"
                           width="1em"
                           height="1em"
                           viewBox="0 0 24 24"
@@ -271,7 +260,7 @@ const Card = () => {
                       <>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="iconify absolute top-28 left-24 text-[400px] z-[-1] pointer-events-none text-purple-100 transition duration-1000 delay-1000 group-hover:-translate-y-8 group-hover:-translate-x-8"
+                          className="iconify absolute top-28 left-24 text-[350px] z-[-1] pointer-events-none text-[#669ede] opacity-30 transition duration-1000 delay-200 group-hover:-translate-y-8 group-hover:-translate-x-8"
                           width="1em"
                           height="1em"
                           viewBox="0 0 24 24"
@@ -289,6 +278,7 @@ const Card = () => {
             )}
           </div>
         </div>
+
         <div className="mt-12 text-center">
           <Link
             to="/services"

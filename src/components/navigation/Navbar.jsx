@@ -133,37 +133,18 @@ function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${getNavbarStyle()}`}
     >
-      <nav className=" flex justify-between">
+      <nav className="flex items-center justify-between px-4 py-4 md:px-10">
         {/* Logo - Set a fixed width */}
-        <Link
-          to="/"
-          className={`flex items-center justify-end space-x-2 p-10 w-[350px]   ${
-            isScrolled && isHomePage
-              ? "border-gray-500 border-r-[1px]"
-              : !isHomePage
-              ? "border-gray-200 border-r-[1px]"
-              : "border-white/30 border-r-[1px] backdrop-blur-sm"
-          }`}
-        >
-          <span
-            className={`flex gap-2 text-2xl font-bold ${
-              !isHomePage
-                ? "text-[#B69D62]"
-                : isScrolled
-                ? "text-[#B69D62]"
-                : "text-white"
-            }`}
-          >
-            <img
-              src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
-              alt="logo"
-              className="w-20 h-20"
-            />
-            <h3>
-              Upsell <br />
-              FinLogix{" "}
-            </h3>
-          </span>
+        <Link to="/" className="flex items-center gap-3 w-auto">
+          <img
+            src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
+            alt="logo"
+            className="w-12 h-12"
+          />
+          <div className="text-xl font-bold leading-tight text-white md:text-[#B69D62]">
+            <div>Upsell</div>
+            <div>FinLogix</div>
+          </div>
         </Link>
 
         {/* Desktop Navigation - Give it a flex-grow to take available space */}
@@ -266,10 +247,10 @@ function Navbar() {
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
           <button
             type="button"
-            className={`z-50 relative ${
+            className={`z-50 relative ml-4 ${
               mobileMenuOpen
                 ? "text-white"
                 : !isHomePage
@@ -280,7 +261,6 @@ function Navbar() {
             }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             ) : (
@@ -292,15 +272,15 @@ function Navbar() {
 
       {/* Mobile menu - Full screen slide from left */}
       <div
-        className={`fixed inset-0 bg-black z-30 md:hidden transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 h-screen bg-black z-30 md:hidden transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col h-full gap-0">
+        <div className="flex flex-col gap-0 h-screen overflow-y-auto">
           {/* Centered Logo */}
           <div className="flex justify-center items-center py-10 border-b border-white/20">
-            <span
-              className={`flex gap-2 text-2xl font-bold ${
+            <div
+              className={`flex items-center gap-4 text-2xl font-bold ${
                 !isHomePage
                   ? "text-[#B69D62]"
                   : isScrolled
@@ -311,18 +291,18 @@ function Navbar() {
               <img
                 src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
                 alt="logo"
-                className="w-20 h-20"
+                className="w-16 h-16"
               />
-              <h3>
-                Upsell <br />
-                Finlogix{" "}
-              </h3>
-            </span>
+              <div className="leading-tight">
+                <div>Upsell</div>
+                <div>FinLogix</div>
+              </div>
+            </div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex -mt-1 flex-col items-center justify-center flex-grow px-8 bg-black">
-            <div className="w-full max-w-md space-y-8">
+          {/* Navigation Links - Make this section scrollable */}
+          <div className="flex -mt-1 flex-col flex-grow px-8 bg-black  ">
+            <div className="w-full max-w-md space-y-8 py-4">
               {navigation.map((item, index) => (
                 <div key={item.name}>
                   {item.submenu ? (
@@ -384,7 +364,7 @@ function Navbar() {
               ))}
 
               {/* Auth Section */}
-              <div className="pt-8 mt-8 border-t border-white/10">
+              <div className="pt-8 mt-8 border-t border-white/10 pb-8">
                 {isSignedIn ? (
                   <div className="flex items-center justify-between">
                     <Link
