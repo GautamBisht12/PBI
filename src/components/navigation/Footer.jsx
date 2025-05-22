@@ -113,26 +113,11 @@ function Footer() {
 
         {/* Bottom section with copyright and additional links */}
         <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-base mx-auto">
             © {currentYear}{" "}
             <span className="text-[#B79E63]">Upsell FinLogix</span>. All rights
             reserved.
           </p>
-
-          <div className="mt-4 md:mt-0 flex flex-wrap gap-4 text-sm text-gray-500">
-            <Link
-              to="/privacy-policy"
-              className="hover:text-primary-300 transition-colors duration-300"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms-of-service"
-              className="hover:text-primary-300 transition-colors duration-300"
-            >
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

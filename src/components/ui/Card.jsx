@@ -54,7 +54,7 @@ const Card = () => {
   return (
     <>
       <div className="mb-22">
-        <div className="text-center m-16 mb-32">
+        <div className="text-center m-16 mb-20">
           <h2 className="heading-tagline text-2xl font-extrabold text-black sm:text-4xl relative inline-block">
             Explore our Services
           </h2>
