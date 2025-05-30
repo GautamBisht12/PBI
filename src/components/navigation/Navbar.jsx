@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { MoveUpRight, User, ChevronDown } from "lucide-react";
+import { User, ChevronDown } from "lucide-react";
 import { GoArrowUpRight } from "react-icons/go";
 import {
   SignInButton,
@@ -9,7 +9,6 @@ import {
   useAuth,
 } from "@clerk/clerk-react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { sub } from "framer-motion/client";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -111,17 +110,17 @@ function Navbar() {
   };
 
   // Determine border style based on page and scroll position
-  const getBorderStyle = () => {
-    if (!isHomePage) {
-      // For all pages except home, use light borders
-      return "border-gray-200 border-r-[1px]";
-    } else {
-      // For home page, use the original conditional styling
-      return isScrolled
-        ? "border-white border-r-[1px]"
-        : "border-white/30 border-r-[1px] backdrop-blur-sm";
-    }
-  };
+  // const getBorderStyle = () => {
+  //   if (!isHomePage) {
+  //     // For all pages except home, use light borders
+  //     return "border-gray-200 border-r-[1px]";
+  //   } else {
+  //     // For home page, use the original conditional styling
+  //     return isScrolled
+  //       ? "border-white border-r-[1px]"
+  //       : "border-white/30 border-r-[1px] backdrop-blur-sm";
+  //   }
+  // };
 
   // Toggle submenu for mobile view
   const toggleSubmenu = (e, index) => {
@@ -176,7 +175,7 @@ function Navbar() {
               : "border-white/30 border-r-[1px] backdrop-blur-sm"
           }`}
         >
-          {navigation.map((item, index) => (
+          {navigation.map((item) => (
             <div key={item.name} className="relative group">
               {item.submenu ? (
                 <>
