@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
+import FAQ from "../components/ui/FAQ";
 
 export default function BookkeepingAccounting() {
   const [expandedId, setExpandedId] = useState(null);
@@ -523,22 +524,28 @@ export default function BookkeepingAccounting() {
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-[#192A2D] to-[#29454a] py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center text-white">
+        <div className="container mx-auto px-4 ">
+          <div className="max-w-3xl mx-auto text-center text-white ">
             <h2 className="text-3xl font-bold mb-6">
               Ready to transform your bookkeeping?
             </h2>
-            <p className="text-xl opacity-90 mb-8 text-yellow-400">
+            <p className="text-xl opacity-90 mb-8 text-white">
               Let our expert team take the burden of financial record-keeping
               off your shoulders so you can focus on growing your business.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="btn-style-2 font-bold py-3 px-8 rounded-lg transition-colors duration-300">
-                Schedule a Free Consultation
-              </button>
-              <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-300">
-                View Pricing Plans
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <Link
+                to="/contact"
+                className="btn-style-2 font-medium py-3 px-8 rounded-lg  transition-colors duration-300"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/pricing"
+                className="border border-white text-white font-medium py-3 px-8 rounded-lg hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
         </div>
@@ -547,6 +554,7 @@ export default function BookkeepingAccounting() {
       {/* Testimonial Section */}
 
       {/* FAQ Section */}
+      <FAQ />
     </div>
   );
 }

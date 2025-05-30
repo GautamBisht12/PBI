@@ -16,6 +16,7 @@ import {
   PieChart,
 } from "lucide-react";
 import HeroSection from "../components/ui/HeroSection";
+import CTA from "../components/ui/CTA";
 import FAQ from "../components/ui/FAQ";
 
 import { Link } from "react-router-dom";
@@ -182,34 +183,34 @@ export default function BookkeepingService() {
                 />
               ))}
         </div>
+      </div>
 
-        {/* CTA Section */}
-        <div className="mt-20 bg-blue-50 rounded-2xl p-8 lg:p-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="mb-8 lg:mb-0 lg:max-w-xl">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Ready to streamline your bookkeeping?
-              </h2>
-              <p className="text-lg text-gray-600">
-                Let our expert team handle your financial records while you
-                focus on growing your business. We offer customized solutions
-                that fit your specific needs and budget.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="btn-style font-medium py-3 px-8 rounded-lg  transition-colors duration-300"
-              >
-                Get Started
-              </Link>
-              <Link
-                to="/pricing"
-                className="border border-blue-600 text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors duration-300"
-              >
-                View Pricing
-              </Link>
-            </div>
+      {/* CTA Section */}
+      <div className="mt-20 bg-gradient-to-r from-[#192A2D] to-[#29454a] text-white rounded-2xl p-12 text-center">
+        <div className="flex flex-col gap-10 items-center justify-between">
+          <div className="mb-8 lg:mb-0 lg:max-w-xl">
+            <h2 className="text-3xl font-bold  mb-6">
+              Ready to streamline your bookkeeping?
+            </h2>
+            <p className="text-lg text-center text-white">
+              Let our expert team handle your financial records while you focus
+              on growing your business. We offer customized solutions that fit
+              your specific needs and budget.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/contact"
+              className="btn-style-2 font-medium py-3 px-8 rounded-lg  transition-colors duration-300"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/pricing"
+              className="border border-white text-white font-medium py-3 px-8 rounded-lg hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              View Pricing
+            </Link>
           </div>
         </div>
       </div>

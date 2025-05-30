@@ -17,8 +17,8 @@ const Services = () => {
       description:
         "Comprehensive accounting solutions tailored to your business needs.",
       services: [
-        "Full-Service Bookkeeping",
-        "Transaction Recording",
+        "Dedicated Accountant ",
+        "Day To Day Accounting Tasks ",
         "Bank & Credit Card Reconciliation",
         "Accounts Payable (AP) Management",
         "Accounts Receivable (AR) Management",
