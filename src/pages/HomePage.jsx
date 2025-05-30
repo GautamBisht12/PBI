@@ -1,21 +1,17 @@
 import { Link } from "react-router-dom";
-import { SignUpButton, useAuth } from "@clerk/clerk-react";
-import {
-  ChartBarIcon,
-  LockClosedIcon,
-  PresentationChartLineIcon,
-} from "@heroicons/react/24/outline";
+// import { SignUpButton, useAuth } from "@clerk/clerk-react";
+
 import ServicesOverview from "../components/ui/ServicesOverview";
 import PricingSection from "../components/ui/PricingSection";
 import { useEffect, useRef, useState } from "react";
 import HeroSlider from "../components/ui/HeroSlidder";
-import { ArrowRightIcon, Book, BookOpen, DollarSign } from "lucide-react";
+
 import WorkedWith from "../components/ui/WorkedWith";
-import Testimonials from "../components/ui/Testimonials";
+
 import Card from "../components/ui/Card";
 
 function HomePage() {
-  const { isSignedIn } = useAuth();
+  // const { isSignedIn } = useAuth();
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -103,7 +99,6 @@ function HomePage() {
       <PricingSection />
       <WorkedWith />
       {/* Testimonials */}
-      <Testimonials />
     </div>
   );
 }

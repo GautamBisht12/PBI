@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react";
 import CTA from "../components/ui/CTA";
 
 const Services = () => {
-  const [heroDetails, setHeroDetails] = useState({
+  const [heroDetails] = useState({
     heroTitle: "Services",
     heroSubtitle:
       "We offer a wide range of services to meet your needs. Explore our offerings below.",

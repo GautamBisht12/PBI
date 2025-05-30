@@ -2,7 +2,7 @@ const FAQ = () => {
   return (
     <>
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">
               Frequently Asked Questions
@@ -12,8 +12,8 @@ const FAQ = () => {
             </p>
           </div>
 
-          <div className="mt-12 space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+          <div className="mt-12 space-y-8 ">
+            <div className="bg-white p-6 rounded-lg shadow-sm ">
               <h3 className="text-lg font-medium text-gray-900">
                 How secure is PowerVision?
               </h3>

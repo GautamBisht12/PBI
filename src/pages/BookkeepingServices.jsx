@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import HeroSection from "../components/ui/HeroSection";
 import FAQ from "../components/ui/FAQ";
-import Testimonials from "../components/ui/Testimonials";
+
 import { Link } from "react-router-dom";
 
 export default function BookkeepingService() {
@@ -119,6 +119,7 @@ export default function BookkeepingService() {
     },
   ];
 
+  // eslint-disable-next-line react/prop-types
   const ServiceCard = ({ icon, title, description }) => (
     <div className="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:translate-y-1 flex flex-col h-full">
       <div className="bg-blue-50 p-3 rounded-full w-12 h-12 flex items-center justify-center text-blue-600 mb-4">
@@ -214,7 +215,6 @@ export default function BookkeepingService() {
       </div>
 
       {/* Testimonials Section */}
-      <Testimonials />
 
       {/* FAQ Section */}
       <FAQ />

@@ -59,13 +59,6 @@ const WorkedWith = () => {
           className="w-24 h-24"
         />
       ),
-      logo: (
-        <img
-          src="https://atowndailynews.com/wp-content/uploads/2016/06/Walmart-logo-600x338.jpg"
-          alt="Walmart Logo"
-          className="w-24 h-24"
-        />
-      ),
     },
   ];
   return (
