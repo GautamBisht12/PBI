@@ -240,7 +240,7 @@ function Navbar() {
           ) : (
             <>
               <Link
-                className={`p-3 bg-[#B79E63] rounded-md 
+                className={`p-2 bg-[#B79E63] rounded-md 
                   ${
                     isHomePage && isScrolled
                       ? "hover:bg-white hover:text-gray-800"
@@ -248,7 +248,7 @@ function Navbar() {
                   }  hover:bg-[#1E2D2F] transition duration-300  font-semibold`}
                 to="/contact"
               >
-                Get Free Consultation
+                Free Consultation
               </Link>
               <SignInButton mode="modal">
                 <User
