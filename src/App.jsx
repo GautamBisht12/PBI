@@ -30,6 +30,7 @@ import Ecommerce from "./pages/industry/Ecommerce.jsx";
 import Healthcare from "./pages/industry/Healthcare.jsx";
 import Hospitality from "./pages/industry/Hospitality.jsx";
 import ManufacturingWholesale from "./pages/industry/ManufacturingWholesale.jsx";
+import SubscriptionAgreement from "./pages/policies/SubscriptionAgreement.jsx";
 
 function App() {
   return (
@@ -70,6 +71,12 @@ function App() {
               <Route
                 path="/industry/manufacturing"
                 element={<ManufacturingWholesale />}
+              />
+
+              {/* Policies  */}
+              <Route
+                path="/subscription-agreement"
+                element={<SubscriptionAgreement />}
               />
             </Route>
 
