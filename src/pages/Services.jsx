@@ -6,9 +6,9 @@ import FAQ from "../components/ui/FAQ";
 
 const Services = () => {
   const [heroDetails] = useState({
-    heroTitle: "Services",
+    heroTitle: "Corporate Finance, Accounting & Bookkeeping",
     heroSubtitle:
-      "We offer a wide range of services to meet your needs. Explore our offerings below.",
+      "Services designed to strengthen the financial backbone of your business. ",
     heroImage: "https://wallpaperaccess.com/full/153208.jpg",
   });
 
@@ -18,7 +18,7 @@ const Services = () => {
       description:
         "Comprehensive accounting solutions tailored to your business needs.",
       services: [
-        "Dedicated Accountant ",
+        "Dedicated Accountant ( expertise in relevant industry)",
         "Day To Day Accounting Tasks ",
         "Bank & Credit Card Reconciliation",
         "Accounts Payable (AP) Management",
@@ -66,12 +66,12 @@ const Services = () => {
         {/* Introduction */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
-            Comprehensive Solutions for Your Business
+            Trusted Corporate Finance, Accounting & Bookkeeping for US
+            Businesses
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
-            We provide end-to-end services designed to help your business thrive
-            in the digital landscape. Our team of experts is committed to
-            delivering exceptional results tailored to your specific needs.
+            Accurate, compliant, and tailored financial solutions that
+            strengthen your business and drive strategic growth.
           </p>
         </div>
 

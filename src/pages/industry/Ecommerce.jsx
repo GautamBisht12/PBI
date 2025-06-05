@@ -4,9 +4,9 @@ import WorkedWith from "../../components/ui/WorkedWith";
 
 const Ecommerce = () => {
   const heroData = {
-    heroTitle: "E-Commerce Financial Solutions",
+    heroTitle: "Ecommerce Accounting and Compliance",
     heroSubtitle:
-      "Specialized bookkeeping, accounting, and financial management for E-Commerce businesses—backed by over a decade of expertise.",
+      " Accounting that understands ECommerce—because it’s what we do best.",
     heroImage:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
     btnText: "Consult with our E-Commerce Expert",
