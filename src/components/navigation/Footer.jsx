@@ -1,16 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState("");
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    // Implement newsletter subscription logic here
-    alert(`Thank you for subscribing with ${email}!`);
-    setEmail("");
-  };
 
   return (
     <footer className="bg-gradient-to-r from-[#192D2F] to-[#203c3e] text-white">
@@ -93,7 +84,6 @@ function Footer() {
 
           {/* Legal  */}
           <div className="col-span-1 md:col-span-2">
-        
             <ul className="space-y-3">
               {legal.map((l) => (
                 <li key={l.name}>
@@ -179,7 +169,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/upsellfinlogix?igsh=dzE3dGx3aDBteDkz",
     icon: (
       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
         <path
