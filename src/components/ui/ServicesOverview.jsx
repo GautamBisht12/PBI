@@ -15,7 +15,7 @@ const services = [
     title: "Diverse Industries Bookkeeping ",
     description:
       " Bookkeeping solutions for diverse industries—delivering clarity, compliance, and control. ",
-    link: "/services/accounting",
+    link: "/industry",
     icon: "📈",
   },
 ];

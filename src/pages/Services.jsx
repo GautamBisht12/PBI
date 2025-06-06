@@ -14,33 +14,37 @@ const Services = () => {
 
   const serviceCategories = [
     {
+      title: "Bookkeeping",
+      description:
+        "Expert bookkeeping services to keep your financial records accurate and up-to-date.",
+      services: [
+        "Dedicated Accountant Of Relevant Industry Expert",
+        "Managing the Complete Bookkeeping Cycle ",
+        "Bank & Credit Card Reconciliation ",
+        "AP (Payable) , AR (Receivable) , RTR (Record to Report)",
+        "Catch-Up & Clean-Up Bookkeeping",
+        "Payroll processing and bookkeeping ",
+        "Periodic Financial Reporting",
+        "Sales Tax Reporting and Filings",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1744051518421-1eaf2fbde680?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tlZXBpbmclMjBhY2NvdW50c3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
       title: "Accounting",
       description:
         "Comprehensive accounting solutions tailored to your business needs.",
       services: [
         "Dedicated Accountant ( expertise in relevant industry)",
-        "Day To Day Accounting Tasks ",
+        "Financial Modeling and Business Valuation  ",
         "Bank & Credit Card Reconciliation",
         "Accounts Payable (AP) Management",
         "Accounts Receivable (AR) Management",
+        "Wealth management ",
+        "Proactive Financial Strategy & Governance for Business Success",
       ],
       image:
         "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWNjb3VudGluZ3xlbnwwfHwwfHx8MA%3D%3D",
-    },
-    {
-      title: "Bookkeeping",
-      description:
-        "Expert bookkeeping services to keep your financial records accurate and up-to-date.",
-      services: [
-        "Monthly Financial Statements",
-        "General Ledger Maintenance",
-        "Payroll Processing",
-        "Sales Tax Preparation",
-        "Financial Reporting & Analysis",
-        "Budgeting & Forecasting",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1744051518421-1eaf2fbde680?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tlZXBpbmclMjBhY2NvdW50c3xlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       title: "Corporate Finance Management",

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../../components/ui/HeroSection";
 import WorkedWith from "../../components/ui/WorkedWith";
+import { FaShopify } from "react-icons/fa";
+import { BsAmazon, BsStripe } from "react-icons/bs";
 
 const Ecommerce = () => {
   const heroData = {
@@ -280,6 +282,149 @@ const Ecommerce = () => {
       </section>
 
       <WorkedWith />
+
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Content Section - Left */}
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Bookkeeping, Built for
+                  <span className="text-blue-600"> ECommerce</span>
+                </h2>
+                <div className="w-24 h-1 bg-blue-600 mb-6"></div>
+              </div>
+
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <span className="font-semibold text-[#B69D62]">
+                  Upsell FinLogix
+                </span>{" "}
+                specializes exclusively in bookkeeping services tailored for
+                e-commerce businesses. With over a decade of deep e-commerce
+                experience, we understand the unique financial complexities
+                faced by online sellers — from multi-channel sales tracking to
+                inventory management and payment reconciliations.
+              </p>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Our expert bookkeeping solutions ensure:
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">
+                      Accurate, real-time financial records that keep you
+                      audit-ready
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">
+                      By{" "}
+                      <strong>Dedicated Accountant + E-commerce Expert</strong>
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">
+                      Seamless integration with leading platforms like Shopify,
+                      Amazon, and Stripe
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">
+                      Detailed transaction categorization to maximize tax
+                      benefits
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">
+                      Transparent, timely reporting for smarter business
+                      decisions
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">
+                      Strict data confidentiality and compliance with industry
+                      standards
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-900 p-6 rounded-xl text-white">
+                <p className="text-lg font-medium text-white">
+                  Partner with{" "}
+                  <span className="font-bold">Upsell FinLogix</span> for
+                  bookkeeping that goes beyond numbers — empowering you to scale
+                  confidently with financial clarity and control.
+                </p>
+              </div>
+            </div>
+
+            {/* Images Section - Right */}
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4 h-[600px]">
+                {/* Large image - top left */}
+                <div className="row-span-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="E-commerce analytics dashboard"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+
+                {/* Top right */}
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Financial charts and graphs"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+
+                {/* Bottom right */}
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Online shopping and e-commerce"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Floating elements for modern touch */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-600 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-[#B69D62] rounded-full opacity-30 animate-pulse delay-1000"></div>
+
+              {/* Platform logos overlay */}
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="text-sm font-medium text-gray-700">
+                    Integrated with:
+                  </div>
+                  <div className="flex space-x-2">
+                    <div className="w-8 h-8 bg-green-600 rounded text-white text-xs flex items-center justify-center font-bold">
+                      <FaShopify size={20} />
+                    </div>
+                    <div className="w-8 h-8 bg-orange-500 rounded text-white text-xs flex items-center justify-center font-bold">
+                      <BsAmazon size={20} />
+                    </div>
+                    <div className="w-8 h-8 bg-purple-600 rounded text-white text-xs flex items-center justify-center font-bold">
+                      <BsStripe size={20} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* What We Serve Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">

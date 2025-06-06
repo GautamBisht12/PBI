@@ -518,56 +518,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Impact section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
-              Our Impact
-            </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              Since our founding, we have helped businesses across multiple
-              industries streamline their financial operations, improve their
-              cash flow, and achieve their growth objectives.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="text-5xl font-bold text-blue-600 mb-4">500+</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Clients Served
-              </h3>
-              <p className="text-gray-600">
-                Across various industries and business sizes
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="text-5xl font-bold text-green-600 mb-4">35%</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Average Cost Reduction
-              </h3>
-              <p className="text-gray-600">
-                For businesses switching to our services
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-4">
-                24/7
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Support & Monitoring
-              </h3>
-              <p className="text-gray-600">
-                Ensuring your financial operations run smoothly
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA section */}
       <section
         className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative"

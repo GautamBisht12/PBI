@@ -15,47 +15,71 @@ const FAQ = () => {
           <div className="mt-12 space-y-8 ">
             <div className="bg-white p-6 rounded-lg shadow-sm ">
               <h3 className="text-lg font-medium text-gray-900">
-                How secure is PowerVision?
+                What types of businesses do you work with?
               </h3>
               <p className="mt-2 text-gray-500">
-                PowerVision implements enterprise-grade security measures
-                including end-to-end encryption, role-based access control, and
-                regular security audits. We comply with industry standards like
-                SOC 2 and GDPR.
+                We serve small to mid-sized businesses, startups, and growing
+                enterprises across industries including professional services,
+                e-commerce, tech, healthcare, and consulting. Our solutions are
+                tailored to your business structure—whether you're a sole
+                proprietor, partnership, LLC, or corporation.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium text-gray-900">
-                Do I need a Power BI license to use PowerVision?
+                What software platforms do you support?
               </h3>
               <p className="mt-2 text-gray-500">
-                Yes, PowerVision integrates with your existing Power BI service.
-                Your organization needs at least a Power BI Pro or Premium
-                license to use our platform.
+                We are proficient in:
+                <ul>
+                  <li>QuickBooks (Online & Desktop)</li>
+                  <li>Zoho Books</li>
+                  <li>Xero </li>
+                  <li>Excel, Google Sheets, and Power BI </li>
+                </ul>
+                We also integrate with tools like Gusto, Amazon, Stripe,
+                Shopify, PayPal, Dext, and Hubdoc.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium text-gray-900">
-                Can I control who sees which reports?
+                How often will I receive financial reports?
               </h3>
               <p className="mt-2 text-gray-500">
-                Absolutely! PowerVision offers granular access control, allowing
-                administrators to determine precisely which users or groups can
-                access specific reports and dashboards.
+                You will receive monthly, quarterly, and annual financial
+                statements, including:
+                <ul>
+                  <li>Profit & Loss Statement </li>
+                  <li>Balance Sheet </li>
+                  <li>Cash Flow Statement </li>
+                  <li>Custom reports upon request </li>
+                </ul>
+                Our reports are timely, accurate, and designed for clear
+                decision-making.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-medium text-gray-900">
-                How often are the reports updated?
+                Is my financial data secure?
               </h3>
               <p className="mt-2 text-gray-500">
-                PowerVision connects directly to your Power BI service, so your
-                reports update according to the refresh schedule you've set in
-                Power BI. We also support real-time dashboards for data that
-                requires immediate visibility.
+                Yes. We adhere to strict data privacy protocols and use secure
+                file-sharing systems. NDAs are available upon request. Your
+                confidentiality and trust are paramount.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-medium text-gray-900">
+                How do I get started?
+              </h3>
+              <p className="mt-2 text-gray-500">
+                Click “Schedule a Free Consultation” or fill out our Contact
+                Form. We'll discuss your current needs, assess your financial
+                setup, and provide a tailored proposal with clear deliverables.
               </p>
             </div>
           </div>

@@ -1,629 +1,288 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
 
-function Industry() {
+const Industry = () => {
   const heroData = {
-    heroTitle: "Industry",
+    heroTitle: "Expert Bookkeeping Across Diverse Industries",
     heroSubtitle:
-      " Our mission is to provide high-quality bookkeeping and accounting services to businesses of all sizes. We are dedicated to helping our clients achieve their financial goals and grow their businesses.",
+      "Specialized financial solutions tailored to your industry's unique needs and challenges.",
     heroImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+      "https://videos.openai.com/vg-assets/assets%2Ftask_01jx1wd252fb181k507s3z2trs%2F1749188864_img_0.webp?st=2025-06-06T04%3A23%3A28Z&se=2025-06-12T05%3A23%3A28Z&sks=b&skt=2025-06-06T04%3A23%3A28Z&ske=2025-06-12T05%3A23%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=5%2BFk%2FdKVg4h9dKAXrXlCplM6nnO7eBw%2FkVjzwfTvqno%3D&az=oaivgprodscus",
+    btnText: "Explore Our Industry Expertise",
   };
+
+  const industries = [
+    {
+      id: 1,
+      title: "E-commerce",
+      description:
+        "Specialized bookkeeping for online retailers with multi-channel sales tracking, inventory management, and payment reconciliations.",
+      icon: "🛒",
+      features: [
+        "Multi-platform Integration",
+        "Inventory Tracking",
+        "Payment Reconciliation",
+        "Tax Optimization",
+      ],
+      link: "/industry/ecommerce",
+      bgColor: "from-blue-500 to-blue-600",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 2,
+      title: "Construction & Contracting",
+      description:
+        "Project-based accounting, job costing, equipment depreciation, and compliance management for construction businesses.",
+      icon: "🏗️",
+      features: [
+        "Job Costing",
+        "Equipment Tracking",
+        "Project Management",
+        "Compliance Reporting",
+      ],
+      link: "/industry/construction",
+      bgColor: "from-orange-500 to-orange-600",
+      image:
+        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 3,
+      title: "Healthcare",
+      description:
+        "HIPAA-compliant financial management, insurance billing, patient account management, and regulatory compliance.",
+      icon: "🏥",
+      features: [
+        "HIPAA Compliance",
+        "Insurance Billing",
+        "Patient Accounts",
+        "Regulatory Reporting",
+      ],
+      link: "/industry/healthcare",
+      bgColor: "from-green-500 to-green-600",
+      image:
+        "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhlYWx0aGNhcmUlMjBpbmR1c3RyeXxlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 4,
+      title: "Hospitality",
+      description:
+        "Revenue management, seasonal accounting, tip reporting, and multi-location financial consolidation for hospitality businesses.",
+      icon: "🏨",
+      features: [
+        "Revenue Management",
+        "Seasonal Accounting",
+        "Tip Reporting",
+        "Multi-location Support",
+      ],
+      link: "/industry/hospitality",
+      bgColor: "from-purple-500 to-purple-600",
+      image:
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 5,
+      title: "Manufacturing",
+      description:
+        "Cost accounting, inventory valuation, production cost analysis, and supply chain financial management.",
+      icon: "🏭",
+      features: [
+        "Cost Accounting",
+        "Inventory Valuation",
+        "Production Analysis",
+        "Supply Chain Finance",
+      ],
+      link: "/industry/manufacturing",
+      bgColor: "from-red-500 to-red-600",
+      image:
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 6,
+      title: "Wholesale Service",
+      description:
+        "Bulk transaction processing, vendor management, distribution cost tracking, and B2B financial solutions.",
+      icon: "📦",
+      features: [
+        "Bulk Processing",
+        "Vendor Management",
+        "Distribution Costs",
+        "B2B Solutions",
+      ],
+      link: "/industry/wholesale",
+      bgColor: "from-indigo-500 to-indigo-600",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+  ];
+
   return (
-    <div className="fade-in">
-      {/* Hero section */}
+    <>
       <HeroSection heroDetails={heroData} />
 
-      {/* Mission section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="mb-10 lg:mb-0">
-              <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Upsell Finlogix, we recognize that effective financial
-                management is essential for the growth and stability of any
-                business. Our mission is to deliver comprehensive bookkeeping,
-                accounting, and corporate finance services that streamline your
-                financial operations, ensuring transparency, efficiency, and
-                long-term success.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Our goal is to go beyond just providing basic financial
-                services. We aim to be a trusted partner in your business
-                journey, delivering reliable, scalable, and efficient solutions
-                that ensure financial clarity, control, and sustainable growth.
-              </p>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                alt="Financial planning"
-                className="rounded-lg shadow-xl"
-              />
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-500 rounded-lg -z-10"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services section */}
+      {/* Industries Overview Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
-              Our Services
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              We provide a full range of financial services designed to meet the
-              needs of businesses across various industries, including
-              e-commerce, real estate, healthcare, and hospitality.
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our expertise spans across multiple industries, providing
+              specialized bookkeeping and financial management solutions
+              tailored to each sector's unique requirements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Service 1 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80"
-                  alt="Bookkeeping & Accounting"
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Bookkeeping & Accounting
-                </h3>
-                <p className="text-gray-600">
-                  We manage day-to-day financial records, ensuring accuracy and
-                  compliance. Our services include tracking transactions,
-                  reconciling accounts, and maintaining your general ledger.
-                </p>
-              </div>
-            </div>
+          {/* Industry Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry) => (
+              <div
+                key={industry.id}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group flex flex-col"
+              >
+                {/* Card Header with Image */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={industry.image}
+                    alt={industry.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${industry.bgColor} opacity-80`}
+                  ></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="text-4xl mb-2">{industry.icon}</div>
+                      <h3 className="text-2xl font-bold">{industry.title}</h3>
+                    </div>
+                  </div>
+                </div>
 
-            {/* Service 2 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                  alt="Financial Reporting & Analysis"
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Financial Reporting & Analysis
-                </h3>
-                <p className="text-gray-600">
-                  Our customized financial reports provide actionable insights
-                  into your business's financial health, empowering you to make
-                  data-driven decisions.
-                </p>
-              </div>
-            </div>
+                {/* Card Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {industry.description}
+                  </p>
 
-            {/* Service 3 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1565514020179-026b92b2d70b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                  alt="Accounts Payable & Receivable"
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Accounts Payable & Receivable
-                </h3>
-                <p className="text-gray-600">
-                  We optimize cash flow by managing both accounts payable and
-                  receivable, from timely payment processing to efficient
-                  collections.
-                </p>
-              </div>
-            </div>
+                  {/* Features List */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      Key Services:
+                    </h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {industry.features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center text-sm text-gray-600"
+                        >
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
-            {/* Service 4 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                  alt="Corporate Finance & Strategy"
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                />
+                  {/* CTA Button */}
+                  <div className="mt-auto">
+                    <Link
+                      to={industry.link}
+                      className={`block w-full text-center bg-gradient-to-r ${industry.bgColor} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Corporate Finance & Strategy
-                </h3>
-                <p className="text-gray-600">
-                  We offer strategic corporate finance services, including
-                  financial modeling, budgeting, and forecasting to help you
-                  make sound financial decisions.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Approach section */}
+      {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
-              Our Approach: Precision, Transparency, and Insight
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Industry-Specific Expertise?
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              We prioritize precision and transparency in everything we do.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-blue-50 rounded-xl p-8 border-t-4 border-blue-500 hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
-                Seamless Integration
-              </h3>
-              <p className="text-gray-600 text-center">
-                We integrate the latest accounting software to automate routine
-                tasks, reducing the potential for errors and enhancing
-                operational efficiency.
-              </p>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-8 border-t-4 border-green-500 hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-green-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
-                Proactive Strategy Development
-              </h3>
-              <p className="text-gray-600 text-center">
-                Our team works alongside you to develop strategic financial
-                plans that align with your business goals, ensuring that your
-                finances are always structured for success.
-              </p>
-            </div>
-
-            <div className="bg-orange-50 rounded-xl p-8 border-t-4 border-orange-500 hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-orange-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
-                Real-Time Financial Visibility
-              </h3>
-              <p className="text-gray-600 text-center">
-                With our real-time financial dashboards, you gain instant access
-                to the key metrics that matter most to your business, enabling
-                quick decision-making and continuous monitoring.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold mb-4">
-              Why Choose Upsell Finlogix?
-            </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-300">
-              We're committed to delivering exceptional service and ensuring
-              your financial operations are accurate and timely.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Industry Expertise
-              </h3>
-              <p className="text-gray-300 text-center">
-                With extensive experience in a wide range of sectors, we
-                understand the unique challenges your business faces.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-green-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-green-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Commitment to Excellence
-              </h3>
-              <p className="text-gray-300 text-center">
-                We maintain the highest professional standards, delivering
-                exceptional service and ensuring your financial operations are
-                accurate.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-purple-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-purple-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Technology-Driven Solutions
-              </h3>
-              <p className="text-gray-300 text-center">
-                By leveraging advanced financial technologies, we streamline
-                operations and provide real-time insights into your financial
-                data.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-orange-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-orange-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Client-Centric Approach
-              </h3>
-              <p className="text-gray-300 text-center">
-                We put your business first, working closely with you to
-                understand your needs and help you achieve your financial
-                objectives.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1 relative">
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-                alt="Team collaboration"
-                className="rounded-lg shadow-xl"
-              />
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-green-500 rounded-lg -z-10"></div>
-            </div>
-            <div className="order-1 lg:order-2 mb-10 lg:mb-0">
-              <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
-                Our Values
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Our values guide everything we do:
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Integrity & Accountability
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      We operate with the utmost integrity, ensuring
-                      transparency and building trust with every client.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Client Commitment
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      Your business's success is our success. We are dedicated
-                      to providing services that deliver measurable results.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Innovation & Agility
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      We continuously adapt to changes in the financial
-                      landscape to offer the most innovative solutions that keep
-                      you ahead of the curve.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Long-Term Relationships
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                      We believe in creating lasting partnerships by delivering
-                      consistent value and support as your business grows.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Impact section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
-              Our Impact
-            </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              Since our founding, we have helped businesses across multiple
-              industries streamline their financial operations, improve their
-              cash flow, and achieve their growth objectives.
-            </p>
+            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="text-5xl font-bold text-blue-600 mb-4">500+</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Clients Served
-              </h3>
-              <p className="text-gray-600">
-                Across various industries and business sizes
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="text-5xl font-bold text-green-600 mb-4">35%</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Average Cost Reduction
-              </h3>
-              <p className="text-gray-600">
-                For businesses switching to our services
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
-              <div className="text-5xl font-bold text-orange-600 mb-4">
-                24/7
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Support & Monitoring
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Industry Knowledge
               </h3>
               <p className="text-gray-600">
-                Ensuring your financial operations run smoothly
+                Deep understanding of industry-specific regulations, compliance
+                requirements, and best practices.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Dedicated Experts
+              </h3>
+              <p className="text-gray-600">
+                Specialized accountants with years of experience in your
+                specific industry sector.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-purple-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Tailored Solutions
+              </h3>
+              <p className="text-gray-600">
+                Customized bookkeeping processes designed to meet your
+                industry's unique operational needs.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA section */}
-      <section
-        className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')",
-        }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/90"></div>
+      {/* CTA Section */}
 
-        {/* Content container */}
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl font-extrabold mb-6 text-white">
-            Partner with Us for a Stronger Financial Future
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            At Upsell Finlogix, we are more than just a service provider; we are
-            your strategic partner in bookkeeping, accounting, and corporate
-            finance. Let us help you navigate the complexities of financial
-            management with precision, insight, and transparency, so you can
-            focus on growing your business.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md  btn-style-2 transition-colors duration-300 shadow-lg"
-          >
-            Book an Appointmemt
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </Link>
-        </div>
-      </section>
-
-      {/* Team section */}
-
-      {/* Final CTA section */}
       <section className="bg-blue-50 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
             Ready to Transform Your Financial Operations?
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Let Upsell Finlogix help you navigate the complexities of financial
-            management with precision, insight, and transparency, so you can
-            focus on growing your business.
+            Let Upsell Finlogix help you streamline your financial operations
+            with industry-specific expertise. Let us help you navigate the
+            complexities of financial management with precision, insight, and
+            transparency, so you can focus on growing your business.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
@@ -641,8 +300,8 @@ function Industry() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
-}
+};
 
 export default Industry;
