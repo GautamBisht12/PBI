@@ -7,7 +7,7 @@ const services = [
     title: " E-commerce Bookkeeping",
     description:
       "Discover how modern bookkeeping tailored for e-commerce ensures financial clarity and compliance ",
-    link: "/services/bookkeeping",
+    link: "/industry/ecommerce",
     icon: "📊",
   },
 

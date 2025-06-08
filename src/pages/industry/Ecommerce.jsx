@@ -281,8 +281,6 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <WorkedWith />
-
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -486,6 +484,8 @@ const Ecommerce = () => {
           </div>
         </div>
       </section>
+
+      <WorkedWith />
 
       {/* Thank You Section */}
       <section className="py-16 bg-white text-black">

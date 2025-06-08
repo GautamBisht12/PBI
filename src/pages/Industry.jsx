@@ -150,11 +150,11 @@ const Industry = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${industry.bgColor} opacity-80`}
+                    className={`absolute inset-0 bg-gradient-to-r bg-black opacity-40`}
                   ></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="text-4xl mb-2">{industry.icon}</div>
+                      {/* <div className="text-4xl mb-2">{industry.icon}</div> */}
                       <h3 className="text-2xl font-bold">{industry.title}</h3>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ const Industry = () => {
                   <div className="mt-auto">
                     <Link
                       to={industry.link}
-                      className={`block w-full text-center bg-gradient-to-r ${industry.bgColor} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                      className={`block w-full text-center bg-gradient-to-r btn-style text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                     >
                       Learn More
                     </Link>
