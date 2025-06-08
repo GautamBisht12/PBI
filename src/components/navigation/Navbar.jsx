@@ -249,14 +249,14 @@ function Navbar() {
               >
                 Free Consultation
               </Link>
-              <SignInButton mode="modal">
+              {/* <SignInButton mode="modal">
                 <User
                   size={30}
                   className={`cursor-pointer hover:text-[#B79E63] ${
                     !isHomePage ? "text-gray-800" : "text-white"
                   }`}
                 />
-              </SignInButton>
+              </SignInButton> */}
               {/* <SignUpButton mode="modal">
           <button className="btn-primary">Sign up</button>
         </SignUpButton> */}
@@ -405,7 +405,7 @@ function Navbar() {
                   </div>
                 ) : (
                   <div className="flex flex-col space-y-4">
-                    <SignInButton mode="modal">
+                    {/* <SignInButton mode="modal">
                       <button className="btn-secondary w-full py-3 text-lg">
                         Sign in
                       </button>
@@ -414,7 +414,7 @@ function Navbar() {
                       <button className="btn-primary w-full py-3 text-lg">
                         Sign up
                       </button>
-                    </SignUpButton>
+                    </SignUpButton> */}
                   </div>
                 )}
               </div>
