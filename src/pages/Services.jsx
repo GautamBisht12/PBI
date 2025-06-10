@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
 import { CheckCircle } from "lucide-react";
 import CTA from "../components/ui/CTA";
 import FAQ from "../components/ui/FAQ";
 
 const Services = () => {
+  const location = useLocation();
+
   const [heroDetails] = useState({
     heroTitle: "Corporate Finance, Accounting & Bookkeeping",
     heroSubtitle:
@@ -42,7 +45,7 @@ const Services = () => {
         "Bank & Credit Card Reconciliation",
         "Accounts Payable (AP) Management",
         "Accounts Receivable (AR) Management",
-        "Wealth management ",
+        "Wealth management ",
         "Proactive Financial Strategy & Governance for Business Success",
       ],
       image:
@@ -64,6 +67,23 @@ const Services = () => {
         "https://plus.unsplash.com/premium_photo-1661720120987-9723da4de350?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RmluYW5jZSUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
     },
   ];
+
+  // Handle hash navigation
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.substring(1); // Remove the '#'
+      const element = document.getElementById(elementId);
+      if (element) {
+        // Add a small delay to ensure the page has loaded
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   return (
     <div className="bg-white">
@@ -90,7 +110,7 @@ const Services = () => {
               id={category.id}
               className={`flex flex-col ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
-              } gap-12 items-center`}
+              } gap-12 items-center scroll-mt-20`} // Added scroll-mt-20 for better positioning
             >
               {/* Image */}
               <div className="w-full lg:w-1/2">
