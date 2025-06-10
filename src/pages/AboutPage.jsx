@@ -110,7 +110,7 @@ function AboutPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1565514020179-026b92b2d70b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                  src="https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFjY291bnRzJTIwcGF5YWJsZSUyMGFuZCUyMHJlY2VpdmFibGV8ZW58MHx8MHx8fDA%3D"
                   alt="Accounts Payable & Receivable"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />

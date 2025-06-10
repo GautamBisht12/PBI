@@ -15,6 +15,7 @@ const Services = () => {
   const serviceCategories = [
     {
       title: "Bookkeeping",
+      id: "bookkeeping",
       description:
         "Expert bookkeeping services to keep your financial records accurate and up-to-date.",
       services: [
@@ -32,6 +33,7 @@ const Services = () => {
     },
     {
       title: "Accounting",
+      id: "accounting",
       description:
         "Comprehensive accounting solutions tailored to your business needs.",
       services: [
@@ -48,6 +50,7 @@ const Services = () => {
     },
     {
       title: "Corporate Finance Management",
+      id: "corporate-finance",
       description:
         "Comprehensive branding solutions to establish a strong market presence.",
       services: [
@@ -58,7 +61,7 @@ const Services = () => {
         "Strategic planning",
       ],
       image:
-        "https://th.bing.com/th/id/OIP.tPVB-7ooVwyiqBXrzVYyVAHaE8?cb=iwp2&w=1600&h=1067&rs=1&pid=ImgDetMain",
+        "https://plus.unsplash.com/premium_photo-1661720120987-9723da4de350?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RmluYW5jZSUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
     },
   ];
 
@@ -84,6 +87,7 @@ const Services = () => {
           {serviceCategories.map((category, index) => (
             <div
               key={index}
+              id={category.id}
               className={`flex flex-col ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
               } gap-12 items-center`}
