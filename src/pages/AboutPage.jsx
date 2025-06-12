@@ -117,7 +117,7 @@ function AboutPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Accounts Payable & Receivable
+                  Accounting
                 </h3>
                 <p className="text-gray-600">
                   We optimize cash flow by managing both accounts payable and

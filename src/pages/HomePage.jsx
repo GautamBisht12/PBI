@@ -66,34 +66,30 @@ function HomePage() {
       <ServicesOverview />
 
       {/* CTA section */}
-      <section className="py-20 bg-white ">
-        {/* Content container */}
-        <div className="max-w-3xl  mx-auto px-4 sm:px-6 lg:px-8  z-10 text-center flex flex-col items-center gap-5">
-          <h2 className="heading-tagline text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Ready to transform your data experience?
+      <section className="bg-blue-50 py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
+            Ready to Transform Your Financial Operations?
           </h2>
-          <p className="mt2 max-w-2xl mx-auto text-xl text-gray-800">
-            Join thousands of businesses that are making smarter decisions with
-            PowerVision.
+          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+            Let Upsell Finlogix help you navigate the complexities of financial
+            management with precision, insight, and transparency, so you can
+            focus on growing your business.
           </p>
-          <Link
-            to="/contact"
-            className=" inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md hover:border-[#B69D62]  btn-style-2 transition-colors duration-300 shadow-lg"
-          >
-            Book an Appointmemt
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md btn-style shadow-md transition-all duration-300"
             >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </Link>
+              Schedule a Free Consultation
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center justify-center px-8 py-4 border border-[#192A2D] text-base font-medium rounded-md text-[#192A2D] bg-white hover:bg-blue-50 shadow-sm transition-all duration-300"
+            >
+              Explore Our Services
+            </Link>
+          </div>
         </div>
       </section>
       <PricingSection />
