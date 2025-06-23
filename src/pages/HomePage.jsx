@@ -78,7 +78,7 @@ function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact"
+              to="https://calendly.com/upsellfinlogix/30min"
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md btn-style shadow-md transition-all duration-300"
             >
               Schedule a Free Consultation

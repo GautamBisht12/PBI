@@ -15,7 +15,7 @@ const slides = [
   },
   {
     image:
-      "https://img.freepik.com/premium-photo/businessman-rooftop_700248-5107.jpg",
+      "https://static.vecteezy.com/system/resources/previews/001/995/653/large_2x/financial-business-background-planting-trees-on-coins-and-wooden-floors-ideas-for-financial-growth-and-investment-free-photo.jpg",
     headline: "Your Partner in Strategic Financial Growth.",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",

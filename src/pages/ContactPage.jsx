@@ -9,12 +9,12 @@ import { Clock9Icon } from "lucide-react";
 import { sendEmail } from "../utils/emailService";
 
 const ContactPage = () => {
-  const [heroDetails, setHeroDetails] = useState({
+  const [heroDetails] = useState({
     heroTitle: "Contact Us",
     heroSubtitle:
       "We'd love to hear from you! Reach out to us using the form below or contact us directly.",
     heroImage:
-      "https://img.freepik.com/premium-photo/business-team-hero-banner-background_693425-12089.jpg",
+      "https://static.vecteezy.com/system/resources/thumbnails/007/067/602/small_2x/businessman-shows-outstretched-hand-with-social-icon-on-virtual-screen-contact-us-free-photo.jpg",
   });
 
   const [formData, setFormData] = useState({
@@ -123,7 +123,7 @@ const ContactPage = () => {
                 <div className="text-sm md:text-lg text-gray-500 text-center">
                   <a
                     href="mailto:info@upsellfinlogix.com"
-                    className="hover:text-[#ceb16b] transition-colors break-all"
+                    className="hover:text-[#ceb16b] transition-colors break-all "
                   >
                     info@upsellfinlogix.com
                   </a>
@@ -149,7 +149,7 @@ const ContactPage = () => {
                 <div className="text-sm md:text-base text-gray-500 text-center">
                   <a
                     href="tel:+18048760978"
-                    className="hover:text-[#ceb16b] transition-colors"
+                    className="hover:text-[#ceb16b] transition-colors font-sans"
                   >
                     +1 (804) 876-0978
                   </a>

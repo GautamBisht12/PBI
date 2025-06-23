@@ -5,8 +5,7 @@ const Pricing = () => {
   const pricingPlans = [
     {
       title: "Pay-As-You-Go",
-      price: "$49",
-      extra: "$125",
+      price: "$24.99",
       extraLabel: "per hour",
       features: [
         "Dedicated Accountant",
@@ -19,7 +18,7 @@ const Pricing = () => {
     },
     {
       title: "Bookkeeping",
-      price: "$399",
+      price: "$199",
       features: [
         "Dedicated Accountant",
         "Monthly or Weekly Accounting",
@@ -28,11 +27,11 @@ const Pricing = () => {
       ],
       addons: ["Payroll", "Sales Tax", "Back Office"],
       buttonText: "Free Consultation",
-      highlighted: false,
+      highlighted: true,
     },
     {
       title: "Accounting",
-      price: "$599",
+      price: "$349",
       features: [
         "Dedicated Accountant",
         "Accounts payable",
@@ -41,11 +40,11 @@ const Pricing = () => {
         "Financial Reporting",
       ],
       buttonText: "Free Consultation",
-      highlighted: true,
+      highlighted: false,
     },
     {
       title: "Corporate Finance Management",
-      price: "$1,599",
+      price: "$999",
       features: [
         "Financial planning and analysis ",
         "Financial planning and business valuation",

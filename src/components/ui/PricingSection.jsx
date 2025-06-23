@@ -186,7 +186,7 @@ const PricingSection = () => {
                 href="/contact"
                 className="text-orange-500 hover:text-orange-600 font-medium"
               >
-                Contact our sales team
+                Contact Us
               </a>
             </p>
           </div>

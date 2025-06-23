@@ -60,6 +60,16 @@ const WorkedWith = () => {
         />
       ),
     },
+    {
+      name: "Ebay",
+      logo: (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg"
+          alt="Walmart Logo"
+          className="w-24 h-24"
+        />
+      ),
+    },
   ];
   return (
     <div className="worked-with-container mt-16">

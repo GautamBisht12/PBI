@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
+import FAQ from "../components/ui/FAQ";
 
 const Industry = () => {
   const heroData = {
@@ -7,7 +8,7 @@ const Industry = () => {
     heroSubtitle:
       "Specialized financial solutions tailored to your industry's unique needs and challenges.",
     heroImage:
-      "https://videos.openai.com/vg-assets/assets%2Ftask_01jx1wd252fb181k507s3z2trs%2F1749188864_img_0.webp?st=2025-06-06T04%3A23%3A28Z&se=2025-06-12T05%3A23%3A28Z&sks=b&skt=2025-06-06T04%3A23%3A28Z&ske=2025-06-12T05%3A23%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=5%2BFk%2FdKVg4h9dKAXrXlCplM6nnO7eBw%2FkVjzwfTvqno%3D&az=oaivgprodscus",
+      "https://www.curt.org/wp-content/uploads/2019/06/iStock-931461960.jpg",
     btnText: "Explore Our Industry Expertise",
   };
 
@@ -286,7 +287,7 @@ const Industry = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact"
+              to="https://calendly.com/upsellfinlogix/30min"
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md btn-style shadow-md transition-all duration-300"
             >
               Schedule a Free Consultation
@@ -300,6 +301,8 @@ const Industry = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
     </>
   );
 };

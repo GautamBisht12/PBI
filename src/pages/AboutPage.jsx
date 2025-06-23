@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
+import FAQ from "../components/ui/FAQ";
 
 function AboutPage() {
   const heroData = {
@@ -151,103 +152,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Approach section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
-              Our Approach: Precision, Transparency, and Insight
-            </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              We prioritize precision and transparency in everything we do.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-blue-50 rounded-xl p-8 border-t-4 border-blue-500 hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
-                Seamless Integration
-              </h3>
-              <p className="text-gray-600 text-center">
-                We integrate the latest accounting software to automate routine
-                tasks, reducing the potential for errors and enhancing
-                operational efficiency.
-              </p>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-8 border-t-4 border-green-500 hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-green-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
-                Proactive Strategy Development
-              </h3>
-              <p className="text-gray-600 text-center">
-                Our team works alongside you to develop strategic financial
-                plans that align with your business goals, ensuring that your
-                finances are always structured for success.
-              </p>
-            </div>
-
-            <div className="bg-orange-50 rounded-xl p-8 border-t-4 border-orange-500 hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-orange-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
-                Real-Time Financial Visibility
-              </h3>
-              <p className="text-gray-600 text-center">
-                With our real-time financial dashboards, you gain instant access
-                to the key metrics that matter most to your business, enabling
-                quick decision-making and continuous monitoring.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us section */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,6 +275,146 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Approach section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+              Our Approach: Precision, Transparency, and Insight
+            </h2>
+            <p className="max-w-3xl mx-auto text-lg text-gray-600">
+              We prioritize precision and transparency in everything we do.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="bg-blue-50 rounded-xl p-8 border-t-4 border-blue-500 hover:shadow-md transition-shadow duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-blue-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
+                Seamless Integration
+              </h3>
+              <p className="text-gray-600 text-center">
+                We integrate the latest accounting software to automate routine
+                tasks, reducing the potential for errors and enhancing
+                operational efficiency.
+              </p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-8 border-t-4 border-green-500 hover:shadow-md transition-shadow duration-300">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-green-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
+                Proactive Strategy Development
+              </h3>
+              <p className="text-gray-600 text-center">
+                Our team works alongside you to develop strategic financial
+                plans that align with your business goals, ensuring that your
+                finances are always structured for success.
+              </p>
+            </div>
+
+            <div className="bg-orange-50 rounded-xl p-8 border-t-4 border-orange-500 hover:shadow-md transition-shadow duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-orange-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center text-gray-900 mb-4">
+                Real-Time Financial Visibility
+              </h3>
+              <p className="text-gray-600 text-center">
+                With our real-time financial dashboards, you gain instant access
+                to the key metrics that matter most to your business, enabling
+                quick decision-making and continuous monitoring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA section */}
+      <section
+        className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/90"></div>
+
+        {/* Content container */}
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-3xl font-extrabold mb-6 text-white">
+            Partner with Us for a Stronger Financial Future
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            At Upsell Finlogix, we are more than just a service provider; we are
+            your strategic partner in bookkeeping, accounting, and corporate
+            finance. Let us help you navigate the complexities of financial
+            management with precision, insight, and transparency, so you can
+            focus on growing your business.
+          </p>
+          <Link
+            to="https://calendly.com/upsellfinlogix/30min"
+            className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md  btn-style-2 transition-colors duration-300 shadow-lg"
+          >
+            Book an Appointmemt
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Link>
+        </div>
+      </section>
       {/* Values section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -518,50 +562,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* CTA section */}
-      <section
-        className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')",
-        }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/90"></div>
-
-        {/* Content container */}
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl font-extrabold mb-6 text-white">
-            Partner with Us for a Stronger Financial Future
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            At Upsell Finlogix, we are more than just a service provider; we are
-            your strategic partner in bookkeeping, accounting, and corporate
-            finance. Let us help you navigate the complexities of financial
-            management with precision, insight, and transparency, so you can
-            focus on growing your business.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md  btn-style-2 transition-colors duration-300 shadow-lg"
-          >
-            Book an Appointmemt
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </Link>
-        </div>
-      </section>
-
       {/* Team section */}
 
       {/* Final CTA section */}
@@ -580,7 +580,7 @@ function AboutPage() {
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md btn-style shadow-md transition-all duration-300"
             >
-              Schedule a Free Consultation
+              Contact Us
             </Link>
             <Link
               to="/services"
@@ -591,6 +591,8 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <FAQ />
     </div>
   );
 }

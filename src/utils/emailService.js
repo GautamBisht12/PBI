@@ -6,7 +6,6 @@ emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 export const sendEmail = async (formData) => {
   try {
     const templateParams = {
-      to_email: "info@upsellfinlogix.com",
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,

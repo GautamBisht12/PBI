@@ -249,7 +249,7 @@ function Navbar() {
                       ? "hover:bg-white hover:text-gray-800"
                       : "hover:text-white"
                   }  hover:bg-[#1E2D2F] transition duration-300  font-semibold`}
-                to="/contact"
+                to="https://calendly.com/upsellfinlogix/30min"
               >
                 Free Consultation
               </Link>
