@@ -31,6 +31,7 @@ import Healthcare from "./pages/industry/Healthcare.jsx";
 import Hospitality from "./pages/industry/Hospitality.jsx";
 import ManufacturingWholesale from "./pages/industry/ManufacturingWholesale.jsx";
 import SubscriptionAgreement from "./pages/policies/SubscriptionAgreement.jsx";
+import PrivacyPolicy from "./pages/policies/PrivacyPolicy.jsx";
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
                 path="/subscription-agreement"
                 element={<SubscriptionAgreement />}
               />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Route>
 
             {/* Protected dashboard routes */}
