@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HeroSection from "../components/ui/HeroSection";
+import { CheckCircle } from "lucide-react";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -127,7 +128,7 @@ const Pricing = () => {
                         {plan.addons.map((addon, idx) => (
                           <div key={idx} className="text-xs text-center">
                             <div className="bg-gray-100 p-2 rounded-full mb-1">
-                              🎯
+                              <CheckCircle className="h-4 w-4 text-blue-500" />
                             </div>
                             <p className="text-sm">{addon}</p>
                           </div>
@@ -135,9 +136,9 @@ const Pricing = () => {
                       </div>
                     </div>
                   )}
-                  {plan.note && (
+                  {/* {plan.note && (
                     <p className="mt-4 text-sm text-gray-500">{plan.note}</p>
-                  )}
+                  )} */}
                 </div>
                 <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-2 px-4 rounded shadow">
                   {plan.buttonText}

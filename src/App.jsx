@@ -30,8 +30,7 @@ import Ecommerce from "./pages/industry/Ecommerce.jsx";
 import Healthcare from "./pages/industry/Healthcare.jsx";
 import Hospitality from "./pages/industry/Hospitality.jsx";
 import ManufacturingWholesale from "./pages/industry/ManufacturingWholesale.jsx";
-import SubscriptionAgreement from "./pages/policies/SubscriptionAgreement.jsx";
-import PrivacyPolicy from "./pages/policies/PrivacyPolicy.jsx";
+import ProfitableBookkeeping from "./pages/industry/ProfitableBookkeeping.jsx";
 
 function App() {
   return (
@@ -76,10 +75,9 @@ function App() {
 
               {/* Policies  */}
               <Route
-                path="/subscription-agreement"
-                element={<SubscriptionAgreement />}
+                path="/profitable-bookkeeping-and-finance-management"
+                element={<ProfitableBookkeeping />}
               />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Route>
 
             {/* Protected dashboard routes */}

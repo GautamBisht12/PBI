@@ -75,7 +75,8 @@ const FAQ = () => {
               Frequently Asked Questions
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Find quick answers to common questions about PowerVision.
+              Find quick answers to common questions about our services and how
+              we can help your business thrive.
             </p>
           </div>
 

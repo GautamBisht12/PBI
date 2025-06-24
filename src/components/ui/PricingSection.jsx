@@ -182,12 +182,12 @@ const PricingSection = () => {
             </Link>
             <p className="mt-4 text-[#B69F63]">
               Need a customized solution?{" "}
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="text-orange-500 hover:text-orange-600 font-medium"
               >
                 Contact Us
-              </a>
+              </Link>
             </p>
           </div>
         </div>

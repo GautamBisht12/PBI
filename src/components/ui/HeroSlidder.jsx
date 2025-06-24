@@ -15,7 +15,7 @@ const slides = [
   },
   {
     image:
-      "https://static.vecteezy.com/system/resources/previews/001/995/653/large_2x/financial-business-background-planting-trees-on-coins-and-wooden-floors-ideas-for-financial-growth-and-investment-free-photo.jpg",
+      "https://www.datamanagementblog.com/wp-content/uploads/2023/01/Modernizing-Data-Analytics-Architecture-with-the-Denodo-Platform-on-Azure.png",
     headline: "Your Partner in Strategic Financial Growth.",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",

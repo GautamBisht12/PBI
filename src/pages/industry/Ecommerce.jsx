@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../../components/ui/HeroSection";
 import WorkedWith from "../../components/ui/WorkedWith";
-import { FaShopify } from "react-icons/fa";
+import { FaAmazon, FaEbay, FaEtsy, FaShopify } from "react-icons/fa";
 import { BsAmazon, BsStripe } from "react-icons/bs";
+import { ClockIcon } from "lucide-react";
+import { MdInventory } from "react-icons/md";
+import { SiWalmart } from "react-icons/si";
 
 const Ecommerce = () => {
   const heroData = {
@@ -14,77 +17,96 @@ const Ecommerce = () => {
     btnText: "Consult with our E-Commerce Expert",
   };
 
-  const services = [
+  const companies = [
     {
-      id: "01",
-      title: "Bookkeeping & Accounting",
-      // description:
-      //   "Comprehensive financial record management tailored for E-Commerce operations",
-      icon: "📊",
+      name: "Shopify",
+      logo: <FaShopify className="w-8 h-8" />,
     },
     {
-      id: "02",
-      title: "Tax Reporting",
-      // description:
-      //   "Strategic tax planning and compliance for online businesses",
-      icon: "📋",
+      name: "Amazon",
+      logo: <FaAmazon className="w-8 h-8" />,
     },
+    ,
     {
-      id: "03",
-      title: "Corporate Finance Consultancy",
-      // description: "Expert guidance for financial strategy and business growth",
-      icon: "💼",
-    },
-    {
-      id: "04",
-      title: "Finance Process Management",
-      // description: "Streamlined financial workflows and operational efficiency",
-      icon: "⚙️",
+      name: "Walmart",
+      logo: <FaEbay className="w-12 h-12" />,
     },
   ];
 
   const offerings = [
     {
-      title: "Record to Report",
+      title: "Bookeepping & Accounting",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-8 h-8 text-white"
-          viewBox="0 0 24 24"
-          fill="currentColor"
+          className="w-7 h-7 text-blue"
+          width="1em"
+          height="1em"
+          viewBox="0 0 32 32"
+          fill="none"
         >
-          <path d="M3 4a1 1 0 0 1 1-1h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4zm12 0v4h4l-4-4zM6 10h6v2H6v-2zm0 4h9v2H6v-2z" />
+          <polyline
+            points="6,25 6,3 22,3 22,26 7,26"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <polyline
+            points="22,5 25,5 25,29 8,29 6,26"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <polyline
+            points="6,24 6,26 8,29 12,29"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <line
+            x1="9"
+            y1="7"
+            x2="19"
+            y2="7"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
         </svg>
       ),
     },
     {
-      title: " Financial Statements",
+      title: "Tax Reporting",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-8 h-8 text-white"
+          width="1em"
+          height="1em"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
-          <path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9l-6-6H5zm7 7V4l6 6h-6zM7 13h10v2H7v-2zm0 4h6v2H7v-2z" />
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM8 15h5v-2H8v2zm0-4h8v-2H8v2zm0-4h8V5H8v2z" />
+          <path d="M14.5 13.5c-.3 0-.5.2-.5.5v1c0 .6.4 1 1 1h.5c.3 0 .5.2.5.5s-.2.5-.5.5h-1c-.3 0-.5.2-.5.5s.2.5.5.5h1c.6 0 1-.4 1-1v-1c0-.6-.4-1-1-1h-.5c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-1z" />
         </svg>
       ),
     },
     {
-      title: "Finance Management",
+      title: "Corporate Finance Consultancy",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-8 h-8 text-white"
+          width="1em"
+          height="1em"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
-          <path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9l-6-6H5zm7 7V4l6 6h-6zM7 13h10v2H7v-2zm0 4h6v2H7v-2z" />
+          <path d="M10 2h4c.6 0 1 .4 1 1v2h4c1.1 0 2 .9 2 2v3h-2V7h-2v2h-2V7h-2v2h-2V7H9v2H7V7H5v3H3V7c0-1.1.9-2 2-2h4V3c0-.6.4-1 1-1zm1 3h2V4h-2v1zM3 12h2v5H3v-5zm4 2h2v3H7v-3zm4-3h2v6h-2v-6zm4 2h2v4h-2v-4zm4-1h2v5h-2v-5zM3 19h18v2H3v-2z" />
         </svg>
       ),
     },
     {
-      title: "Valuation & Profitability",
+      title: "Finance Process Management",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +114,8 @@ const Ecommerce = () => {
           viewBox="0 0 24 24"
           fill="currentColor"
         >
-          <path d="M3 17h2v-4h4v4h2V7h4v10h2V10h4v10h2v2H3v-2z" />
+          <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-1-5h2v1h-2v-1zm0 2h2v1h-2v-1z" />
+          <path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.02-.66-.07-.98l1.84-1.43a.5.5 0 0 0 .11-.65l-1.75-3.03a.5.5 0 0 0-.61-.22l-2.17.87a7.15 7.15 0 0 0-1.7-.98L14 2.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5l-.26 2.06c-.63.24-1.2.56-1.7.98l-2.17-.87a.5.5 0 0 0-.61.22L2.62 9.54a.5.5 0 0 0 .11.65l1.84 1.43c-.05.32-.07.65-.07.98s.02.66.07.98l-1.84 1.43a.5.5 0 0 0-.11.65l1.75 3.03c.14.24.44.34.7.22l2.17-.87c.5.42 1.07.75 1.7.98L10 21.5c.04.28.25.5.5.5h3c.25 0 .46-.22.5-.5l.26-2.06c.63-.24 1.2-.56 1.7-.98l2.17.87c.26.12.56.02.7-.22l1.75-3.03a.5.5 0 0 0-.11-.65l-1.84-1.43zM12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
         </svg>
       ),
     },
@@ -170,114 +193,172 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      {/* Profitable Bookkeeping and Finance Management Section */}
+      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <h2 className="text-3xl font-bold text-center  mb-14">
+          Profitable Bookkeeping and Finance Management
+        </h2>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold mb-4">What we Do </h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-300">
-              We're committed to delivering exceptional service and ensuring
-              your financial operations are accurate and timely.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Grid like structure with relevant images - Left Side */}
+            <div className="relative">
+              {/* Main grid container */}
+              <div className="grid grid-cols-2 gap-4 h-[500px]">
+                {/* Top left - Large card */}
+                <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-2">
+                  <div>
+                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                      <ClockIcon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white ">
+                      Real-Time Bookkeeping
+                    </h3>
+                    <p className="text-green-100 text-sm">
+                      Daily transaction reconciliation and financial monitoring
+                      to keep your business data accurate and up-to-date.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Top right - Medium card */}
+                <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-6  justify-between shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                    <MdInventory className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white ">
+                    Inventory Intelligence
+                  </h3>
+                  <p className="text-green-100 text-sm">
+                    Advanced inventory tracking and cost analysis to optimize
+                    your product portfolio and maximize margins.
+                  </p>
+                </div>
+
+                {/* Bottom left - Medium card */}
+                <div className="bg-gradient-to-br from-green-600 to-green-800 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-2">
+                  <div>
+                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-white ">
+                      Tax-Ready Reports
+                    </h3>
+                    <p className="text-green-100 text-sm">
+                      Comprehensive financial documentation prepared for tax
+                      compliance and optimized for e-commerce business
+                      deductions.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom right - Large card */}
+                <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:-translate-y-2">
+                  <div>
+                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-2">
+                      Growth Strategy
+                    </h3>
+                    <p className="text-orange-100 text-sm">
+                      Strategic planning for sustainable growth
+                    </p>
+                  </div>
+                  <div className="text-2xl font-bold text-white">$2M+</div>
+                </div>
+              </div>
+
+              {/* Floating decorative elements */}
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+            </div>
+
+            {/* Content - Right Side */}
+            <div className="space-y-8">
+              <div>
+                <div className="inline-block px-4 py-2 bg-blue-600/20 text-blue-300 rounded-full text-sm font-medium mb-4">
+                  Financial Excellence
+                </div>
+                <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
+                  Upsell
+                  <span className=" bg-clip-text text-[#B69D62]">
+                    {" "}
+                    Finlogix
+                  </span>
+                </h2>
+                <p className="text-gray-300 text-2xl leading-relaxed font-light mb-6">
+                  Profitable Bookkeeping & Financial Management for US
+                  E-commerce Businesses
+                </p>
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                  <span className="text-gray-400 text-lg font-medium">
+                    How Upsell FinLogix helps online sellers grow smarter and
+                    stay compliant
+                  </span>
+                </div>
+              </div>
+
+              {/* Stats or features */}
+              <div className="flex flex-wrap justify-start space-x-4">
+                {companies.map((c) => (
+                  <>
+                    <div className="p-2 w-20 bg-white/5 rounded-xl flex justify-center items-center backdrop-blur-sm border border-white/10">
+                      {c.logo}
+                    </div>
+                  </>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <Link
+                  to="/profitable-bookkeeping-and-finance-management"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/25"
+                >
+                  More Info
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7 text-blue-300"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                >
-                  <polyline
-                    points="6,25 6,3 22,3 22,26 7,26"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                  <polyline
-                    points="22,5 25,5 25,29 8,29 6,26"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                  <polyline
-                    points="6,24 6,26 8,29 12,29"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                  <line
-                    x1="9"
-                    y1="7"
-                    x2="19"
-                    y2="7"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Bookeepping & Accounting
-              </h3>
-            </div>
+        </div>
 
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-green-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 text-blue-300"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM8 15h5v-2H8v2zm0-4h8v-2H8v2zm0-4h8V5H8v2z" />
-                  <path d="M14.5 13.5c-.3 0-.5.2-.5.5v1c0 .6.4 1 1 1h.5c.3 0 .5.2.5.5s-.2.5-.5.5h-1c-.3 0-.5.2-.5.5s.2.5.5.5h1c.6 0 1-.4 1-1v-1c0-.6-.4-1-1-1h-.5c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-1z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Tax Reporting
-              </h3>
-            </div>
-
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-purple-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 text-blue-300"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M10 2h4c.6 0 1 .4 1 1v2h4c1.1 0 2 .9 2 2v3h-2V7h-2v2h-2V7h-2v2h-2V7H9v2H7V7H5v3H3V7c0-1.1.9-2 2-2h4V3c0-.6.4-1 1-1zm1 3h2V4h-2v1zM3 12h2v5H3v-5zm4 2h2v3H7v-3zm4-3h2v6h-2v-6zm4 2h2v4h-2v-4zm4-1h2v5h-2v-5zM3 19h18v2H3v-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Corporate Finance Consultancy
-              </h3>
-            </div>
-
-            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
-              <div className="w-16 h-16 bg-orange-900 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-1-5h2v1h-2v-1zm0 2h2v1h-2v-1z" />
-                  <path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.02-.66-.07-.98l1.84-1.43a.5.5 0 0 0 .11-.65l-1.75-3.03a.5.5 0 0 0-.61-.22l-2.17.87a7.15 7.15 0 0 0-1.7-.98L14 2.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5l-.26 2.06c-.63.24-1.2.56-1.7.98l-2.17-.87a.5.5 0 0 0-.61.22L2.62 9.54a.5.5 0 0 0 .11.65l1.84 1.43c-.05.32-.07.65-.07.98s.02.66.07.98l-1.84 1.43a.5.5 0 0 0-.11.65l1.75 3.03c.14.24.44.34.7.22l2.17-.87c.5.42 1.07.75 1.7.98L10 21.5c.04.28.25.5.5.5h3c.25 0 .46-.22.5-.5l.26-2.06c.63-.24 1.2-.56 1.7-.98l2.17.87c.26.12.56.02.7-.22l1.75-3.03a.5.5 0 0 0-.11-.65l-1.84-1.43zM12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-4">
-                Finance Process Management
-              </h3>
-            </div>
-          </div>
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
         </div>
       </section>
 
@@ -429,12 +510,12 @@ const Ecommerce = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tight">
-              WHAT WE SERVE
+              What we Do
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
             <p className="mt-4 text-gray-500 text-lg max-w-2xl mx-auto">
-              Empowering your financial growth with expert guidance and smart
-              strategies.
+              We're committed to delivering exceptional service and ensuring
+              your financial operations are accurate and timely.
             </p>
           </div>
 
@@ -446,7 +527,7 @@ const Ecommerce = () => {
               >
                 {/* Replace this with actual icons for each service if you have them */}
                 <div className="mb-4 flex justify-center">
-                  <div className="bg-blue-600 text-white p-3 rounded-full shadow-lg">
+                  <div className="bg-blue-600 text-white p-2 rounded-full shadow-lg">
                     {offering.icon}
                   </div>
                 </div>
