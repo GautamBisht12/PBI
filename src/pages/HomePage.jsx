@@ -9,6 +9,7 @@ import HeroSlider from "../components/ui/HeroSlidder";
 import WorkedWith from "../components/ui/WorkedWith";
 
 import Card from "../components/ui/Card";
+import FAQ from "../components/ui/FAQ";
 
 function HomePage() {
   // const { isSignedIn } = useAuth();
@@ -94,7 +95,8 @@ function HomePage() {
       </section>
       <PricingSection />
       <WorkedWith />
-      {/* Testimonials */}
+      {/* FAQ */}
+      <FAQ />
     </div>
   );
 }

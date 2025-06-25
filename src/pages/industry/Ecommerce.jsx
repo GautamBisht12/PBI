@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../../components/ui/HeroSection";
 import WorkedWith from "../../components/ui/WorkedWith";
-import { FaAmazon, FaEbay, FaEtsy, FaShopify } from "react-icons/fa";
+import { FaAmazon, FaEbay, FaShopify } from "react-icons/fa";
 import { BsAmazon, BsStripe } from "react-icons/bs";
 import { ClockIcon } from "lucide-react";
 import { MdInventory } from "react-icons/md";
-import { SiWalmart } from "react-icons/si";
 
 const Ecommerce = () => {
   const heroData = {
@@ -15,6 +14,7 @@ const Ecommerce = () => {
     heroImage:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
     btnText: "Consult with our E-Commerce Expert",
+    btnLink: "/https://calendly.com/upsellfinlogix/30min",
   };
 
   const companies = [
@@ -205,7 +205,7 @@ const Ecommerce = () => {
               {/* Main grid container */}
               <div className="grid grid-cols-2 gap-4 h-[500px]">
                 {/* Top left - Large card */}
-                <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className=" bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-2">
                   <div>
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                       <ClockIcon className="w-6 h-6 text-white" />
@@ -221,7 +221,7 @@ const Ecommerce = () => {
                 </div>
 
                 {/* Top right - Medium card */}
-                <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-6  justify-between shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className=" bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6  justify-between shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:-translate-y-2">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                     <MdInventory className="w-6 h-6 text-white" />
                   </div>
@@ -235,7 +235,7 @@ const Ecommerce = () => {
                 </div>
 
                 {/* Bottom left - Medium card */}
-                <div className="bg-gradient-to-br from-green-600 to-green-800 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className=" bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-2">
                   <div>
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                       <svg
@@ -263,7 +263,7 @@ const Ecommerce = () => {
                 </div>
 
                 {/* Bottom right - Large card */}
-                <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className=" rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 p-6 flex flex-col justify-between shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:-translate-y-2">
                   <div>
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                       <svg
@@ -285,7 +285,6 @@ const Ecommerce = () => {
                       Strategic planning for sustainable growth
                     </p>
                   </div>
-                  <div className="text-2xl font-bold text-white">$2M+</div>
                 </div>
               </div>
 
@@ -304,7 +303,7 @@ const Ecommerce = () => {
                   Upsell
                   <span className=" bg-clip-text text-[#B69D62]">
                     {" "}
-                    Finlogix
+                    FinLogix
                   </span>
                 </h2>
                 <p className="text-gray-300 text-2xl leading-relaxed font-light mb-6">
@@ -321,21 +320,26 @@ const Ecommerce = () => {
               </div>
 
               {/* Stats or features */}
-              <div className="flex flex-wrap justify-start space-x-4">
-                {companies.map((c) => (
-                  <>
-                    <div className="p-2 w-20 bg-white/5 rounded-xl flex justify-center items-center backdrop-blur-sm border border-white/10">
-                      {c.logo}
-                    </div>
-                  </>
-                ))}
+              <div className="flex flex-col flex-wrap justify-start space-x-4">
+                <span className="font-semibold text-base ml-5 mb-2">
+                  Marketplaces:
+                </span>
+                <div className="flex gap-4">
+                  {companies.map((c) => (
+                    <>
+                      <div className="p-2 w-20 bg-white/5 rounded-xl flex justify-center items-center backdrop-blur-sm border border-white/10">
+                        {c.logo}
+                      </div>
+                    </>
+                  ))}
+                </div>
               </div>
 
               {/* CTA Button */}
               <div className="pt-4">
                 <Link
                   to="/profitable-bookkeeping-and-finance-management"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/25"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  hover:border-[#B69F63] shadow-md  transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/25"
                 >
                   More Info
                   <svg
@@ -370,7 +374,7 @@ const Ecommerce = () => {
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
                   Bookkeeping, Built for
-                  <span className="text-blue-600"> ECommerce</span>
+                  <span className="text-blue-600"> eCommerce</span>
                 </h2>
                 <div className="w-24 h-1 bg-blue-600 mb-6"></div>
               </div>
@@ -484,9 +488,7 @@ const Ecommerce = () => {
               {/* Platform logos overlay */}
               <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
                 <div className="flex items-center space-x-3">
-                  <div className="text-sm font-medium text-gray-700">
-                    Integrated with:
-                  </div>
+                  <span>Marketplaces:</span>
                   <div className="flex space-x-2">
                     <div className="w-8 h-8 bg-green-600 rounded text-white text-xs flex items-center justify-center font-bold">
                       <FaShopify size={20} />

@@ -27,7 +27,7 @@ const HeroSection = ({ heroDetails }) => {
             </p>
             {heroDetails.btnText && (
               <Link
-                to="/contact"
+                to={heroDetails.btnLink || "/contact"}
                 className="mt-8 inline-block btn-style border border-transparent rounded-md py-3 px-8 text-base font-medium "
               >
                 {heroDetails.btnText}

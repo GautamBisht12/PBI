@@ -24,7 +24,7 @@ function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Upsell Finlogix, we recognize that effective financial
+                At Upsell FinLogix, we recognize that effective financial
                 management is essential for the growth and stability of any
                 business. Our mission is to deliver comprehensive bookkeeping,
                 accounting, and corporate finance services that streamline your
@@ -157,7 +157,7 @@ function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold mb-4">
-              Why Choose Upsell Finlogix?
+              Why Choose Upsell FinLogix?
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-300">
               We're committed to delivering exceptional service and ensuring
@@ -389,7 +389,7 @@ function AboutPage() {
             Partner with Us for a Stronger Financial Future
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            At Upsell Finlogix, we are more than just a service provider; we are
+            At Upsell FinLogix, we are more than just a service provider; we are
             your strategic partner in bookkeeping, accounting, and corporate
             finance. Let us help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
@@ -562,8 +562,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Team section */}
-
       {/* Final CTA section */}
       <section className="bg-blue-50 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -571,7 +569,7 @@ function AboutPage() {
             Ready to Transform Your Financial Operations?
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Let Upsell Finlogix help you navigate the complexities of financial
+            Let Upsell FinLogix help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
             focus on growing your business.
           </p>
