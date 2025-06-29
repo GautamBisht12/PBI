@@ -124,9 +124,9 @@ const quickLinks = [
 
 // Services data
 const services = [
-  { name: "Bookkeeping", to: "/services#bookkeeping" },
-  { name: "Accounting", to: "/services#accounting" },
-  { name: "Corporate Finance Management", to: "/services#corporate-finance" },
+  { name: "Bookkeeping", to: "/services/bookkeeping" },
+  { name: "Accounting", to: "/services/accounting" },
+  { name: "Corporate Finance Management", to: "/services/finance" },
 ];
 
 const legal = [{ name: "Privacy Policy", to: "/privacy-policy" }];

@@ -18,11 +18,11 @@ const navigation = [
     name: "Services",
     href: "/services",
     submenu: [
-      { name: "Bookkeeping", href: "/services#bookkeeping" },
-      { name: "Accounting", href: "/services#accounting" },
+      { name: "Bookkeeping", href: "/services/bookkeeping" },
+      { name: "Accounting", href: "/services/accounting" },
       {
         name: "Corporate Finance Management",
-        href: "/services#corporate-finance",
+        href: "/services/finance",
       },
     ],
   },

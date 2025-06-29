@@ -17,6 +17,7 @@ import {
   Calculator,
   FileBarChart2,
   PackageSearch,
+  Check,
 } from "lucide-react";
 import {
   FaBullseye,
@@ -187,35 +188,55 @@ export const financeServices = [
     iconBgColor: "bg-blue-900",
     icon: <FaChartLine className="h-8 w-8 text-blue-300" />,
     title: "Financial Planning & Analysis",
-    description:
-      "Strategic financial reviews, performance insights, and ROI opportunity mapping.",
+    description: (
+      <ul className="pl-5 list-disc text-start flex flex-col gap-2">
+        <li>Strategic financial reviews & performance insight.</li>
+        <li>Risk identification & ROI opportunity.</li>
+      </ul>
+    ),
   },
   {
     iconBgColor: "bg-green-900",
     icon: <FaMoneyBillWave className="h-8 w-8 text-green-300" />,
-    title: "Budgeting, Forecasting & Modelling",
-    description:
-      "Multi-scenario cashflow forecasting and data-driven budgeting frameworks.",
+    title: " Budgeting, Forecasting & Modelling",
+    description: (
+      <ul className="pl-5 list-disc text-start flex flex-col gap-2">
+        <li>Multi-scenario cashflow forecasting.</li>
+        <li>Data-driven operational budgeting frameworks.</li>
+      </ul>
+    ),
   },
   {
     iconBgColor: "bg-teal-900",
     icon: <FaFileInvoiceDollar className="h-8 w-8 text-teal-300" />,
     title: "Cashflow & Liquidity Management",
-    description:
-      "Real-time cash monitoring and working capital optimization strategies.",
+    description: (
+      <ul className="pl-5 list-disc text-start flex flex-col gap-2">
+        <li>Real-time cash monitoring & control</li>
+        <li>Working capital optimization strategies.</li>
+      </ul>
+    ),
   },
   {
     iconBgColor: "bg-yellow-900",
     icon: <FaBalanceScale className="h-8 w-8 text-yellow-300" />,
     title: "Business Valuation & Financial Structuring",
-    description:
-      "Valuation reports for M&A and designing resilient financial frameworks.",
+    description: (
+      <ul className="pl-5 list-disc text-start flex flex-col gap-2">
+        <li>Valuation reporting for M&A & investor readiness.</li>
+        <li>Financial framework design for resilience.</li>
+      </ul>
+    ),
   },
   {
     iconBgColor: "bg-purple-900",
     icon: <FaThumbtack className="h-8 w-8 text-purple-300" />,
     title: "Strategic Financial Advisory",
-    description:
-      "Profitability planning and tailored recommendations for scalable growth.",
+    description: (
+      <ul className="pl-5 list-disc text-start flex flex-col gap-2">
+        <li>Margin improvement & profitability planning.</li>
+        <li>Financial recommendations for scalable growth.</li>
+      </ul>
+    ),
   },
 ];
