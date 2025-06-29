@@ -4,7 +4,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-r from-[#192D2F] to-[#203c3e] text-white">
+    <footer className="bg-gray-900 text-white">
       <div className="container-custom py-16">
         {/* Top section with logo, description, links and contact */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-9">

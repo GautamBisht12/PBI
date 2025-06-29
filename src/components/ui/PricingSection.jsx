@@ -4,7 +4,7 @@ const PricingSection = () => {
   return (
     <>
       {/* Pricing Section */}
-      <section className="py-20 bg-[#192D2F]">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="heading-tagline text-3xl font-extrabold text-gray-300 sm:text-4xl relative inline-block">
@@ -18,7 +18,7 @@ const PricingSection = () => {
 
           {/* Main Pricing Card */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto mb-16">
-            <div className="bg-gradient-to-r from-[#e6c882] to-[#ab8d47] px-6 py-8 text-white">
+            <div className="bg-gradient-to-r from-[#B69D62] to-[#ab8d47] px-6 py-8 text-white">
               <h3 className="text-2xl font-bold">Per-Transaction Pricing</h3>
               <p className="mt-2 opacity-90">
                 Pay only for what you use with our flexible pricing model
@@ -37,7 +37,7 @@ const PricingSection = () => {
                 </div>
                 <div className="mt-4 md:mt-0">
                   <span className="text-4xl font-bold text-gray-900">
-                    $0.75 – $1.50
+                    $0.75 – $1
                   </span>
                   <span className="text-gray-500 ml-2">per transaction</span>
                 </div>

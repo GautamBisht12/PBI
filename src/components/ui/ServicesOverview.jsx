@@ -24,7 +24,7 @@ const ServicesOverview = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="bg-[#1E2D2F] from-white to-gray-50 py-8 md:py-16 md:mt-28 mt-10">
+    <div className="bg-gray-900  py-8 md:py-16 md:mt-28 mt-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10">
           {/* Image div - responsive */}
