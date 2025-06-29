@@ -19,7 +19,7 @@ const ProfitableBookkeeping = () => {
 
   const profitStrategies = [
     {
-      title: " Real-Time Bookkeeping",
+      title: "Daily/Weekly Accurate Books",
       description:
         "Real-time financial clarity for better decision-making and cash flow management.",
       icon: (
@@ -215,12 +215,12 @@ const ProfitableBookkeeping = () => {
                     </div>
                   </div>
 
-                  <div className="relative flex items-center ">
-                    <div className="flex items-center justify-center w-12 h-12  ">
+                  <div className="relative">
+                    <div>
                       <FaArrowTrendUp />
                     </div>
 
-                    <div className="md:pl-5">
+                    <div className="md:pl-12">
                       <p className="text-gray-700 font-medium text-lg">
                         {item.howItIncreases}
                       </p>

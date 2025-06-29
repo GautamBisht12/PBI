@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../../components/ui/HeroSection";
 import WorkedWith from "../../components/ui/WorkedWith";
-import { FaAmazon, FaEbay, FaEtsy, FaShopify } from "react-icons/fa";
+import { FaAmazon, FaEbay, FaShopify } from "react-icons/fa";
 import { BsAmazon, BsStripe } from "react-icons/bs";
 import { ClockIcon } from "lucide-react";
 import { MdInventory } from "react-icons/md";
-import CTA from "../../components/ui/CTA";
-import FAQ from "../../components/ui/FAQ";
 
 const Ecommerce = () => {
   const heroData = {
@@ -16,7 +14,7 @@ const Ecommerce = () => {
     heroImage:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
     btnText: "Consult with our E-Commerce Expert",
-    btnLink: "https://calendly.com/upsellfinlogix/30min",
+    btnLink: "/https://calendly.com/upsellfinlogix/30min",
   };
 
   const companies = [
@@ -198,8 +196,7 @@ const Ecommerce = () => {
       {/* Profitable Bookkeeping and Finance Management Section */}
       <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
         <h2 className="text-3xl font-bold text-center  mb-14">
-          Bookkeeping, Accounting & Financial Management <br />
-          That Drive Profitability
+          Profitable Bookkeeping and Finance Management
         </h2>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -217,9 +214,8 @@ const Ecommerce = () => {
                       Real-Time Bookkeeping
                     </h3>
                     <p className="text-green-100 text-sm">
-                      Timely transaction reconciliation and financial tracking
-                      to ensure your business records remain accurate, current,
-                      and ready for smarter decisions.
+                      Daily transaction reconciliation and financial monitoring
+                      to keep your business data accurate and up-to-date.
                     </p>
                   </div>
                 </div>
@@ -289,7 +285,6 @@ const Ecommerce = () => {
                       Strategic planning for sustainable growth
                     </p>
                   </div>
-                  <div className="text-2xl font-bold text-white">$2M+</div>
                 </div>
               </div>
 
@@ -371,7 +366,6 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* Bookkeeping built for eccommerce */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -380,7 +374,7 @@ const Ecommerce = () => {
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
                   Bookkeeping, Built for
-                  <span className="text-blue-600"> ECommerce</span>
+                  <span className="text-blue-600"> eCommerce</span>
                 </h2>
                 <div className="w-24 h-1 bg-blue-600 mb-6"></div>
               </div>
@@ -513,33 +507,7 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              WE ALWAYS GIVE THE BEST FOR OUR CLIENTS
-            </h2>
-            <div className="w-24 h-1 bg-white mx-auto"></div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="text-3xl font-bold text-green-300 mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="font-bold text-xl mb-3">{benefit.title}</h3>
-                <p className="text-blue-100">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We DO Section */}
+      {/* What We Serve Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -573,10 +541,53 @@ const Ecommerce = () => {
           </div>
         </div>
       </section>
-      <CTA />
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              WE ALWAYS GIVE THE BEST FOR OUR CLIENTS
+            </h2>
+            <div className="w-24 h-1 bg-white mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-3xl font-bold text-green-300 mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="font-bold text-xl mb-3">{benefit.title}</h3>
+                <p className="text-blue-100">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <WorkedWith />
 
-      <FAQ />
+      {/* Thank You Section */}
+      <section className="py-16 bg-white text-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">THANK YOU</h2>
+          <p className="text-xl text-gray-800 leading-relaxed">
+            Your trust means everything to us. Thank you for the chance to
+            showcase how we can create lasting value for your business.
+          </p>
+          <div className="mt-8">
+            <Link
+              to="/contact"
+              className="btn-style text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -68,9 +68,9 @@ const FAQ = () => {
 
   return (
     <>
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center ">
             <h2 className="text-3xl font-extrabold text-gray-900">
               Frequently Asked Questions
             </h2>
@@ -84,7 +84,7 @@ const FAQ = () => {
             {faqData.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-sm border border-gray-200"
+                className="bg-gray-50 rounded-lg shadow-sm border border-gray-200"
               >
                 <button
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded-lg transition-colors duration-200"

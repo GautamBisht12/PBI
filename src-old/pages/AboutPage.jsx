@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
 import FAQ from "../components/ui/FAQ";
-import WhyChooseUsSection from "../components/ui/WhyChooseUsSection";
-import { aboutPageWhyChooseUs } from "../data/whyChooseUsData.jsx";
 
 function AboutPage() {
   const heroData = {
@@ -26,7 +24,7 @@ function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Upsell Finlogix, we recognize that effective financial
+                At Upsell FinLogix, we recognize that effective financial
                 management is essential for the growth and stability of any
                 business. Our mission is to deliver comprehensive bookkeeping,
                 accounting, and corporate finance services that streamline your
@@ -155,14 +153,127 @@ function AboutPage() {
       </section>
 
       {/* Why Choose Us section */}
-      <WhyChooseUsSection
-        title={aboutPageWhyChooseUs.title}
-        subtitle={aboutPageWhyChooseUs.subtitle}
-        features={aboutPageWhyChooseUs.features}
-        
-        cardBackgroundColor="bg-blue-800"
-        cardHoverColor="hover:bg-blue-700"
-      />
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-extrabold mb-4">
+              Why Choose Upsell FinLogix?
+            </h2>
+            <p className="max-w-3xl mx-auto text-lg text-gray-300">
+              We're committed to delivering exceptional service and ensuring
+              your financial operations are accurate and timely.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-blue-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4">
+                Industry Expertise
+              </h3>
+              <p className="text-gray-300 text-center">
+                With extensive experience in a wide range of sectors, we
+                understand the unique challenges your business faces.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-green-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-green-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4">
+                Commitment to Excellence
+              </h3>
+              <p className="text-gray-300 text-center">
+                We maintain the highest professional standards, delivering
+                exceptional service and ensuring your financial operations are
+                accurate.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-purple-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-purple-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4">
+                Technology-Driven Solutions
+              </h3>
+              <p className="text-gray-300 text-center">
+                By leveraging advanced financial technologies, we streamline
+                operations and provide real-time insights into your financial
+                data.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors duration-300">
+              <div className="w-16 h-16 bg-orange-900 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-orange-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4">
+                Client-Centric Approach
+              </h3>
+              <p className="text-gray-300 text-center">
+                We put your business first, working closely with you to
+                understand your needs and help you achieve your financial
+                objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Approach section */}
       <section className="py-20 bg-white">
@@ -278,7 +389,7 @@ function AboutPage() {
             Partner with Us for a Stronger Financial Future
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            At Upsell Finlogix, we are more than just a service provider; we are
+            At Upsell FinLogix, we are more than just a service provider; we are
             your strategic partner in bookkeeping, accounting, and corporate
             finance. Let us help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
@@ -451,8 +562,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Team section */}
-
       {/* Final CTA section */}
       <section className="bg-blue-50 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -460,7 +569,7 @@ function AboutPage() {
             Ready to Transform Your Financial Operations?
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Let Upsell Finlogix help you navigate the complexities of financial
+            Let Upsell FinLogix help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
             focus on growing your business.
           </p>

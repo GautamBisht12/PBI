@@ -9,12 +9,13 @@ const slides = [
       "Streamlined Solutions for Accurate, Compliant, and Scalable Growth",
   },
   {
-    image: "https://images.pexels.com/photos/8353793/pexels-photo-8353793.jpeg",
+    image: "https://wallpaperaccess.com/full/643457.jpg",
     headline: "Experience You Can Trust",
     subtext: "Empowering Businesses Through Smart Financial Decisions",
   },
   {
-    image: "https://wallpaperaccess.com/full/643457.jpg ",
+    image:
+      "https://www.datamanagementblog.com/wp-content/uploads/2023/01/Modernizing-Data-Analytics-Architecture-with-the-Denodo-Platform-on-Azure.png",
     headline: "Your Partner in Strategic Financial Growth.",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",

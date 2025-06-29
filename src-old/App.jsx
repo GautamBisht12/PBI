@@ -18,20 +18,20 @@ import DashboardPage from "./pages/DashboardPage.jsx";
 import ReportPage from "./pages/ReportPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import LoadingSpinner from "./components/ui/LoadingSpinner.jsx";
-import Accounting from "./pages/services/Accounting.jsx";
-import Bookkeeping from "./pages/services/Bookkeeping.jsx";
-import FinanceManagement from "./pages/services/FinanceManagement.jsx";
+import BookkeepingAccounting from "./pages/BookkeepingAccounting.jsx";
+import BookkeepingService from "./pages/BookkeepingServices.jsx";
 // import Industries from "./pages/Industries.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import Services from "./pages/Services.jsx";
 import Industry from "./pages/Industry.jsx";
-
+import FinanceManagement from "./pages/FinanceManagement.jsx";
 import Construction from "./pages/industry/Construction.jsx";
 import Ecommerce from "./pages/industry/Ecommerce.jsx";
 import Healthcare from "./pages/industry/Healthcare.jsx";
 import Hospitality from "./pages/industry/Hospitality.jsx";
 import ManufacturingWholesale from "./pages/industry/ManufacturingWholesale.jsx";
 import ProfitableBookkeeping from "./pages/industry/ProfitableBookkeeping.jsx";
+import PrivacyPolicy from "./pages/policies/PrivacyPolicy.jsx";
 
 function App() {
   return (
@@ -51,12 +51,18 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
 
-              <Route path="/services/bookkeeping" element={<Bookkeeping />} />
+              <Route
+                path="/services/bookkeeping"
+                element={<BookkeepingService />}
+              />
               <Route path="/pricing" element={<Pricing />} />
 
               <Route path="/services" element={<Services />} />
               <Route path="/services/finance" element={<FinanceManagement />} />
-              <Route path="/services/accounting" element={<Accounting />} />
+              <Route
+                path="/services/accounting"
+                element={<BookkeepingAccounting />}
+              />
 
               <Route path="/industry" element={<Industry />} />
               <Route path="/industry/construction" element={<Construction />} />
@@ -73,6 +79,7 @@ function App() {
                 path="/profitable-bookkeeping-and-finance-management"
                 element={<ProfitableBookkeeping />}
               />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Route>
 
             {/* Protected dashboard routes */}

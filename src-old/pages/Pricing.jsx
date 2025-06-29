@@ -1,7 +1,6 @@
 import { useState } from "react";
 import HeroSection from "../components/ui/HeroSection";
 import { CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -15,7 +14,7 @@ const Pricing = () => {
         "Fast and easy setup",
       ],
       note: "Projects starting at $1,000",
-      buttonText: "Free Consultation",
+      buttonText: "Get Started Now",
       highlighted: false,
     },
     {
@@ -28,7 +27,7 @@ const Pricing = () => {
         "Monthly Financial Reports",
       ],
       addons: ["Payroll", "Sales Tax", "Back Office"],
-      buttonText: "Get Started Now",
+      buttonText: "Free Consultation",
       highlighted: true,
     },
     {
@@ -141,12 +140,9 @@ const Pricing = () => {
                     <p className="mt-4 text-sm text-gray-500">{plan.note}</p>
                   )} */}
                 </div>
-                <Link
-                  to="https://calendly.com/upsellfinlogix/30min"
-                  className="mt-6 text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-2 px-4 rounded shadow"
-                >
+                <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-2 px-4 rounded shadow">
                   {plan.buttonText}
-                </Link>
+                </button>
               </div>
             ))}
           </div>

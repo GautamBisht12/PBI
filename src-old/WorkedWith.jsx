@@ -60,20 +60,10 @@ const WorkedWith = () => {
         />
       ),
     },
-    {
-      name: "Ebay",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg"
-          alt="Walmart Logo"
-          className="w-24 h-24"
-        />
-      ),
-    },
   ];
   return (
     <div className="worked-with-container mt-16">
-      <h3 className="worked-with-title bg-clip-text bg-gradient-to-r text-[#4955E9]">
+      <h3 className="worked-with-title bg-clip-text text-transparent bg-gradient-to-r text-[#4955E9]">
         We’ve worked extensively with leading software tools. <br /> Here are a
         few!
       </h3>
