@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const PricingSection = ({ theme, page }) => {
+  const showCTA = page === "pricing";
   return (
     <>
       {/* Pricing Section */}
@@ -171,7 +172,8 @@ const PricingSection = ({ theme, page }) => {
           </div>
 
           {/* CTA */}
-          {page === "pricing" && (
+
+          {!showCTA && (
             <div className="text-center">
               <Link
                 to="/pricing"

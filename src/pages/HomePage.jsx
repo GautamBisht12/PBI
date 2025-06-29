@@ -92,7 +92,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <PricingSection />
+      <PricingSection theme="dark" />
       <WorkedWith />
       {/* Testimonials */}
     </div>
