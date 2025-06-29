@@ -1,17 +1,27 @@
 import { Link } from "react-router-dom";
 
-const PricingSection = () => {
+const PricingSection = ({ theme, page }) => {
   return (
     <>
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-900">
+      <section
+        className={`py-20 ${theme === "dark" ? "bg-gray-900" : "bg-white"} `}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-tagline text-3xl font-extrabold text-gray-300 sm:text-4xl relative inline-block">
+            <h2
+              className={`heading-tagline text-3xl font-extrabold ${
+                theme === "dark" ? "text-gray-300" : "text-black"
+              } sm:text-4xl relative inline-block `}
+            >
               Transparent Pricing
               <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-green-600 transform translate-y-1"></span>
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-200">
+            <p
+              className={`mt-4 max-w-2xl mx-auto text-xl ${
+                theme === "dark" ? "text-gray-300" : "text-gray-600"
+              } `}
+            >
               Simple per-transaction pricing that scales with your business
             </p>
           </div>
@@ -60,7 +70,7 @@ const PricingSection = () => {
                   </svg>
                   <p className="text-gray-700 font-medium">
                     Example: For 200 transactions per month, the cost would
-                    range from $150 to $300
+                    range from $150 to $200
                   </p>
                 </div>
                 <div className="flex items-center">
@@ -161,35 +171,37 @@ const PricingSection = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
-            <Link
-              to="/pricing"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  hover:border-[#B69F63] shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              See full pricing details
-              <svg
-                xmlns="https://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-2"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-            <p className="mt-4 text-[#B69F63]">
-              Need a customized solution?{" "}
+          {page === "pricing" && (
+            <div className="text-center">
               <Link
-                to="/contact"
-                className="text-orange-500 hover:text-orange-600 font-medium"
+                to="/pricing"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  hover:border-[#B69F63] shadow-md hover:shadow-lg transition-all duration-300"
               >
-                Contact Us
+                See full pricing details
+                <svg
+                  xmlns="https://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-2"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </Link>
-            </p>
-          </div>
+              <p className="mt-4 text-[#B69F63]">
+                Need a customized solution?{" "}
+                <Link
+                  to="/contact"
+                  className="text-orange-500 hover:text-orange-600 font-medium"
+                >
+                  Contact Us
+                </Link>
+              </p>
+            </div>
+          )}
         </div>
       </section>
     </>

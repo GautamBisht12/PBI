@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeroSection from "../components/ui/HeroSection";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import PricingSection from "../components/ui/PricingSection";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -69,7 +70,7 @@ const Pricing = () => {
 
   return (
     <>
-      <div className="mt-20">
+      <section className="mt-20">
         <HeroSection heroDetails={heroDetails} />
         <h2 className="text-center text-2xl font-bold mt-12 mb-6">
           Behind on your books? <br></br> We can help you get up to date quickly
@@ -151,7 +152,8 @@ const Pricing = () => {
             ))}
           </div>
         </div>
-      </div>
+        <PricingSection theme="light" page="pricing" />
+      </section>
     </>
   );
 };
