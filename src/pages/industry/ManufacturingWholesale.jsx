@@ -9,7 +9,7 @@ import FAQ from "../../components/ui/FAQ";
 
 const ManufacturingWholesale = () => {
   const heroData = {
-    heroTitle: "Specialization in Manufacturing & Wholesale",
+    heroTitle: "Manufacturing & Wholesale",
     heroSubtitle:
       "Finance systems built for B2B efficiency, growth, and compliance.",
     heroImage:
@@ -64,7 +64,7 @@ const ManufacturingWholesale = () => {
               <p className="text-gray-600 text-lg leading-relaxed">
                 <span className="text-[#B69D62] font-extrabold">
                   Empowering B2B Manufacturers and Resellers with Expert
-                  Accounting & Compliance. <br />
+                  Bookkeeping and Finance Management. <br />
                 </span>{" "}
                 In the manufacturing and wholesale sector, financial oversight
                 isn't just about balancing books—it's about managing margins,

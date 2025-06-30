@@ -33,11 +33,11 @@ const navigation = [
     submenu: [
       { name: "Ecommerce", href: "/industry/ecommerce " },
       { name: "Healthcare & Medical", href: "/industry/healthcare" },
-      { name: "Hospitality", href: "/industry/hospitality" },
       {
         name: "Manufacturing & Wholesale Service",
         href: "/industry/manufacturing",
       },
+      { name: "Hospitality", href: "/industry/hospitality" },
       { name: "Construction & Contracting", href: "/industry/construction" },
     ],
   },
@@ -112,19 +112,6 @@ function Navbar() {
         : "bg-transparent border-white border-t-2 border-b-[1px] backdrop-blur-sm border-b-white/30";
     }
   };
-
-  // Determine border style based on page and scroll position
-  // const getBorderStyle = () => {
-  //   if (!isHomePage) {
-  //     // For all pages except home, use light borders
-  //     return "border-gray-200 border-r-[1px]";
-  //   } else {
-  //     // For home page, use the original conditional styling
-  //     return isScrolled
-  //       ? "border-white border-r-[1px]"
-  //       : "border-white/30 border-r-[1px] backdrop-blur-sm";
-  //   }
-  // };
 
   // Toggle submenu for mobile view
   const toggleSubmenu = (e, index) => {
@@ -349,7 +336,7 @@ function Navbar() {
                       <div
                         className={`pl-4 mt-2 mb-4 space-y-2 overflow-hidden transition-all duration-300 ease-in-out ${
                           activeSubmenu === index
-                            ? "max-h-40 opacity-100"
+                            ? "max-h-80 opacity-100"
                             : "max-h-0 opacity-0"
                         }`}
                       >

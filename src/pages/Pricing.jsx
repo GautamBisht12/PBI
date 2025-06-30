@@ -11,7 +11,7 @@ const Pricing = () => {
       price: "$24.99",
       extraLabel: "per hour",
       features: [
-        "Dedicated Accountant",
+        "Dedicated Accountant + Industry Expert",
         "Best for on-call bookkeeping and projects",
         "Fast and easy setup",
       ],
@@ -23,7 +23,7 @@ const Pricing = () => {
       title: "Bookkeeping",
       price: "$199",
       features: [
-        "Dedicated Accountant",
+        "Dedicated Accountant + Industry Expert",
         "Monthly or Weekly Accounting",
         "Cash Basis or Accrual Basis",
         "Monthly Financial Reports",
@@ -33,10 +33,11 @@ const Pricing = () => {
       highlighted: true,
     },
     {
-      title: "Accounting",
+      title: "Accounting Process Support",
+
       price: "$349",
       features: [
-        "Dedicated Accountant",
+        "Dedicated Accountant + Industry Expert",
         "Accounts payable",
         "Accounts Receivable",
         "Record to Report",

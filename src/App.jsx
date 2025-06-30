@@ -33,6 +33,8 @@ import Hospitality from "./pages/industry/Hospitality.jsx";
 import ManufacturingWholesale from "./pages/industry/ManufacturingWholesale.jsx";
 import ProfitableBookkeeping from "./pages/industry/ProfitableBookkeeping.jsx";
 
+import PrivacyPolicy from "./pages/policies/PrivacyPolicy.jsx";
+
 function App() {
   return (
     <>
@@ -73,6 +75,7 @@ function App() {
                 path="/profitable-bookkeeping-and-finance-management"
                 element={<ProfitableBookkeeping />}
               />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Route>
 
             {/* Protected dashboard routes */}
