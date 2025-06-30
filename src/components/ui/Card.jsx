@@ -19,7 +19,7 @@ const Card = () => {
       gradientTo: "to-indigo-700",
       borderColor: "border-indigo-200",
       hoverShadow: "hover:shadow-indigo-200/50",
-      link: "/services#corporate-finance",
+      link: "/services/finance",
       isMain: false,
     },
     {
@@ -40,7 +40,7 @@ const Card = () => {
       borderColor: "border-blue-300",
       hoverShadow: "hover:shadow-blue-300/50",
       isMain: true,
-      link: "/services#bookkeeping",
+      link: "/services/bookkeeping",
     },
     {
       title: "Accounting",
@@ -58,7 +58,7 @@ const Card = () => {
       gradientTo: "to-purple-700",
       borderColor: "border-purple-200",
       hoverShadow: "hover:shadow-purple-200/50",
-      link: "/services#accounting",
+      link: "/services/accounting",
       isMain: false,
     },
   ];

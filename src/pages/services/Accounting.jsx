@@ -1,16 +1,8 @@
 import { useState } from "react";
-import {
-  TrendingUp,
-  Clock,
-  CheckCircle,
-  DollarSign,
-  Briefcase,
-  Shield,
-} from "lucide-react";
+import { CheckCircle, Briefcase } from "lucide-react";
 
 import { FaBolt, FaEye, FaTint, FaChartBar, FaRocket } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
 import HeroSection from "../../components/ui/HeroSection";
 import FAQ from "../../components/ui/FAQ";
 import WhyChooseUsSection from "../../components/ui/WhyChooseUsSection";
@@ -87,10 +79,10 @@ export default function Accounting() {
                   Upsell FinLogix{" "}
                 </span>
                 , we deliver reliable, structured, and growth-focused accounting
-                support tailored for fast-paced US businesses. Our services
-                simplify financial operations, enhance financial visibility, and
-                provide actionable insights — so you stay focused on scaling
-                while we manage the numbers.
+                process support tailored for fast-paced US businesses. Our
+                services simplify financial operations, enhance financial
+                visibility, and provide actionable insights — so you stay
+                focused on scaling while we manage the numbers.
               </p>
             </div>
             <div className="relative">
