@@ -1,0 +1,47 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ✅ Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ✅ React SPA routing (fallback to index.html)
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+
+  # ✅ Serve .gz files if browser accepts gzip
+  RewriteCond %{HTTP:Accept-encoding} gzip
+  RewriteCond %{REQUEST_FILENAME}.gz -f
+  RewriteRule ^(.*)\.js$ $1\.js\.gz [QSA,L]
+  RewriteRule ^(.*)\.css$ $1\.css\.gz [QSA,L]
+  RewriteRule ^(.*)\.html$ $1\.html\.gz [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # ✅ Set proper headers for gzipped files
+  <FilesMatch "\.js\.gz$">
+    ForceType application/javascript
+    Header set Content-Encoding gzip
+    Header set Content-Type application/javascript
+  </FilesMatch>
+
+  <FilesMatch "\.css\.gz$">
+    ForceType text/css
+    Header set Content-Encoding gzip
+    Header set Content-Type text/css
+  </FilesMatch>
+
+  <FilesMatch "\.html\.gz$">
+    ForceType text/html
+    Header set Content-Encoding gzip
+    Header set Content-Type text/html
+  </FilesMatch>
+
+  # ✅ Cache static assets for 1 year
+  <FilesMatch "\.(js|css|html|svg|woff|woff2|eot|ttf|otf|jpg|jpeg|png|gif|webp|avif)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
