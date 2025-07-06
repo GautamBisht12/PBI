@@ -1,0 +1,13 @@
+# Allow all search engines
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /api/internal/
+Allow: /
+
+# Optional: Crawl-delay to reduce server load
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.upsellfinlogix.com/sitemap.xml
