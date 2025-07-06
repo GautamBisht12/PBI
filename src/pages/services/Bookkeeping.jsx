@@ -1,7 +1,7 @@
 import { Briefcase, CheckCircle } from "lucide-react";
 import HeroSection from "../../components/ui/HeroSection";
 import { bookkeepingPageWhyChooseUs } from "../../data/whyChooseUsData.jsx";
-
+import { Helmet } from "react-helmet-async";
 import FAQ from "../../components/ui/FAQ";
 
 import { industryServicesBookkeeping } from "../../data/industriesServicesCardData.jsx";
@@ -11,12 +11,117 @@ import WhyChooseUsSection from "../../components/ui/WhyChooseUsSection.jsx";
 export default function Bookkeeping() {
   const heroDetails = {
     heroTitle: " Bookkeeping",
-    heroSubtitle: "Industry-Specific Bookkeeping That Drives Real Impact",
-    heroImage: "https://wallpaperaccess.com/full/153208.jpg",
+    heroSubtitle: (
+      <p className="text-lg text-gray-50">
+        Industry Expertise Across: <br />
+        Ecommerce | Manufacturing & Wholesale (B2B) | Healthcare | Hospitality
+      </p>
+    ),
+    heroImage: "/hero/buildings.webp",
   };
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <Helmet>
+        <title>
+          Bookkeeping Services for E-commerce, Healthcare & More | Upsell
+          FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Get expert bookkeeping services tailored for industries like e-commerce, manufacturing, healthcare, and hospitality. Stay compliant, organized, and growth-ready with Upsell FinLogix."
+        />
+        <meta
+          name="keywords"
+          content="bookkeeping services, ecommerce bookkeeping, healthcare bookkeeping, hospitality bookkeeping, manufacturing bookkeeping, AP AR reconciliation, IRS compliant bookkeeping, financial reporting"
+        />
+        <meta
+          property="og:title"
+          content="Industry-Specific Bookkeeping Services | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="From clean-up to compliance, our bookkeeping services ensure precision and insight for your business's financial growth."
+        />
+        <meta
+          property="og:image"
+          content="https://wallpaperaccess.com/full/153208.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/services/bookkeeping"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/services/bookkeeping"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Industry-Specific Bookkeeping Services",
+            description:
+              "Expert bookkeeping solutions tailored for the specific operational needs, tax regulations, and profitability goals of your industry — ensuring accuracy, compliance, and strategic insights at every step.",
+            provider: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            serviceType: "Bookkeeping Services",
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Industry-Specific Bookkeeping Solutions",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "E-commerce Bookkeeping",
+                    description:
+                      "Multi-channel sales tracking, inventory management, payment reconciliation, and marketplace integration for online retailers",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Manufacturing & Wholesale (B2B) Bookkeeping",
+                    description:
+                      "Cost accounting, inventory valuation, production analysis, and supply chain financial management for B2B operations",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Healthcare Bookkeeping",
+                    description:
+                      "HIPAA-compliant financial management, insurance billing, patient account management, and regulatory compliance",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Hospitality Bookkeeping",
+                    description:
+                      "Revenue management, seasonal accounting, tip reporting, and multi-location financial consolidation for hospitality businesses",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <HeroSection heroDetails={heroDetails} />
 
@@ -44,9 +149,11 @@ export default function Bookkeeping() {
             </div>
             <div className="relative">
               <img
-                src="https://plus.unsplash.com/premium_photo-1661308288174-0f6ac8d391d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va2tlZXBpbmd8ZW58MHx8MHx8fDA%3D"
+                src="/services/bookkeeping-page.webp"
                 alt="Team collaboration"
                 className="rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -92,9 +199,9 @@ export default function Bookkeeping() {
                       {service.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors">
                         {service.title}
-                      </h3>
+                      </h2>
                       <p className="text-gray-600 leading-relaxed">
                         {service.description}
                       </p>
@@ -131,7 +238,7 @@ export default function Bookkeeping() {
 
           {/* Bottom CTA */}
           <div className="text-center">
-            <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
+            <div className="inline-flex flex-col sm:flex-row items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md gap-5 sm:gap-2">
               <CheckCircle className="w-5 h-5 text-green-500" />
               <span className="text-gray-700 font-medium">
                 "No matter the industry, our bookkeeping adapts to your business

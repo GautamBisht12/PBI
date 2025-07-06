@@ -22,6 +22,7 @@ const Team = () => {
                 <img
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
                   alt="Sarah Johnson"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -63,6 +64,7 @@ const Team = () => {
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
                   alt="Michael Chang"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -107,6 +109,7 @@ const Team = () => {
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2338&q=80"
                   alt="Jessica Martinez"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>

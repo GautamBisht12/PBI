@@ -7,14 +7,14 @@ import {
 import HeroSection from "../components/ui/HeroSection";
 import { Clock9Icon } from "lucide-react";
 import { sendEmail } from "../utils/emailService";
+import { Helmet } from "react-helmet-async";
 
 const ContactPage = () => {
   const [heroDetails] = useState({
     heroTitle: "Contact Us",
     heroSubtitle:
       "We'd love to hear from you! Reach out to us using the form below or contact us directly.",
-    heroImage:
-      "https://static.vecteezy.com/system/resources/thumbnails/007/067/602/small_2x/businessman-shows-outstretched-hand-with-social-icon-on-virtual-screen-contact-us-free-photo.jpg",
+    heroImage: "hero/contact.webp",
   });
 
   const [formData, setFormData] = useState({
@@ -96,7 +96,77 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="fade-in overflow-hidden mt-20">
+    <div className="fade-in overflow-hidden ">
+      <Helmet>
+        <title>
+          Contact Us | Get Expert Bookkeeping Consultation | Upsell FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Contact Upsell FinLogix for professional bookkeeping and accounting services. Get a free consultation, expert advice, and personalized financial solutions for your business needs."
+        />
+        <meta
+          name="keywords"
+          content="contact bookkeeping services, free accounting consultation, bookkeeping contact form, accounting services inquiry, financial consultation, bookkeeping support, accounting help, business financial advice, professional bookkeeper contact"
+        />
+        <meta
+          property="og:title"
+          content="Contact Upsell FinLogix | Professional Bookkeeping Services"
+        />
+        <meta
+          property="og:description"
+          content="Reach out to our expert bookkeeping team for personalized financial solutions. Contact us via phone, email, or our online form for immediate assistance."
+        />
+        <meta
+          property="og:image"
+          content="https://static.vecteezy.com/system/resources/thumbnails/007/067/602/small_2x/businessman-shows-outstretched-hand-with-social-icon-on-virtual-screen-contact-us-free-photo.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/contact"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://www.upsellfinlogix.com/contact" />
+
+        {/* JSON-LD Structured Data for Organization + ContactPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            mainEntity: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+              logo: "https://www.upsellfinlogix.com/logo.png",
+              areaServed: {
+                "@type": "Country",
+                name: "United States",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-804-876-0978",
+                contactType: "customer service",
+                email: "info@upsellfinlogix.com",
+                availableLanguage: "English",
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "7901 4TH ST N STE 300",
+                addressLocality: "St. Petersburg",
+                addressRegion: "FL",
+                postalCode: "33702",
+                addressCountry: "US",
+              },
+              sameAs: [
+                "https://www.facebook.com/upsellfinlogix",
+                "https://www.linkedin.com/company/upsellfinlogix",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero section */}
       <HeroSection heroDetails={heroDetails} />
 

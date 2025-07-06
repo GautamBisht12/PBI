@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
-import HeroSection from "../../components/ui/HeroSection";
+import HeroSection from "../components/ui/HeroSection";
 
-import WorkedWith from "../../components/ui/WorkedWith";
-import FAQ from "../../components/ui/FAQ";
+import WorkedWith from "../components/ui/WorkedWith";
+import FAQ from "../components/ui/FAQ";
 
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const ProfitableBookkeeping = () => {
   const heroData = {
     heroTitle: "Profitable Bookkeeping",
     heroSubtitle:
       "Unlock the secrets to financial success with our Profitable Bookkeeping services. We specialize in helping businesses optimize their financial operations, ensuring profitability and growth.",
-    heroImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    heroImage: "hero/documents.webp",
     btnText: "Start Your Profitable Journey",
     btnLink: "/https://calendly.com/upsellfinlogix/30min",
   };
@@ -131,6 +131,124 @@ const ProfitableBookkeeping = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Profitable Bookkeeping Services | Maximize Business Profitability |
+          Upsell FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Unlock financial success with our profitable bookkeeping services. Real-time tracking, COGS analysis, KPI dashboards, multi-state tax compliance, and investor-ready reports to maximize your business profitability."
+        />
+        <meta
+          name="keywords"
+          content="profitable bookkeeping, real-time bookkeeping, COGS tracking by SKU, KPI dashboards, ROAS tracking, CAC analysis, LTV metrics, multi-state sales tax compliance, financial reporting for investors, clean year-end books, profit optimization, business profitability services"
+        />
+        <meta
+          property="og:title"
+          content="Profitable Bookkeeping Services | Drive Business Growth | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Transform your bookkeeping into a profit-driving machine with real-time financial clarity, granular product analysis, and investor-grade reporting for maximum business growth."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/services/profitable-bookkeeping"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/services/profitable-bookkeeping"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Profitable Bookkeeping Services",
+            description:
+              "Comprehensive bookkeeping solutions designed to maximize profitability through real-time tracking, COGS analysis, KPI dashboards, and strategic financial reporting.",
+            provider: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            serviceType: "Profitable Bookkeeping",
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Profit-Driving Strategies",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Real-Time Bookkeeping",
+                    description:
+                      "Real-time financial clarity for better decision-making and cash flow management",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "COGS Tracking by SKU",
+                    description:
+                      "Granular product profitability analysis to identify your best and worst performers",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Multi-state Sales Tax Compliance",
+                    description:
+                      "Avoid costly penalties with our specialized e-commerce tax expertise",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Financial Reporting for Lenders & Investors",
+                    description:
+                      "Professional documentation to secure funding and investment opportunities",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "KPI Dashboards (ROAS, CAC, LTV)",
+                    description:
+                      "Visual metrics tracking to optimize marketing spend and customer acquisition",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Clean Year-End Books",
+                    description:
+                      "Stress-free tax season with organized, audit-ready financial records",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <HeroSection heroDetails={heroData} />
 
       {/* Profit-Driving Strategies Section */}

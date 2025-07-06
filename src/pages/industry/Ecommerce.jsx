@@ -7,14 +7,14 @@ import { ClockIcon } from "lucide-react";
 import { MdInventory } from "react-icons/md";
 import CTA from "../../components/ui/CTA";
 import FAQ from "../../components/ui/FAQ";
+import { Helmet } from "react-helmet-async";
 
 const Ecommerce = () => {
   const heroData = {
-    heroTitle: "Ecommerce Accounting and Compliance",
+    heroTitle: "E-Commerce Bookkeeping, Accounting, and Finance Management",
     heroSubtitle:
       " Accounting that understands ECommerce—because it’s what we do best.",
-    heroImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    heroImage: "/hero/documents.webp",
     btnText: "Consult with our E-Commerce Expert",
     btnLink: "https://calendly.com/upsellfinlogix/30min",
   };
@@ -148,6 +148,42 @@ const Ecommerce = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          E-Commerce Bookkeeping & Accounting Services | Upsell FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Specialized e-commerce bookkeeping for online retailers. Multi-channel sales tracking, inventory management, Shopify & Amazon integration, payment reconciliation, and tax optimization for US e-commerce businesses."
+        />
+        <meta
+          name="keywords"
+          content="e-commerce bookkeeping, online retail accounting, Shopify bookkeeping, Amazon seller accounting, multi-channel sales tracking, inventory management, payment reconciliation, e-commerce tax compliance, online business accounting, marketplace accounting, Stripe integration, e-commerce financial reports"
+        />
+        <meta
+          property="og:title"
+          content="Expert E-Commerce Bookkeeping & Financial Management | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Professional bookkeeping services built for e-commerce success. Dedicated accountants with 10+ years of online retail expertise, real-time tracking, and seamless platform integration."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/industry/ecommerce"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/industry/ecommerce"
+        />
+      </Helmet>
+
       <HeroSection heroDetails={heroData} />
 
       {/* Specialization Section */}
@@ -186,9 +222,11 @@ const Ecommerce = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                src="/industry/ecommerce-page-whoWeAre.webp"
                 alt="Team collaboration"
                 className="rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -286,10 +324,11 @@ const Ecommerce = () => {
                       Growth Strategy
                     </h3>
                     <p className="text-orange-100 text-sm">
-                      Strategic planning for sustainable growth
+                      Strategic planning for sustainable growth, combining
+                      capital budgeting, cost reduction, and profit-maximizing
+                      strategies to drive long-term success.
                     </p>
                   </div>
-                  <div className="text-2xl font-bold text-white">$2M+</div>
                 </div>
               </div>
 
@@ -462,8 +501,10 @@ const Ecommerce = () => {
                 {/* Large image - top left */}
                 <div className="row-span-2">
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="/industry/ecommerce-page-img1.webp"
                     alt="E-commerce analytics dashboard"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                   />
                 </div>
@@ -471,8 +512,10 @@ const Ecommerce = () => {
                 {/* Top right */}
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="/industry/ecommerce-page-img2.webp"
                     alt="Financial charts and graphs"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                   />
                 </div>
@@ -480,8 +523,10 @@ const Ecommerce = () => {
                 {/* Bottom right */}
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="/industry/ecommerce-page-img3.webp"
                     alt="Online shopping and e-commerce"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                   />
                 </div>

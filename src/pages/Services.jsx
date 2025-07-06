@@ -4,6 +4,7 @@ import HeroSection from "../components/ui/HeroSection";
 import { CheckCircle } from "lucide-react";
 import CTA from "../components/ui/CTA";
 import FAQ from "../components/ui/FAQ";
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const Services = () => {
     heroTitle: "Corporate Finance, Accounting & Bookkeeping",
     heroSubtitle:
       "Services designed to strengthen the financial backbone of your business. ",
-    heroImage: "https://wallpaperaccess.com/full/153208.jpg",
+    heroImage: "hero/buildings.webp",
   });
 
   const serviceCategories = [
@@ -31,8 +32,7 @@ const Services = () => {
         "Periodic Financial Reporting",
         "Sales Tax Reporting and Filings",
       ],
-      image:
-        "https://images.unsplash.com/photo-1744051518421-1eaf2fbde680?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tlZXBpbmclMjBhY2NvdW50c3xlbnwwfHwwfHx8MA%3D%3D",
+      image: "services/bookkeeping.webp",
     },
     {
       title: "Accounting",
@@ -48,8 +48,7 @@ const Services = () => {
         "Wealth management ",
         "Proactive Financial Strategy & Governance for Business Success",
       ],
-      image:
-        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWNjb3VudGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+      image: "services/accounting.webp",
     },
     {
       title: "Corporate Finance Management",
@@ -63,8 +62,7 @@ const Services = () => {
         "Cashflow management",
         "Strategic planning",
       ],
-      image:
-        "https://plus.unsplash.com/premium_photo-1661720120987-9723da4de350?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RmluYW5jZSUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
+      image: "services/finance.webp",
     },
   ];
 
@@ -87,8 +85,93 @@ const Services = () => {
 
   return (
     <div className="bg-white">
-      <HeroSection heroDetails={heroDetails} />
+      <Helmet>
+        <title>
+          Finance, Accounting & Bookkeeping Services | Upsell FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Explore our expert bookkeeping, accounting, and corporate finance services for U.S. businesses. From financial modeling to sales tax filings, we deliver tailored, compliant solutions that grow with your business."
+        />
+        <meta
+          name="keywords"
+          content="bookkeeping services, accounting services, corporate finance, financial modeling, AP AR RTR, payroll, tax filing, budgeting, business valuation, cash flow management"
+        />
+        <meta
+          property="og:title"
+          content="Professional Bookkeeping & Finance Services | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Trusted accounting and finance solutions for small and mid-sized businesses. Discover our end-to-end services today."
+        />
+        <meta
+          property="og:image"
+          content="https://wallpaperaccess.com/full/153208.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/services"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://www.upsellfinlogix.com/services" />
 
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Corporate Finance, Accounting & Bookkeeping Services",
+            description:
+              "Services designed to strengthen the financial backbone of your business with expert bookkeeping, accounting, and corporate finance management.",
+            provider: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            serviceType: "Financial Services",
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Financial Services Portfolio",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Bookkeeping Services",
+                    description:
+                      "Expert bookkeeping services including dedicated accountant, complete bookkeeping cycle, bank reconciliation, AP/AR/RTR, catch-up bookkeeping, payroll processing, and sales tax reporting",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Accounting Services",
+                    description:
+                      "Comprehensive accounting solutions with dedicated industry expert, financial modeling, business valuation, bank reconciliation, AP/AR management, and proactive financial strategy",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Corporate Finance Management",
+                    description:
+                      "Strategic financial planning and analysis, business valuation, budgeting and forecasting, cashflow management, and strategic planning",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+      <HeroSection heroDetails={heroDetails} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Introduction */}
         <div className="text-center mb-16">
@@ -118,13 +201,15 @@ const Services = () => {
                   <img
                     src={category.image}
                     alt={category.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
-                    <h3 className="text-2xl font-bold text-white">
+                    <h2 className="text-2xl font-bold text-white">
                       {category.title}
-                    </h3>
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -150,10 +235,6 @@ const Services = () => {
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-
-        {/* Testimonials */}
       </div>
       <CTA />
       <FAQ />

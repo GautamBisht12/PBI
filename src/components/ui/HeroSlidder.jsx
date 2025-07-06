@@ -3,18 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    image: "https://wallpaperaccess.com/full/3397663.jpg",
+    image: "slidder/slidder1.webp",
     headline: "Reliable Bookkeeping and Accounting Firm",
     subtext:
       "Streamlined Solutions for Accurate, Compliant, and Scalable Growth",
   },
   {
-    image: "https://images.pexels.com/photos/8353793/pexels-photo-8353793.jpeg",
+    image: "slidder/slidder2.webp",
     headline: "Experience You Can Trust",
     subtext: "Empowering Businesses Through Smart Financial Decisions",
   },
   {
-    image: "https://wallpaperaccess.com/full/643457.jpg ",
+    image: "slidder/slidder3.webp",
     headline: "Your Partner in Strategic Financial Growth.",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",
@@ -52,9 +52,19 @@ export default function HeroSlider() {
                   opacity: 0,
                   transition: { duration: 1 },
                 }}
-                className="absolute inset-0 w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
-              />
+                className="absolute inset-0 w-full h-full overflow-hidden"
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.alt || "Banner image"}
+                  className="w-full h-full object-cover"
+                  width={1920}
+                  height={1080}
+                  decoding="async"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchpriority={index === 0 ? "high" : undefined}
+                />
+              </motion.div>
             )
         )}
       </AnimatePresence>

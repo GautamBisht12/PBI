@@ -3,6 +3,7 @@ import HeroSection from "../components/ui/HeroSection";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import PricingSection from "../components/ui/PricingSection";
+import { Helmet } from "react-helmet-async";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -65,13 +66,126 @@ const Pricing = () => {
     heroTitle: "Pricing",
     heroSubtitle:
       "Explore our pricing plans and find the perfect fit for your business.",
-    heroImage:
-      "https://t4.ftcdn.net/jpg/05/24/39/69/360_F_524396965_aEvKerRzFRmTBzm6ffQcaWy8JLQeZvAi.jpg",
+    heroImage: "hero/pricing-hero.webp",
   });
 
   return (
     <>
-      <section className="mt-20">
+      <section className="fade-in">
+        <Helmet>
+          <title>
+            Bookkeeping & Accounting Pricing Plans | Upsell FinLogix
+          </title>
+          <meta
+            name="description"
+            content="Transparent pricing for professional bookkeeping services starting at $199/month. Pay-as-you-go, monthly bookkeeping, accounting process support, and corporate finance management plans available."
+          />
+          <meta
+            name="keywords"
+            content="bookkeeping pricing, accounting service costs, monthly bookkeeping rates, pay as you go accounting, corporate finance pricing, bookkeeping packages, accounting plans, financial management costs, dedicated accountant pricing, US bookkeeping services"
+          />
+          <meta
+            property="og:title"
+            content="Affordable Bookkeeping & Accounting Pricing | Upsell FinLogix"
+          />
+          <meta
+            property="og:description"
+            content="Choose from flexible bookkeeping plans starting at $199/month. Dedicated accountants, monthly financial reports, and specialized industry expertise for U.S. businesses."
+          />
+          <meta
+            property="og:image"
+            content="https://t4.ftcdn.net/jpg/05/24/39/69/360_F_524396965_aEvKerRzFRmTBzm6ffQcaWy8JLQeZvAi.jpg"
+          />
+          <meta
+            property="og:url"
+            content="https://www.upsellfinlogix.com/pricing"
+          />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <link rel="canonical" href="https://www.upsellfinlogix.com/pricing" />
+
+          {/* JSON-LD Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: "Bookkeeping & Accounting Services",
+              description:
+                "Professional bookkeeping and accounting services with dedicated accountants and industry expertise",
+              brand: {
+                "@type": "Organization",
+                name: "Upsell FinLogix",
+                url: "https://www.upsellfinlogix.com",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "United States",
+              },
+              offers: [
+                {
+                  "@type": "Offer",
+                  name: "Pay-As-You-Go",
+                  description:
+                    "Dedicated Accountant + Industry Expert for on-call bookkeeping and projects",
+                  price: "24.99",
+                  priceCurrency: "USD",
+                  priceSpecification: {
+                    "@type": "UnitPriceSpecification",
+                    price: "24.99",
+                    priceCurrency: "USD",
+                    unitText: "per hour",
+                  },
+                  availability: "https://schema.org/InStock",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Monthly Bookkeeping",
+                  description:
+                    "Monthly or Weekly Accounting with Cash Basis or Accrual Basis and Monthly Financial Reports",
+                  price: "199",
+                  priceCurrency: "USD",
+                  priceSpecification: {
+                    "@type": "UnitPriceSpecification",
+                    price: "199",
+                    priceCurrency: "USD",
+                    unitText: "per month",
+                  },
+                  availability: "https://schema.org/InStock",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Accounting Process Support",
+                  description:
+                    "Accounts payable, Accounts Receivable, Record to Report, and Financial Reporting",
+                  price: "349",
+                  priceCurrency: "USD",
+                  priceSpecification: {
+                    "@type": "UnitPriceSpecification",
+                    price: "349",
+                    priceCurrency: "USD",
+                    unitText: "per month",
+                  },
+                  availability: "https://schema.org/InStock",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Corporate Finance Management",
+                  description:
+                    "Financial planning and analysis, business valuation, forecasting, budgeting, and strategic planning",
+                  price: "999",
+                  priceCurrency: "USD",
+                  priceSpecification: {
+                    "@type": "UnitPriceSpecification",
+                    price: "999",
+                    priceCurrency: "USD",
+                    unitText: "per month",
+                  },
+                  availability: "https://schema.org/InStock",
+                },
+              ],
+            })}
+          </script>
+        </Helmet>
         <HeroSection heroDetails={heroDetails} />
         <h2 className="text-center text-2xl font-bold mt-12 mb-6">
           Behind on your books? <br></br> We can help you get up to date quickly

@@ -19,7 +19,7 @@ const navigation = [
     href: "/services",
     submenu: [
       { name: "Bookkeeping", href: "/services/bookkeeping" },
-      { name: "Accounting", href: "/services/accounting" },
+      { name: "Accounting (Process Support)", href: "/services/accounting" },
       {
         name: "Corporate Finance Management",
         href: "/services/finance",
@@ -139,6 +139,7 @@ function Navbar() {
             src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
             alt="logo"
             className="w-14 h-14"
+            loading="lazy"
           />
           <div
             className={`flex gap-2 text-lg md:text-2xl font-bold ${
@@ -301,6 +302,7 @@ function Navbar() {
                 src="https://upsellwholesale.com/wp-content/uploads/2025/05/logo2.png"
                 alt="logo"
                 className="w-16 h-16"
+                loading="lazy"
               />
               <div className="leading-tight">
                 <div>Upsell</div>

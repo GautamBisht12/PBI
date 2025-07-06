@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ClerkProvider } from "@clerk/clerk-react";
 import App from "./App.jsx";
 import "./index.css";
+import { HelmetProvider } from "react-helmet-async";
 
 // Use a public key for demo purposes
 // In production, use environment variables
@@ -17,9 +18,11 @@ if (!clerkPubKey) {
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ClerkProvider publishableKey={clerkPubKey}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </HelmetProvider>
     </ClerkProvider>
   </StrictMode>
 );

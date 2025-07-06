@@ -3,17 +3,90 @@ import HeroSection from "../components/ui/HeroSection";
 import FAQ from "../components/ui/FAQ";
 import WhyChooseUsSection from "../components/ui/WhyChooseUsSection";
 import { aboutPageWhyChooseUs } from "../data/whyChooseUsData.jsx";
+import { Helmet } from "react-helmet-async";
 
 function AboutPage() {
   const heroData = {
     heroTitle: "About Us",
     heroSubtitle:
       " Empowering Your Business with Professional Bookkeeping, Accounting, and Corporate Finance Solutions",
-    heroImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    heroImage: "hero/documents.webp",
   };
   return (
     <div className="fade-in">
+      <Helmet>
+        <title>
+          About Us | Upsell FinLogix - Your Strategic Finance Partner
+        </title>
+        <meta
+          name="description"
+          content="Learn how Upsell FinLogix delivers expert bookkeeping, accounting, and financial strategy services. Discover our mission, values, and why businesses choose us as a trusted financial partner."
+        />
+        <meta
+          name="keywords"
+          content="about accounting firm, financial strategy, bookkeeping experts, corporate finance solutions, business valuation, why choose Upsell FinLogix ,QuickBooks and Xero experts"
+        />
+        <meta
+          property="og:title"
+          content="About Upsell FinLogix - Trusted Accounting & Finance Experts"
+        />
+        <meta
+          property="og:description"
+          content="Explore what makes Upsell FinLogix a leader in bookkeeping and finance. Our experienced team is committed to your business's success."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/about"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://www.upsellfinlogix.com/about" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            mainEntity: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+              logo: "https://www.upsellfinlogix.com/logo.png",
+              description:
+                "Upsell FinLogix delivers comprehensive bookkeeping, accounting, and corporate finance services that streamline your financial operations, ensuring transparency, efficiency, and long-term success.",
+              foundingDate: "2023",
+              areaServed: {
+                "@type": "Country",
+                name: "United States",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-804-876-0978",
+                contactType: "customer service",
+                email: "info@upsellfinlogix.com",
+                availableLanguage: "English",
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "7901 4TH ST N STE 300",
+                addressLocality: "St. Petersburg",
+                addressRegion: "FL",
+                postalCode: "33702",
+                addressCountry: "US",
+              },
+              sameAs: [
+                "https://www.facebook.com/upsellfinlogix",
+                "https://www.linkedin.com/company/upsellfinlogix",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero section */}
       <HeroSection heroDetails={heroData} />
 
@@ -26,7 +99,7 @@ function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Upsell Finlogix, we recognize that effective financial
+                At Upsell FinLogix, we recognize that effective financial
                 management is essential for the growth and stability of any
                 business. Our mission is to deliver comprehensive bookkeeping,
                 accounting, and corporate finance services that streamline your
@@ -42,9 +115,11 @@ function AboutPage() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                src="about/our-mission.webp"
                 alt="Financial planning"
                 className="rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-500 rounded-lg -z-10"></div>
             </div>
@@ -71,14 +146,16 @@ function AboutPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80"
+                  src="about/service1.webp"
                   alt="Bookkeeping & Accounting"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Bookkeeping & Accounting
+                  Bookkeeping
                 </h3>
                 <p className="text-gray-600">
                   We manage day-to-day financial records, ensuring accuracy and
@@ -92,8 +169,10 @@ function AboutPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                  src="about/service2.webp"
                   alt="Financial Reporting & Analysis"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -113,14 +192,16 @@ function AboutPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFjY291bnRzJTIwcGF5YWJsZSUyMGFuZCUyMHJlY2VpdmFibGV8ZW58MHx8MHx8fDA%3D"
+                  src="about/service3.webp"
                   alt="Accounts Payable & Receivable"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Accounting
+                  Accounting Process Support
                 </h3>
                 <p className="text-gray-600">
                   We optimize cash flow by managing both accounts payable and
@@ -134,8 +215,10 @@ function AboutPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                  src="about/service4.webp"
                   alt="Corporate Finance & Strategy"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -159,7 +242,6 @@ function AboutPage() {
         title={aboutPageWhyChooseUs.title}
         subtitle={aboutPageWhyChooseUs.subtitle}
         features={aboutPageWhyChooseUs.features}
-        
         cardBackgroundColor="bg-blue-800"
         cardHoverColor="hover:bg-blue-700"
       />
@@ -278,7 +360,7 @@ function AboutPage() {
             Partner with Us for a Stronger Financial Future
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            At Upsell Finlogix, we are more than just a service provider; we are
+            At Upsell FinLogix, we are more than just a service provider; we are
             your strategic partner in bookkeeping, accounting, and corporate
             finance. Let us help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
@@ -310,9 +392,11 @@ function AboutPage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                src="about/values.webp"
                 alt="Team collaboration"
                 className="rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-green-500 rounded-lg -z-10"></div>
             </div>
@@ -460,7 +544,7 @@ function AboutPage() {
             Ready to Transform Your Financial Operations?
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Let Upsell Finlogix help you navigate the complexities of financial
+            Let Upsell FinLogix help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
             focus on growing your business.
           </p>

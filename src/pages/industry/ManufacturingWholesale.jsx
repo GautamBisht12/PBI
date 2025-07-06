@@ -1,21 +1,21 @@
-import { ClockIcon, Check, Cog, Book } from "lucide-react";
+import { Check, Cog, Book } from "lucide-react";
 import HeroSection from "../../components/ui/HeroSection";
 import { MdInventory } from "react-icons/md";
 import { BiAnalyse } from "react-icons/bi";
 import { TbTax } from "react-icons/tb";
-import CTA from "../../components/ui/CTA";
 import { Link } from "react-router-dom";
 import FAQ from "../../components/ui/FAQ";
+import { Helmet } from "react-helmet-async";
 
 const ManufacturingWholesale = () => {
   const heroData = {
     heroTitle: "Manufacturing & Wholesale",
     heroSubtitle:
       "Finance systems built for B2B efficiency, growth, and compliance.",
-    heroImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    heroImage: "/hero/wholesale-hero.webp",
     btnText: "Consult with our Manufacturing & Wholesale Expert",
     btnLink: "https://calendly.com/upsellfinlogix/30min",
+    imgStyle: "object-center",
   };
 
   const offerings = [
@@ -50,6 +50,42 @@ const ManufacturingWholesale = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Manufacturing & Wholesale Bookkeeping Services | Upsell FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Expert bookkeeping for B2B manufacturers and wholesalers. COGS reporting, inventory reconciliation, margin analysis, vendor management, tax filing support, and corporate finance planning for US manufacturing businesses."
+        />
+        <meta
+          name="keywords"
+          content="manufacturing bookkeeping, wholesale accounting, B2B bookkeeping, COGS reporting, inventory reconciliation, margin analysis, vendor management reporting, manufacturing tax filing, wholesale financial management, supply chain accounting, production cost analysis, manufacturing compliance"
+        />
+        <meta
+          property="og:title"
+          content="B2B Manufacturing & Wholesale Financial Management | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Specialized bookkeeping for manufacturers and wholesalers. Expert financial management with dedicated accountants, ERP integration, and real-time reporting for B2B growth and compliance."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/industry/manufacturing"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/industry/manufacturing"
+        />
+      </Helmet>
+
       <HeroSection heroDetails={heroData} />
 
       {/* Who We Are Section */}
@@ -78,9 +114,11 @@ const ManufacturingWholesale = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                src="/about/our-mission.webp"
                 alt="Team collaboration"
                 className="rounded-lg shadow-xl"
+                decoding="async"
+                loading="lazy"
               />
             </div>
           </div>
@@ -273,7 +311,7 @@ const ManufacturingWholesale = () => {
             {/* Image - Right Side */}
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80"
+                src="/hero/documents.webp"
                 alt="Manufacturing bookkeeping and financial management"
                 className="rounded-lg shadow-xl"
               />

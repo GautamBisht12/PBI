@@ -1,4 +1,4 @@
-import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const HeroSection = ({ heroDetails }) => {
@@ -6,12 +6,24 @@ const HeroSection = ({ heroDetails }) => {
     <>
       <section className="relative text-white  px-4 sm:px-6 lg:px-8 h-[70vh] w-full">
         {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat bg-fixed z-0"
-          style={{
-            backgroundImage: `url(${heroDetails.heroImage})`,
-          }}
-        ></div>
+        <Helmet>
+          <link
+            rel="preload"
+            as="image"
+            href={heroDetails.heroImage}
+            fetchpriority="high"
+          />
+        </Helmet>
+        <img
+          src={heroDetails.heroImage}
+          alt="Hero background"
+          className={`${heroDetails.imgStyle} absolute inset-0 w-full h-full object-cover object-top z-0`}
+          width={1920}
+          height={800}
+          decoding="async"
+          loading="eager"
+          fetchpriority="high"
+        />
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/70 z-0"></div>

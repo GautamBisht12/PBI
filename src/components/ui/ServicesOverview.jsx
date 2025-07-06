@@ -31,8 +31,10 @@ const ServicesOverview = () => {
           <div className="w-full lg:w-5/12 flex justify-center lg:justify-start">
             <img
               className="w-full max-w-md lg:max-w-none object-cover rounded-lg"
-              src="https://thumbs.dreamstime.com/b/young-businessman-business-meeting-conference-room-office-66968197.jpg"
+              src="images/services-homePage.webp"
               alt="Professional consultant"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           {/* Text div - responsive */}

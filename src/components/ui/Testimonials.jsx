@@ -87,6 +87,7 @@ const Testimonials = () => {
                       className="h-12 w-12 rounded-full object-cover border-2 border-indigo-100"
                       src={testimonial.image}
                       alt={testimonial.name}
+                      loading="lazy"
                     />
                   </div>
                   <div className="ml-4">

@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import HeroSection from "../../components/ui/HeroSection";
 import FAQ from "../../components/ui/FAQ";
+import { Helmet } from "react-helmet-async";
+
 import WhyChooseUsSection from "../../components/ui/WhyChooseUsSection";
 import {
   financeServices,
@@ -17,11 +19,117 @@ export default function Accounting() {
     heroSubtitle:
       "Strategic financial oversight designed to optimize profitability, enhance operational control, and empower confident business decisions.",
 
-    heroImage: "https://wallpaperaccess.com/full/153208.jpg",
+    heroImage: "/hero/buildings.webp",
   });
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+      <Helmet>
+        <title>Corporate Financial Management Services | Upsell FinLogix</title>
+        <meta
+          name="description"
+          content="Strategic financial oversight designed to optimize profitability, enhance operational control, and empower confident business decisions."
+        />
+        <meta
+          name="keywords"
+          content="corporate finance, financial management, financial planning, business valuation, forecasting, budgeting, cashflow optimization, investor reporting, financial advisory, US businesses"
+        />
+        <meta
+          property="og:title"
+          content="Strategic Financial Services | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Empowering U.S. businesses with investor-grade financial planning, valuation, reporting, and strategic decision support."
+        />
+        <meta
+          property="og:image"
+          content="https://wallpaperaccess.com/full/153208.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/services/finance"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/services/finance"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Corporate Financial Management Services",
+            description:
+              "Strategic financial oversight designed to optimize profitability, enhance operational control, and empower confident business decisions through structured processes and real-time financial oversight.",
+            provider: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            serviceType: "Corporate Finance Management",
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Corporate Finance Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Financial Planning and Analysis",
+                    description:
+                      "Strategic financial planning with comprehensive analysis for business growth and profitability optimization",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Business Valuation",
+                    description:
+                      "Professional business valuation services for investment, acquisition, or strategic planning purposes",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Forecasting & Budgeting",
+                    description:
+                      "Growth-driven forecasting and budget controls for sustainable business expansion",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Cashflow Management",
+                    description:
+                      "Operational cost and cashflow optimization for maximum efficiency and profitability",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Strategic Planning",
+                    description:
+                      "Comprehensive strategic financial planning to navigate complexities and ensure scalable profit growth",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <HeroSection heroDetails={heroDetails} />
 
@@ -52,9 +160,11 @@ export default function Accounting() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFjY291bnRpbmd8ZW58MHx8MHx8fDA%3D"
+                src="/hero/documents.webp"
                 alt="Team collaboration"
                 className="rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckCircle, Briefcase } from "lucide-react";
 
 import { FaBolt, FaEye, FaTint, FaChartBar, FaRocket } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 import HeroSection from "../../components/ui/HeroSection";
 import FAQ from "../../components/ui/FAQ";
@@ -12,7 +13,7 @@ import CTA from "../../components/ui/CTA.jsx";
 
 export default function Accounting() {
   const [heroDetails] = useState({
-    heroTitle: "Accounting Services for US Businesses",
+    heroTitle: "Accounting Process Support  for US Businesses",
     heroSubtitle: (
       <p className="text-lg text-gray-50">
         Industry Expertise Across: <br />
@@ -20,7 +21,7 @@ export default function Accounting() {
       </p>
     ),
 
-    heroImage: "https://wallpaperaccess.com/full/153208.jpg",
+    heroImage: "/hero/buildings.webp",
   });
 
   const financialBenefits = [
@@ -60,6 +61,114 @@ export default function Accounting() {
   ];
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+      <Helmet>
+        <title>
+          Accounting Process Support for U.S. Businesses | Upsell FinLogix
+        </title>
+        <meta
+          name="description"
+          content="Streamline your financial operations with our accounting process support services. Tailored for ecommerce, manufacturing, healthcare, and hospitality sectors, we deliver scalable and insightful financial systems."
+        />
+        <meta
+          name="keywords"
+          content="accounting process support, real-time reporting, AP AR management, cash flow visibility, ecommerce accounting, healthcare accounting, hospitality accounting, inventory tracking, financial reconciliation"
+        />
+        <meta
+          property="og:title"
+          content="Expert Accounting Solutions for US Businesses | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Scalable, industry-focused accounting solutions with real-time insights and streamlined financial operations."
+        />
+        <meta
+          property="og:image"
+          content="https://wallpaperaccess.com/full/153208.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/services/accounting"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/services/accounting"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Accounting Process Support Services",
+            description:
+              "Comprehensive accounting process support tailored for US businesses across ecommerce, manufacturing, healthcare, and hospitality industries with streamlined workflows and real-time visibility.",
+            provider: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            serviceType: "Accounting Process Support",
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Core Accounting Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Accounts Payable Management",
+                    description:
+                      "Streamlined AP processes with vendor management and payment optimization",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Accounts Receivable Management",
+                    description:
+                      "Efficient AR processes to improve cash flow and reduce outstanding receivables",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Record to Report (RTR)",
+                    description:
+                      "Complete financial reporting cycle from transaction recording to final reports",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Financial Reporting",
+                    description:
+                      "Real-time financial insights and comprehensive reporting for better decision-making",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Industry-Specific Solutions",
+                    description:
+                      "Specialized accounting solutions for ecommerce, manufacturing, healthcare, and hospitality sectors",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <HeroSection heroDetails={heroDetails} />
 
@@ -87,9 +196,11 @@ export default function Accounting() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFjY291bnRpbmd8ZW58MHx8MHx8fDA%3D"
+                src="/hero/documents.webp"
                 alt="Team collaboration"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl "
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

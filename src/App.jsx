@@ -7,33 +7,48 @@ import {
   RedirectToSignIn,
 } from "@clerk/clerk-react";
 
-import RootLayout from "./layouts/RootLayout.jsx";
+import { lazy, Suspense } from "react";
+
+// Layouts
 import HomePageLayout from "./layouts/HomePageLayout.jsx";
-import DashboardLayout from "./layouts/DashboardLayout.jsx";
 
-import HomePage from "./pages/HomePage.jsx";
-import AboutPage from "./pages/AboutPage.jsx";
-import ContactPage from "./pages/ContactPage.jsx";
-import DashboardPage from "./pages/DashboardPage.jsx";
-import ReportPage from "./pages/ReportPage.jsx";
-import NotFoundPage from "./pages/NotFoundPage.jsx";
-import LoadingSpinner from "./components/ui/LoadingSpinner.jsx";
-import Accounting from "./pages/services/Accounting.jsx";
-import Bookkeeping from "./pages/services/Bookkeeping.jsx";
-import FinanceManagement from "./pages/services/FinanceManagement.jsx";
-// import Industries from "./pages/Industries.jsx";
-import Pricing from "./pages/Pricing.jsx";
-import Services from "./pages/Services.jsx";
-import Industry from "./pages/Industry.jsx";
+import RootLayout from "./layouts/RootLayout.jsx";
 
-import Construction from "./pages/industry/Construction.jsx";
-import Ecommerce from "./pages/industry/Ecommerce.jsx";
-import Healthcare from "./pages/industry/Healthcare.jsx";
-import Hospitality from "./pages/industry/Hospitality.jsx";
-import ManufacturingWholesale from "./pages/industry/ManufacturingWholesale.jsx";
-import ProfitableBookkeeping from "./pages/industry/ProfitableBookkeeping.jsx";
+// Pages
+const HomePage = lazy(() => import("./pages/HomePage.jsx"));
+const AboutPage = lazy(() => import("./pages/AboutPage.jsx"));
+const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
 
-import PrivacyPolicy from "./pages/policies/PrivacyPolicy.jsx";
+const Pricing = lazy(() => import("./pages/Pricing.jsx"));
+
+// Services Pages
+const Services = lazy(() => import("./pages/Services.jsx"));
+const Bookkeeping = lazy(() => import("./pages/services/Bookkeeping.jsx"));
+const FinanceManagement = lazy(() =>
+  import("./pages/services/FinanceManagement.jsx")
+);
+const Accounting = lazy(() => import("./pages/services/Accounting.jsx"));
+
+// Industry Pages
+const Industry = lazy(() => import("./pages/Industry.jsx"));
+const Construction = lazy(() => import("./pages/industry/Construction.jsx"));
+const Ecommerce = lazy(() => import("./pages/industry/Ecommerce.jsx"));
+const Healthcare = lazy(() => import("./pages/industry/Healthcare.jsx"));
+const Hospitality = lazy(() => import("./pages/industry/Hospitality.jsx"));
+const ManufacturingWholesale = lazy(() =>
+  import("./pages/industry/ManufacturingWholesale.jsx")
+);
+const ProfitableBookkeeping = lazy(() =>
+  import("./pages/ProfitableBookkeeping.jsx")
+);
+
+// Policies
+const PrivacyPolicy = lazy(() => import("./pages/policies/PrivacyPolicy.jsx"));
+
+// Other imports
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage.jsx"));
+
+const LoadingSpinner = lazy(() => import("./components/ui/LoadingSpinner.jsx"));
 
 function App() {
   return (
@@ -45,61 +60,75 @@ function App() {
       </ClerkLoading>
 
       <ClerkLoaded>
-        <Routes>
-          {/* Public routes with home page layout */}
-          <Route element={<RootLayout />}>
-            <Route element={<HomePageLayout />}>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center min-h-screen">
+              <LoadingSpinner size="large" />
+            </div>
+          }
+        >
+          <Routes>
+            {/* Public routes with home page layout */}
+            <Route element={<RootLayout />}>
+              <Route element={<HomePageLayout />}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
 
-              <Route path="/services/bookkeeping" element={<Bookkeeping />} />
-              <Route path="/pricing" element={<Pricing />} />
+                <Route path="/services/bookkeeping" element={<Bookkeeping />} />
+                <Route path="/pricing" element={<Pricing />} />
 
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/finance" element={<FinanceManagement />} />
-              <Route path="/services/accounting" element={<Accounting />} />
+                <Route path="/services" element={<Services />} />
+                <Route
+                  path="/services/finance"
+                  element={<FinanceManagement />}
+                />
+                <Route path="/services/accounting" element={<Accounting />} />
 
-              <Route path="/industry" element={<Industry />} />
-              <Route path="/industry/construction" element={<Construction />} />
-              <Route path="/industry/ecommerce" element={<Ecommerce />} />
-              <Route path="/industry/healthcare" element={<Healthcare />} />
-              <Route path="/industry/hospitality" element={<Hospitality />} />
-              <Route
-                path="/industry/manufacturing"
-                element={<ManufacturingWholesale />}
-              />
+                <Route path="/industry" element={<Industry />} />
+                <Route
+                  path="/industry/construction"
+                  element={<Construction />}
+                />
+                <Route path="/industry/ecommerce" element={<Ecommerce />} />
+                <Route path="/industry/healthcare" element={<Healthcare />} />
+                <Route path="/industry/hospitality" element={<Hospitality />} />
+                <Route
+                  path="/industry/manufacturing"
+                  element={<ManufacturingWholesale />}
+                />
 
-              {/* Policies  */}
-              <Route
-                path="/profitable-bookkeeping-and-finance-management"
-                element={<ProfitableBookkeeping />}
-              />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                {/* Policies  */}
+                <Route
+                  path="/profitable-bookkeeping-and-finance-management"
+                  element={<ProfitableBookkeeping />}
+                />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              </Route>
+
+              {/* Protected dashboard routes */}
+              {/* <Route
+                path="/dashboard"
+                element={
+                  <>
+                    <SignedIn>
+                      <DashboardLayout />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn />
+                    </SignedOut>
+                  </>
+                }
+              >
+                <Route index element={<DashboardPage />} />
+                <Route path="reports/:reportId" element={<ReportPage />} />
+              </Route> */}
+
+              {/* 404 page */}
+              <Route path="*" element={<NotFoundPage />} />
             </Route>
-
-            {/* Protected dashboard routes */}
-            <Route
-              path="/dashboard"
-              element={
-                <>
-                  <SignedIn>
-                    <DashboardLayout />
-                  </SignedIn>
-                  <SignedOut>
-                    <RedirectToSignIn />
-                  </SignedOut>
-                </>
-              }
-            >
-              <Route index element={<DashboardPage />} />
-              <Route path="reports/:reportId" element={<ReportPage />} />
-            </Route>
-
-            {/* 404 page */}
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
+          </Routes>
+        </Suspense>
       </ClerkLoaded>
     </>
   );

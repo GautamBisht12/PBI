@@ -23,10 +23,10 @@ const Card = () => {
       isMain: false,
     },
     {
-      title: "Bookkeeping",
+      title: "Bookkeeping ",
       // subtitle: "Our Premier Service",
       points: [
-        "Dedicated Bookkeeper",
+        "Dedicated Bookkeeper + Industry Expert",
         "Weekly, Monthly or Annually bookkeeping",
         "Accrual or Cash Basis on US GAAP & IFRS",
         "Financial Reporting",
@@ -43,9 +43,9 @@ const Card = () => {
       link: "/services/bookkeeping",
     },
     {
-      title: "Accounting",
+      title: "Accounting Process Support",
       points: [
-        "Dedicated Accountant",
+        "Dedicated Accountant + Industry Expert",
         "Accounts Payable",
         "Accounts Receivable",
         "Record to Report",
@@ -174,7 +174,9 @@ const Card = () => {
                     ${card.isMain ? "ring-2 ring-blue-300 ring-offset-2" : ""}
                   `}
                       >
-                        {card.isMain ? "Get Started Today" : "Learn More"}
+                        {card.isMain
+                          ? "Get Started Today"
+                          : "View Service Details"}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5 ml-2"

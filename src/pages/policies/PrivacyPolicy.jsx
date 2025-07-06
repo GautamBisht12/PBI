@@ -1,15 +1,74 @@
+import { Helmet } from "react-helmet-async";
 import HeroSection from "../../components/ui/HeroSection";
 
 const PrivacyPolicy = () => {
   const heroData = {
     heroTitle: "Privacy Policy",
     heroSubtitle:
-      "This Privacy Policy outlines how Upsell Finlogix collects, uses, and protects your personal information when you use our services.",
-    heroImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+      "This Privacy Policy outlines how Upsell FinLogix collects, uses, and protects your personal information when you use our services.",
+    heroImage: "/hero/documents.webp",
   };
   return (
     <>
+      <Helmet>
+        <title>Privacy Policy | Upsell FinLogix</title>
+        <meta
+          name="description"
+          content="Learn how Upsell FinLogix collects, uses, and protects your personal information. Our privacy policy outlines data handling practices for bookkeeping and financial services clients."
+        />
+        <meta
+          name="keywords"
+          content="privacy policy, data protection, personal information, financial data security, bookkeeping privacy, accounting data protection, client confidentiality, HIPAA compliance, data retention, privacy rights"
+        />
+        <meta property="og:title" content="Privacy Policy | Upsell FinLogix" />
+        <meta
+          property="og:description"
+          content="Comprehensive privacy policy detailing how Upsell FinLogix protects and manages client data in accordance with federal and state regulations."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/privacy-policy"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="canonical"
+          href="https://www.upsellfinlogix.com/privacy-policy"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Privacy Policy",
+            description:
+              "Privacy policy outlining how Upsell FinLogix collects, uses, and protects personal information in accordance with federal and state regulations.",
+            publisher: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            datePublished: "2024-01-01",
+            dateModified: "2024-01-01",
+            mainEntity: {
+              "@type": "Article",
+              headline: "Privacy Policy - Upsell FinLogix",
+              description:
+                "Comprehensive privacy policy detailing data collection, usage, protection practices, and user rights for bookkeeping and financial services.",
+              author: {
+                "@type": "Organization",
+                name: "Upsell FinLogix",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
       <HeroSection heroDetails={heroData} />
       <section className="px-6 py-16 bg-white text-gray-800 max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
@@ -18,7 +77,7 @@ const PrivacyPolicy = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-2">1. Introduction</h2>
             <p>
-              Upsell Finlogix respects your privacy and is committed to
+              Upsell FinLogix respects your privacy and is committed to
               protecting it in accordance with this Privacy Policy. This policy
               applies to all information collected through our website,
               www.upsellfinlogix.com, and the bookkeeping, tax, and corporate

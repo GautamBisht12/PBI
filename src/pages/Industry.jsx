@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
 import FAQ from "../components/ui/FAQ";
+import { Helmet } from "react-helmet-async";
 
 const Industry = () => {
   const heroData = {
     heroTitle: "Expert Bookkeeping Across Diverse Industries",
     heroSubtitle:
       "Specialized financial solutions tailored to your industry's unique needs and challenges.",
-    heroImage:
-      "https://www.curt.org/wp-content/uploads/2019/06/iStock-931461960.jpg",
+    heroImage: "/hero/industry.webp",
     btnText: "Explore Our Industry Expertise",
   };
 
@@ -27,8 +27,7 @@ const Industry = () => {
       ],
       link: "/industry/ecommerce",
       bgColor: "from-blue-500 to-blue-600",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "industry/eCommerce-industry.webp",
     },
     {
       id: 2,
@@ -44,8 +43,7 @@ const Industry = () => {
       ],
       link: "/industry/construction",
       bgColor: "from-orange-500 to-orange-600",
-      image:
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "industry/construction-industry.webp",
     },
     {
       id: 3,
@@ -61,8 +59,7 @@ const Industry = () => {
       ],
       link: "/industry/healthcare",
       bgColor: "from-green-500 to-green-600",
-      image:
-        "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhlYWx0aGNhcmUlMjBpbmR1c3RyeXxlbnwwfHwwfHx8MA%3D%3D",
+      image: "industry/healthcare-industry.webp",
     },
     {
       id: 4,
@@ -78,8 +75,7 @@ const Industry = () => {
       ],
       link: "/industry/hospitality",
       bgColor: "from-purple-500 to-purple-600",
-      image:
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "industry/hospitality-industry.webp",
     },
     {
       id: 5,
@@ -95,8 +91,7 @@ const Industry = () => {
       ],
       link: "/industry/manufacturing",
       bgColor: "from-red-500 to-red-600",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "industry/manufacturing-industry.webp",
     },
     {
       id: 6,
@@ -112,13 +107,124 @@ const Industry = () => {
       ],
       link: "/industry/wholesale",
       bgColor: "from-indigo-500 to-indigo-600",
-      image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "industry/wholesale-industry.webp",
     },
   ];
 
   return (
     <>
+      <Helmet>
+        <title>Industry-Specific Bookkeeping Services | Upsell FinLogix</title>
+        <meta
+          name="description"
+          content="Expert bookkeeping services tailored for E-commerce, Healthcare, Construction, Manufacturing, Hospitality & Wholesale industries. HIPAA-compliant, specialized financial solutions for U.S. businesses."
+        />
+        <meta
+          name="keywords"
+          content="industry specific bookkeeping, e-commerce accounting, healthcare bookkeeping, construction accounting, manufacturing bookkeeping, hospitality accounting, wholesale bookkeeping, HIPAA compliant accounting, job costing, inventory management, multi-channel sales tracking, specialized financial services"
+        />
+        <meta
+          property="og:title"
+          content="Specialized Industry Bookkeeping Services | Upsell FinLogix"
+        />
+        <meta
+          property="og:description"
+          content="Professional bookkeeping services across diverse industries including E-commerce, Healthcare, Construction, Manufacturing, Hospitality & Wholesale with industry-specific expertise and compliance."
+        />
+        <meta
+          property="og:image"
+          content="https://www.curt.org/wp-content/uploads/2019/06/iStock-931461960.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.upsellfinlogix.com/industry"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://www.upsellfinlogix.com/industry" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Industry-Specific Bookkeeping Services",
+            description:
+              "Specialized bookkeeping and financial management solutions tailored to each industry's unique requirements including E-commerce, Healthcare, Construction, Manufacturing, Hospitality, and Wholesale.",
+            provider: {
+              "@type": "Organization",
+              name: "Upsell FinLogix",
+              url: "https://www.upsellfinlogix.com",
+            },
+            serviceType: "Industry-Specific Bookkeeping",
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Industry-Specific Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "E-commerce Bookkeeping",
+                    description:
+                      "Multi-channel sales tracking, inventory management, and payment reconciliations for online retailers",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Healthcare Bookkeeping",
+                    description:
+                      "HIPAA-compliant financial management, insurance billing, and regulatory compliance",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Construction Accounting",
+                    description:
+                      "Project-based accounting, job costing, equipment depreciation, and compliance management",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Manufacturing Bookkeeping",
+                    description:
+                      "Cost accounting, inventory valuation, production cost analysis, and supply chain financial management",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Hospitality Accounting",
+                    description:
+                      "Revenue management, seasonal accounting, tip reporting, and multi-location financial consolidation",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Wholesale Service Bookkeeping",
+                    description:
+                      "Bulk transaction processing, vendor management, distribution cost tracking, and B2B financial solutions",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <HeroSection heroDetails={heroData} />
 
       {/* Industries Overview Section */}
@@ -148,6 +254,8 @@ const Industry = () => {
                   <img
                     src={industry.image}
                     alt={industry.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div
@@ -280,7 +388,7 @@ const Industry = () => {
             Ready to Transform Your Financial Operations?
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Let Upsell Finlogix help you streamline your financial operations
+            Let Upsell FinLogix help you streamline your financial operations
             with industry-specific expertise. Let us help you navigate the
             complexities of financial management with precision, insight, and
             transparency, so you can focus on growing your business.

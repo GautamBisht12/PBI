@@ -4,9 +4,11 @@ const WorkedWith = () => {
       name: "Intuit_QuickBooks_logo",
       logo: (
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/79/Intuit_QuickBooks_logo.svg"
+          src="/workedwith/intuit.svg"
           alt="Intuit_QuickBooks_logo"
-          className="w-36 "
+          className="w-36 object-contain"
+          loading="lazy"
+          decoding="async"
         />
       ),
     },
@@ -14,9 +16,11 @@ const WorkedWith = () => {
       name: "XERO",
       logo: (
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRasOICRC_6iN6K6IQiapRLMx-UE4U72jRD5w&s"
+          src="workedwith/xero.webp"
           alt="Shopify Logo"
-          className="w-24 "
+          className="w-24 object-contain"
+          loading="lazy"
+          decoding="async"
         />
       ),
     },
@@ -24,9 +28,11 @@ const WorkedWith = () => {
       name: "Shopify",
       logo: (
         <img
-          src="https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.png"
+          src="workedwith/Shopify-Logo.webp"
           alt="Shopify Logo"
-          className="w-24 "
+          className="w-24 object-contain"
+          loading="lazy"
+          decoding="async"
         />
       ),
     },
@@ -34,9 +40,11 @@ const WorkedWith = () => {
       name: "Amazon",
       logo: (
         <img
-          src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png"
+          src="workedwith/Amazon-Logo.webp"
           alt="Amazon Logo"
-          className="w-24 "
+          loading="lazy"
+          className="w-24 object-contain"
+          decoding="async"
         />
       ),
     },
@@ -44,9 +52,11 @@ const WorkedWith = () => {
       name: "Gusto",
       logo: (
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5A8Iv2CT-9t4XqDD2KrmeRtbEl4imeNT8Hg&s"
+          src="workedwith/gusto.webp"
           alt="Amazon Logo"
-          className="w-28 "
+          loading="lazy"
+          className="w-28 object-contain"
+          decoding="async"
         />
       ),
     },
@@ -54,9 +64,11 @@ const WorkedWith = () => {
       name: "Walmart",
       logo: (
         <img
-          src="https://atowndailynews.com/wp-content/uploads/2016/06/Walmart-logo-600x338.jpg"
+          src="workedwith/Walmart-logo.webp"
           alt="Walmart Logo"
-          className="w-24 h-24"
+          loading="lazy"
+          className="w-24 h-24 object-contain"
+          decoding="async"
         />
       ),
     },
@@ -64,9 +76,11 @@ const WorkedWith = () => {
       name: "Ebay",
       logo: (
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg"
+          src="workedwith/EBay_logo.svg"
           alt="Walmart Logo"
-          className="w-24 h-24"
+          loading="lazy"
+          className="w-24 h-24 object-contain"
+          decoding="async"
         />
       ),
     },
