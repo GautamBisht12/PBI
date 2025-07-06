@@ -9,7 +9,7 @@ function AboutPage() {
   const heroData = {
     heroTitle: "About Us",
     heroSubtitle:
-      " Empowering Your Business with Professional Bookkeeping, Accounting, and Corporate Finance Solutions",
+      " Empowering Your Business with Professional Bookkeeping, Accounting, and Corporate Finance Solutions.",
     heroImage: "hero/documents.webp",
   };
   return (

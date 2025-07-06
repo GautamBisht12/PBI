@@ -4,7 +4,7 @@ const Healthcare = () => {
   const heroData = {
     heroTitle: "Healthcare",
     heroSubtitle:
-      "Empowering Your Business with Professional Bookkeeping, Accounting, and Corporate Finance Solutions",
+      "Empowering Your Business with Professional Bookkeeping, Accounting, and Corporate Finance Solutions.",
     heroImage: "/hero/documents.webp",
     btnText: "Consult with our Healthcare Expert",
   };

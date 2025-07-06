@@ -23,7 +23,7 @@ const PricingSection = ({ theme, page }) => {
                 theme === "dark" ? "text-gray-300" : "text-gray-600"
               } `}
             >
-              Simple per-transaction pricing that scales with your business
+              Simple per-transaction pricing that scales with your business.
             </p>
           </div>
 

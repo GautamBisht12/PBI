@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../../components/ui/HeroSection";
 import WorkedWith from "../../components/ui/WorkedWith";
-import { FaAmazon, FaEbay, FaEtsy, FaShopify } from "react-icons/fa";
+import { FaAmazon, FaEbay, FaShopify } from "react-icons/fa";
 import { BsAmazon, BsStripe } from "react-icons/bs";
 import { ClockIcon } from "lucide-react";
 import { MdInventory } from "react-icons/md";

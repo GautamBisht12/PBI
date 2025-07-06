@@ -6,16 +6,16 @@ const slides = [
     image: "slidder/slidder1.webp",
     headline: "Reliable Bookkeeping and Accounting Firm",
     subtext:
-      "Streamlined Solutions for Accurate, Compliant, and Scalable Growth",
+      "Streamlined Solutions for Accurate, Compliant, and Scalable Growth.",
   },
   {
     image: "slidder/slidder2.webp",
     headline: "Experience You Can Trust",
-    subtext: "Empowering Businesses Through Smart Financial Decisions",
+    subtext: "Empowering Businesses Through Smart Financial Decisions.",
   },
   {
     image: "slidder/slidder3.webp",
-    headline: "Your Partner in Strategic Financial Growth.",
+    headline: "Your Partner in Strategic Financial Growth",
     subtext:
       "We turn financial complexity into strategic growth you can trust.",
   },
@@ -62,7 +62,7 @@ export default function HeroSlider() {
                   height={1080}
                   decoding="async"
                   loading={index === 0 ? "eager" : "lazy"}
-                  fetchpriority={index === 0 ? "high" : undefined}
+                  fetchPriority={index === 0 ? "high" : undefined}
                 />
               </motion.div>
             )

@@ -62,7 +62,7 @@ const Pricing = () => {
     },
   ];
 
-  const [heroDetails, setHeroDetails] = useState({
+  const [heroDetails] = useState({
     heroTitle: "Pricing",
     heroSubtitle:
       "Explore our pricing plans and find the perfect fit for your business.",
