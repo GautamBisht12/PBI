@@ -57,7 +57,7 @@ function HomePage() {
   }, [displayText, isDeleting, loopNum, services, typingSpeed]);
 
   return (
-    <div className="fade-in">
+    <div className="fade-in overflow-hidden">
       <Helmet>
         <link
           rel="preload"
@@ -135,6 +135,7 @@ function HomePage() {
       {/* Hero section */}
       <HeroSlider />
       {/* Explore our services section */}
+
       <Card />
 
       {/* Industries We serve */}

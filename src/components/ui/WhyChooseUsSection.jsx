@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const WhyChooseUsSection = ({
   title = "Why Choose Us?",
   subtitle = "We're committed to delivering exceptional service and ensuring your operations are accurate and timely.",
@@ -10,7 +11,7 @@ const WhyChooseUsSection = ({
     <section className={`py-20 ${backgroundColor} ${textColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold mb-4">{title}</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">{title}</h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-300">{subtitle}</p>
         </div>
         <div className={`grid grid-cols-1 md:grid-cols-2 ${gridCols} gap-8`}>

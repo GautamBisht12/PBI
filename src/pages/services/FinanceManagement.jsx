@@ -14,6 +14,50 @@ import CTA from "../../components/ui/CTA.jsx";
 import { Link } from "react-router-dom";
 
 export default function Accounting() {
+  const cardData = [
+    {
+      iconBg: "from-blue-500 to-blue-700",
+      iconSvg: (
+        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+      ),
+      title: "Profit-Centric Financial Structuring",
+      bullet:
+        "Optimized financial frameworks designed for maximum profitability",
+    },
+    {
+      iconBg: "from-indigo-500 to-indigo-700",
+      iconSvg: (
+        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+      ),
+      title: "Real-Time Financial Visibility & Reporting",
+      bullet: "Transparent insights for informed decision-making",
+    },
+    {
+      iconBg: "from-purple-500 to-purple-700",
+      iconSvg: (
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+          clipRule="evenodd"
+        />
+      ),
+      title: "Operational Cost & Cashflow Optimization",
+      bullet: "Strategic resource allocation for maximum efficiency",
+    },
+    {
+      iconBg: "from-emerald-500 to-emerald-700",
+      iconSvg: (
+        <path
+          fillRule="evenodd"
+          d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clipRule="evenodd"
+        />
+      ),
+      title: "Growth-Driven Forecasting & Budget Controls",
+      bullet: "Forward-looking financial planning for sustainable growth",
+    },
+  ];
+
   const [heroDetails] = useState({
     heroTitle: "Corporate Financial Management Services",
     heroSubtitle:
@@ -42,10 +86,7 @@ export default function Accounting() {
           property="og:description"
           content="Empowering U.S. businesses with investor-grade financial planning, valuation, reporting, and strategic decision support."
         />
-        <meta
-          property="og:image"
-          content="https://wallpaperaccess.com/full/153208.jpg"
-        />
+        <meta property="og:image" content="/hero/buildings.webp" />
         <meta
           property="og:url"
           content="https://www.upsellfinlogix.com/services/finance"
@@ -134,11 +175,11 @@ export default function Accounting() {
       <HeroSection heroDetails={heroDetails} />
 
       {/* Who We Are Section */}
-      <section className="py-16 bg-white h-[90vh] flex justify-center items-center">
+      <section className="px-5 sm:px-0 py-16 bg-white h-[90vh] flex justify-center items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 WHO WE ARE
               </h2>
 
@@ -152,10 +193,11 @@ export default function Accounting() {
                 strategic growth engine. Our corporate financial management
                 services are engineered to improve business resilience, unlock
                 profitability, optimize working capital, and provide actionable
-                financial insights. Through structured processes and real-time
-                financial oversight, we help businesses navigate financial
-                complexities with clarity — ensuring operational control,
-                capital efficiency, and scalable profit growth.
+                financial insights. <br />
+                Through structured processes and real-time financial oversight,
+                we help businesses navigate financial complexities with clarity
+                — ensuring operational control, capital efficiency, and scalable
+                profit growth.
               </p>
             </div>
             <div className="relative">
@@ -206,7 +248,7 @@ export default function Accounting() {
               </svg>
               Profitability Excellence
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               How We Create
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 {" "}
@@ -214,7 +256,7 @@ export default function Accounting() {
               </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our systematic approach transforms your financial operations into
               profit-generating engines through strategic optimization and
               data-driven insights.
@@ -222,175 +264,59 @@ export default function Accounting() {
           </div>
 
           {/* Profitability Cards Grid */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Card 1 */}
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+            {cardData.map((card, idx) => (
+              <div
+                key={idx}
+                className="group bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+                  {/* Icon Box */}
+                  <div className="flex-shrink-0 mx-auto sm:mx-0">
+                    <div
+                      className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${
+                        card.iconBg
+                      } rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-${
+                        card.iconBg.split(" ")[1]
+                      }/25 transition-all duration-300`}
                     >
-                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Profit-Centric Financial Structuring
-                  </h3>
-                  <div className="flex items-start space-x-3 mb-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
                       <svg
-                        className="w-4 h-4 text-green-600"
+                        className="w-6 h-6 sm:w-8 sm:h-8 text-white"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
+                        {card.iconSvg}
                       </svg>
                     </div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      Optimized financial frameworks designed for maximum
-                      profitability
-                    </p>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Card 2 */}
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-indigo-500/25 transition-all duration-300">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Real-Time Financial Visibility & Reporting
-                  </h3>
-                  <div className="flex items-start space-x-3 mb-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                      <svg
-                        className="w-4 h-4 text-green-600"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                  {/* Text Content */}
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 leading-tight">
+                      {card.title}
+                    </h3>
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-3">
+                      <div className="hidden sm:flex-shrink-0 w-6 h-6 bg-green-100 rounded-full sm:flex items-center justify-center mt-0.5">
+                        <svg
+                          className="w-4 h-4 text-green-600"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
+                        {card.bullet}
+                      </p>
                     </div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      Transparent insights for informed decision-making
-                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Operational Cost & Cashflow Optimization
-                  </h3>
-                  <div className="flex items-start space-x-3 mb-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                      <svg
-                        className="w-4 h-4 text-green-600"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      Strategic resource allocation for maximum efficiency
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-300">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Growth-Driven Forecasting & Budget Controls
-                  </h3>
-                  <div className="flex items-start space-x-3 mb-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                      <svg
-                        className="w-4 h-4 text-green-600"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      Forward-looking financial planning for sustainable growth
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Bottom CTA */}

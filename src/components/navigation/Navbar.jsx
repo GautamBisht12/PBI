@@ -327,7 +327,7 @@ function Navbar() {
                         } cursor-pointer`}
                         onClick={(e) => toggleSubmenu(e, index)}
                       >
-                        <span>{item.name}</span>
+                        <Link to={item.name}>{item.name}</Link>
                         <ChevronDown
                           size={20}
                           className={`transition-transform ${

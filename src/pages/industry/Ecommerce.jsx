@@ -190,16 +190,21 @@ const Ecommerce = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               SPECIALIZATION IN E-COMMERCE
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <p className="mt-4 text-gray-600 max-w-[430px] mx-auto">
+              Our team of experts is dedicated to providing top-notch
+              bookkeeping services tailored to the unique needs of e-commerce
+              businesses.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-5 sm:px-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -234,27 +239,28 @@ const Ecommerce = () => {
       </section>
 
       {/* Profitable Bookkeeping and Finance Management Section */}
-      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
-        <h2 className="text-3xl font-bold text-center  mb-14">
-          Bookkeeping, Accounting & Financial Management <br />
-          That Drive Profitability
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-900 text-white relative overflow-hidden">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-8 sm:mb-12 lg:mb-14 px-4">
+          Bookkeeping, Accounting & Financial Management{" "}
+          <br className="hidden sm:block" />
+          <span className="block sm:inline">That Drive Profitability</span>
         </h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-10 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Grid like structure with relevant images - Left Side */}
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               {/* Main grid container */}
-              <div className="grid grid-cols-2 gap-4 h-[500px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 h-auto sm:h-[400px] lg:h-[500px]">
                 {/* Top left - Large card */}
-                <div className=" bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col justify-between shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
                   <div>
-                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                      <ClockIcon className="w-6 h-6 text-white" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                      <ClockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-white ">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                       Real-Time Bookkeeping
                     </h3>
-                    <p className="text-green-100 text-sm">
+                    <p className="text-green-100 text-xs sm:text-sm leading-relaxed">
                       Timely transaction reconciliation and financial tracking
                       to ensure your business records remain accurate, current,
                       and ready for smarter decisions.
@@ -263,25 +269,27 @@ const Ecommerce = () => {
                 </div>
 
                 {/* Top right - Medium card */}
-                <div className=" bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6  justify-between shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:-translate-y-2">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                    <MdInventory className="w-6 h-6 text-white" />
+                <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col justify-between shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
+                  <div>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                      <MdInventory className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">
+                      Inventory Intelligence
+                    </h3>
+                    <p className="text-green-100 text-xs sm:text-sm leading-relaxed">
+                      Advanced inventory tracking and cost analysis to optimize
+                      your product portfolio and maximize margins.
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-white ">
-                    Inventory Intelligence
-                  </h3>
-                  <p className="text-green-100 text-sm">
-                    Advanced inventory tracking and cost analysis to optimize
-                    your product portfolio and maximize margins.
-                  </p>
                 </div>
 
                 {/* Bottom left - Medium card */}
-                <div className=" bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col justify-between shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col justify-between shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
                   <div>
-                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -293,10 +301,10 @@ const Ecommerce = () => {
                         />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-bold text-white ">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                       Tax-Ready Reports
                     </h3>
-                    <p className="text-green-100 text-sm">
+                    <p className="text-green-100 text-xs sm:text-sm leading-relaxed">
                       Comprehensive financial documentation prepared for tax
                       compliance and optimized for e-commerce business
                       deductions.
@@ -305,11 +313,11 @@ const Ecommerce = () => {
                 </div>
 
                 {/* Bottom right - Large card */}
-                <div className=" rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 p-6 flex flex-col justify-between shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:-translate-y-2">
+                <div className="rounded-xl sm:rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 p-4 sm:p-6 flex flex-col justify-between shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
                   <div>
-                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -320,10 +328,10 @@ const Ecommerce = () => {
                         />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                       Growth Strategy
                     </h3>
-                    <p className="text-orange-100 text-sm">
+                    <p className="text-orange-100 text-xs sm:text-sm leading-relaxed">
                       Strategic planning for sustainable growth, combining
                       capital budgeting, cost reduction, and profit-maximizing
                       strategies to drive long-term success.
@@ -332,31 +340,28 @@ const Ecommerce = () => {
                 </div>
               </div>
 
-              {/* Floating decorative elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+              {/* Floating decorative elements - Hidden on mobile */}
+              <div className="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse hidden sm:block"></div>
+              <div className="absolute -bottom-6 -right-6 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000 hidden sm:block"></div>
             </div>
 
             {/* Content - Right Side */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
               <div>
-                <div className="inline-block px-4 py-2 bg-blue-600/20 text-blue-300 rounded-full text-sm font-medium mb-4">
+                <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600/20 text-blue-300 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4">
                   Financial Excellence
                 </div>
-                <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                   Upsell
-                  <span className=" bg-clip-text text-[#B69D62]">
-                    {" "}
-                    FinLogix
-                  </span>
+                  <span className="bg-clip-text text-[#B69D62]"> FinLogix</span>
                 </h2>
-                <p className="text-gray-300 text-2xl leading-relaxed font-light mb-6">
+                <p className="text-gray-300 text-lg sm:text-xl lg:text-2xl leading-relaxed font-light mb-4 sm:mb-6">
                   Profitable Bookkeeping & Financial Management for US
                   E-commerce Businesses
                 </p>
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-                  <span className="text-gray-400 text-lg font-medium">
+                <div className="flex items-center space-x-3 sm:space-x-4 mb-6 sm:mb-8">
+                  <div className="w-8 sm:w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                  <span className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium">
                     How Upsell FinLogix helps online sellers grow smarter and
                     stay compliant
                   </span>
@@ -364,30 +369,31 @@ const Ecommerce = () => {
               </div>
 
               {/* Stats or features */}
-              <div className="flex flex-col flex-wrap justify-start space-x-4">
-                <span className="font-semibold text-base ml-5 mb-2">
+              <div className="flex flex-col space-y-3 sm:space-y-4">
+                <span className="font-semibold text-sm sm:text-base">
                   Marketplaces:
                 </span>
-                <div className="flex gap-4">
-                  {companies.map((c) => (
-                    <>
-                      <div className="p-2 w-20 bg-white/5 rounded-xl flex justify-center items-center backdrop-blur-sm border border-white/10">
-                        {c.logo}
-                      </div>
-                    </>
+                <div className="flex flex-wrap gap-2 sm:gap-3 lg:gap-4">
+                  {companies.map((c, index) => (
+                    <div
+                      key={index}
+                      className="p-2 w-16 sm:w-18 lg:w-20 bg-white/5 rounded-lg sm:rounded-xl flex justify-center items-center backdrop-blur-sm border border-white/10"
+                    >
+                      {c.logo}
+                    </div>
                   ))}
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4">
+              <div className="pt-2 sm:pt-4">
                 <Link
                   to="/profitable-bookkeeping-and-finance-management"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white  hover:border-[#B69F63] shadow-md  transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/25"
+                  className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-[#192d2f] bg-[#B69F63] hover:bg-[#192d2f] hover:text-white hover:border-[#B69F63] shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/25"
                 >
                   More Info
                   <svg
-                    className="ml-2 w-5 h-5"
+                    className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -403,21 +409,21 @@ const Ecommerce = () => {
           </div>
         </div>
 
-        {/* Background decorative elements */}
+        {/* Background decorative elements - Reduced opacity on mobile */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-blue-500/3 sm:bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-purple-500/3 sm:bg-purple-500/5 rounded-full blur-3xl"></div>
         </div>
       </section>
 
       {/* Bookkeeping built for eccommerce */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 px-5 sm:px-0 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content Section - Left */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                   Bookkeeping, Built for
                   <span className="text-blue-600"> ECommerce</span>
                 </h2>
@@ -435,7 +441,7 @@ const Ecommerce = () => {
                 inventory management and payment reconciliations.
               </p>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
+              <div className="bg-white  p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Our expert bookkeeping solutions ensure:
                 </h3>
@@ -562,7 +568,7 @@ const Ecommerce = () => {
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               WE ALWAYS GIVE THE BEST FOR OUR CLIENTS
             </h2>
             <div className="w-24 h-1 bg-white mx-auto"></div>
@@ -620,7 +626,6 @@ const Ecommerce = () => {
       </section>
       <CTA />
       <WorkedWith />
-
       <FAQ />
     </>
   );

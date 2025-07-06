@@ -231,11 +231,11 @@ const Industry = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Industries We Serve
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Our expertise spans across multiple industries, providing
               specialized bookkeeping and financial management solutions
               tailored to each sector's unique requirements.
@@ -313,7 +313,7 @@ const Industry = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Why Choose Our Industry-Specific Expertise?
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
@@ -384,10 +384,10 @@ const Industry = () => {
 
       <section className="bg-blue-50 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
             Ready to Transform Your Financial Operations?
           </h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+          <p className="text-lg  sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
             Let Upsell FinLogix help you streamline your financial operations
             with industry-specific expertise. Let us help you navigate the
             complexities of financial management with precision, insight, and

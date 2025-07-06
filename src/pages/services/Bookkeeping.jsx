@@ -43,10 +43,7 @@ export default function Bookkeeping() {
           property="og:description"
           content="From clean-up to compliance, our bookkeeping services ensure precision and insight for your business's financial growth."
         />
-        <meta
-          property="og:image"
-          content="https://wallpaperaccess.com/full/153208.jpg"
-        />
+        <meta property="og:image" content="slidder/buildings.webp" />
         <meta
           property="og:url"
           content="https://www.upsellfinlogix.com/services/bookkeeping"
@@ -126,11 +123,11 @@ export default function Bookkeeping() {
       <HeroSection heroDetails={heroDetails} />
 
       {/* Who We Are Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-5 sm:px-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 WHO WE ARE
               </h2>
 
@@ -161,28 +158,28 @@ export default function Bookkeeping() {
       </section>
 
       {/* Industry-Specific Services Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full mb-4">
-              <Briefcase className="w-6 h-6 text-blue-600" />
+          <div className="text-center mb-12 sm:mb-14 lg:mb-16">
+            <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full mb-3 sm:mb-4">
+              <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Industry-Specific Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
               Tailored bookkeeping services designed for your industry's unique
               challenges and requirements
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-12">
             {industryServicesBookkeeping.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+                className="group relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
               >
                 {/* Gradient Background */}
                 <div
@@ -190,37 +187,37 @@ export default function Bookkeeping() {
                 ></div>
 
                 {/* Card Content */}
-                <div className="relative p-8">
+                <div className="relative p-4 sm:p-6 lg:p-8">
                   {/* Header */}
-                  <div className="flex items-start space-x-4 mb-6">
+                  <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
                     <div
-                      className={`${service.bgColor} p-4 rounded-xl ${service.iconColor} group-hover:scale-110 transition-transform duration-300`}
+                      className={`${service.bgColor} p-3 sm:p-4 rounded-lg sm:rounded-xl ${service.iconColor} group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
                     >
                       {service.icon}
                     </div>
-                    <div className="flex-1">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors leading-tight">
                         {service.title}
                       </h2>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                         {service.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Features List */}
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <div
                         key={featureIndex}
-                        className="flex items-center space-x-3 group/feature"
+                        className="flex items-start space-x-2 sm:space-x-3 group/feature"
                       >
                         <div
-                          className={`${service.bgColor} p-2 rounded-lg ${service.iconColor} group-hover/feature:scale-110 transition-transform duration-200`}
+                          className={`${service.bgColor} p-1.5 sm:p-2 rounded-md sm:rounded-lg ${service.iconColor} group-hover/feature:scale-110 transition-transform duration-200 flex-shrink-0 mt-0.5`}
                         >
                           {feature.icon}
                         </div>
-                        <span className="text-gray-700 font-medium group-hover/feature:text-gray-900 transition-colors">
+                        <span className="text-sm sm:text-base text-gray-700 font-medium group-hover/feature:text-gray-900 transition-colors leading-relaxed">
                           {feature.text}
                         </span>
                       </div>
@@ -229,7 +226,7 @@ export default function Bookkeeping() {
 
                   {/* Hover Effect Border */}
                   <div
-                    className={`absolute inset-0 border-2 border-transparent group-hover:border-gradient-to-r group-hover:${service.gradient} rounded-2xl transition-all duration-300 opacity-0 group-hover:opacity-20`}
+                    className={`absolute inset-0 border-2 border-transparent group-hover:border-gradient-to-r group-hover:${service.gradient} rounded-xl sm:rounded-2xl transition-all duration-300 opacity-0 group-hover:opacity-20`}
                   ></div>
                 </div>
               </div>
@@ -238,12 +235,18 @@ export default function Bookkeeping() {
 
           {/* Bottom CTA */}
           <div className="text-center">
-            <div className="inline-flex flex-col sm:flex-row items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md gap-5 sm:gap-2">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700 font-medium">
-                "No matter the industry, our bookkeeping adapts to your business
-                DNA. <br /> Trust Upsell FinLogix to keep your books clean,
-                compliant, and growth-ready."
+            <div className="inline-flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-2 bg-white px-4 sm:px-6 py-4 sm:py-3 rounded-2xl sm:rounded-full shadow-md max-w-4xl mx-auto">
+              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+              <span className="text-sm sm:text-base text-gray-700 font-medium text-center leading-relaxed">
+                <span className="block sm:inline">
+                  "No matter the industry, our bookkeeping adapts to your
+                  business DNA.
+                </span>
+                <span className="block sm:inline mt-1 sm:mt-0">
+                  {" "}
+                  Trust Upsell FinLogix to keep your books clean, compliant, and
+                  growth-ready."
+                </span>
               </span>
             </div>
           </div>

@@ -17,7 +17,7 @@ const WorkedWith = () => {
       logo: (
         <img
           src="workedwith/xero.webp"
-          alt="Shopify Logo"
+          alt="Xero Logo"
           className="w-24 object-contain"
           loading="lazy"
           decoding="async"
@@ -53,7 +53,7 @@ const WorkedWith = () => {
       logo: (
         <img
           src="workedwith/gusto.webp"
-          alt="Amazon Logo"
+          alt="Gusto Logo"
           loading="lazy"
           className="w-28 object-contain"
           decoding="async"
@@ -77,7 +77,7 @@ const WorkedWith = () => {
       logo: (
         <img
           src="workedwith/EBay_logo.svg"
-          alt="Walmart Logo"
+          alt="Ebay Logo"
           loading="lazy"
           className="w-24 h-24 object-contain"
           decoding="async"

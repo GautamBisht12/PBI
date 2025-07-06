@@ -36,7 +36,7 @@ const PricingSection = ({ theme, page }) => {
               </p>
             </div>
 
-            <div className="p-8">
+            <div className="p-5  md:p-8 ">
               <div className="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-gray-100 pb-8">
                 <div>
                   <h4 className="text-xl font-bold text-gray-800 mb-2">
@@ -96,7 +96,7 @@ const PricingSection = ({ theme, page }) => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 rounded-xl p-6">
+                <div className="bg-gray-50 rounded-xl sm:p-6">
                   <h4 className="text-lg font-bold text-gray-800 mb-4">
                     Factors Influencing Pricing
                   </h4>
@@ -130,7 +130,7 @@ const PricingSection = ({ theme, page }) => {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6">
+                <div className="bg-gray-50 rounded-xl sm:p-6">
                   <h4 className="text-lg font-bold text-gray-800 mb-4">
                     What Counts as a "Transaction"?
                   </h4>

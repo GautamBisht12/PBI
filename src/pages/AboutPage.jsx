@@ -13,7 +13,7 @@ function AboutPage() {
     heroImage: "hero/documents.webp",
   };
   return (
-    <div className="fade-in">
+    <div className="fade-in  ">
       <Helmet>
         <title>
           About Us | Upsell FinLogix - Your Strategic Finance Partner
@@ -91,14 +91,14 @@ function AboutPage() {
       <HeroSection heroDetails={heroData} />
 
       {/* Mission section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-5 sm:px-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="mb-10 lg:mb-0">
-              <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
+            <div className="mb-10 lg:mb-0 ">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
                 At Upsell FinLogix, we recognize that effective financial
                 management is essential for the growth and stability of any
                 business. Our mission is to deliver comprehensive bookkeeping,
@@ -128,7 +128,7 @@ function AboutPage() {
       </section>
 
       {/* Services section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 px-5 sm:px-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
@@ -247,7 +247,7 @@ function AboutPage() {
       />
 
       {/* Approach section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-5 sm:px-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
@@ -345,7 +345,7 @@ function AboutPage() {
 
       {/* CTA section */}
       <section
-        className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative"
+        className="py-20 bg-fixed bg-center bg-no-repeat bg-cover relative px-5 sm:px-0"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')",
@@ -356,10 +356,10 @@ function AboutPage() {
 
         {/* Content container */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl font-extrabold mb-6 text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 text-white">
             Partner with Us for a Stronger Financial Future
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-lg sm:text-xl text-blue-100 mb-8">
             At Upsell FinLogix, we are more than just a service provider; we are
             your strategic partner in bookkeeping, accounting, and corporate
             finance. Let us help you navigate the complexities of financial
@@ -387,10 +387,10 @@ function AboutPage() {
         </div>
       </section>
       {/* Values section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-5 sm:px-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1 relative">
+            <div className="hidden sm:block order-2 lg:order-1 relative">
               <img
                 src="about/values.webp"
                 alt="Team collaboration"
@@ -538,12 +538,12 @@ function AboutPage() {
       {/* Team section */}
 
       {/* Final CTA section */}
-      <section className="bg-blue-50 py-16">
+      <section className="bg-blue-50 py-16 px-5 sm:px-0">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
             Ready to Transform Your Financial Operations?
           </h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
             Let Upsell FinLogix help you navigate the complexities of financial
             management with precision, insight, and transparency, so you can
             focus on growing your business.

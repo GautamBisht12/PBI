@@ -105,10 +105,7 @@ const Services = () => {
           property="og:description"
           content="Trusted accounting and finance solutions for small and mid-sized businesses. Discover our end-to-end services today."
         />
-        <meta
-          property="og:image"
-          content="https://wallpaperaccess.com/full/153208.jpg"
-        />
+        <meta property="og:image" content="slidder/slidder1.webp" />
         <meta
           property="og:url"
           content="https://www.upsellfinlogix.com/services"
@@ -175,7 +172,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Introduction */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-4xl mb-4">
             Trusted Corporate Finance, Accounting & Bookkeeping for US
             Businesses
           </h2>
@@ -216,7 +213,7 @@ const Services = () => {
 
               {/* Content */}
               <div className="w-full lg:w-1/2">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                   {category.title}
                 </h3>
                 <p className="text-lg text-gray-600 mb-8">

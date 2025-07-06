@@ -38,7 +38,7 @@ const ServicesOverview = () => {
             />
           </div>
           {/* Text div - responsive */}
-          <div className="w-full lg:w-7/12 px-10">
+          <div className="w-full lg:w-7/12 px-5 sm:px-10">
             <div className="mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
                 Industries We Serve
@@ -50,7 +50,7 @@ const ServicesOverview = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 md:gap-8">
+            <div className="grid  grid-cols-1 sm:grid-cols-1 gap-6 md:gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -59,7 +59,7 @@ const ServicesOverview = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Link to={service.link}>
-                    <div className="p-4 bg-white rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1 h-full flex flex-col relative overflow-hidden">
+                    <div className=" p-4 w-full bg-white rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1 h-full flex flex-col relative overflow-hidden">
                       {/* Gradient accent on hover */}
                       <div
                         className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-black to-[#B69F63] transition-all duration-300 ${
@@ -72,11 +72,11 @@ const ServicesOverview = () => {
                         {service.icon}
                       </div>
 
-                      <h3 className="text-2xl font-extrabold text-black mb-3 group-hover:text-[#B79E63] transition-colors duration-300 ">
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-black mb-3 group-hover:text-[#B79E63] transition-colors duration-300 ">
                         {service.title}
                       </h3>
 
-                      <p className="text-gray-800 mb-4 flex-grow text-xl font-semibold">
+                      <p className="text-gray-800 mb-4 flex-grow text-lg sm:text-xl font-semibold">
                         {service.description}
                       </p>
 

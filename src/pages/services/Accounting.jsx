@@ -81,10 +81,7 @@ export default function Accounting() {
           property="og:description"
           content="Scalable, industry-focused accounting solutions with real-time insights and streamlined financial operations."
         />
-        <meta
-          property="og:image"
-          content="https://wallpaperaccess.com/full/153208.jpg"
-        />
+        <meta property="og:image" content="hero/buildings.webp" />
         <meta
           property="og:url"
           content="https://www.upsellfinlogix.com/services/accounting"
@@ -173,11 +170,11 @@ export default function Accounting() {
       <HeroSection heroDetails={heroDetails} />
 
       {/* Who We Are Section */}
-      <section className="py-16 bg-white h-[90vh] flex justify-center items-center">
+      <section className="py-16 bg-white h-[90vh] flex justify-center items-center p-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 WHO WE ARE
               </h2>
 
@@ -222,7 +219,7 @@ export default function Accounting() {
             <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full mb-4">
               <Briefcase className="w-6 h-6 text-blue-600" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
